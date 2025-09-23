@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Eliot Institute</title>
-    <link rel="stylesheet" href="css/almond.min.css">
-    <script src="js/script.js"></script>
-  </head>
-  <body>
-    <h1>What is Eliot?</h1>
 
-    <figure>
-        <img src="img/firelight_slide.jpg" alt="Firelight" />
-        <figcaption>Songs at Firelight</figcaption>
-    </figure>
+<head>
+  <meta charset="utf-8">
+  <title>Eliot Institute</title>
+  <link rel="stylesheet" href="css/eliot.css">
+  <script src="js/script.js"></script>
+</head>
 
-    <p>It's a <b>summer camp</b> for people of all ages, filled with laughter, 
-        singalongs, swimming in the lagoon, talent shows, and group meals in the dining hall.</p>
+<body>
+  <nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+      <li><a href='index.html'>Home</a></li>
+      <li><a class='dropdown-arrow' href='http://'>Products</a>
+        <ul class='sub-menus'>
+          <li><a href='http://'>Products 1</a></li>
+          <li><a href='http://'>Products 2</a></li>
+          <li><a href='http://'>Products 3</a></li>
+          <li><a href='http://'>Products 4</a></li>
+        </ul>
+      </li>
+      <li><a href='http://'>About</a></li>
+      <li><a class='dropdown-arrow' href='http://'>Services</a>
+        <ul class='sub-menus'>
+          <li><a href='http://'>Services 1</a></li>
+          <li><a href='http://'>Services 2</a></li>
+          <li><a href='http://'>Services 3</a></li>
+        </ul>
+      </li>
+      <li><a href='http://'>Contact Us</a></li>
+    </ul>
+  </nav>
 
-    <p>It's a <b>retreat</b>, with thought-provoking morning programs followed by small group 
-        discussions, and additional opportunities to explore social justice issues.</p>
+  <h1>What is Eliot?</h1>
 
-    <p>It's an opportunity for <b>spiritual connection</b>, with worship services each evening.</p>
+  <figure>
+    <img src="img/firelight_slide.jpg" alt="Firelight" />
+    <figcaption>Songs at Firelight</figcaption>
+  </figure>
 
-    <p>It's a chance to express <b>creativity</b> - explore music in choir, rock band and 
-        coffeehouse performances, learn a new visual art, dance, or tie-dye.</p>
+  <p>It's a <b>summer camp</b> for people of all ages, filled with laughter,
+    singalongs, swimming in the lagoon, talent shows, and group meals in the dining hall.</p>
 
-    <p>It's a safe space for <b>personal growth</b>, from the profound to the silly.</p>
+  <p>It's a <b>retreat</b>, with thought-provoking morning programs followed by small group
+    discussions, and additional opportunities to explore social justice issues.</p>
 
-    <p>It's a time to enjoy <b>nature-walk</b> in the woods, watch the sunset, listen 
-        to the birds, and look for shells on the shore of Hood Canal.</p>
+  <p>It's an opportunity for <b>spiritual connection</b>, with worship services each evening.</p>
 
-    <p>It's a <b>]multi-generational community</b> of people who find their happy place at Seabeck Conference Center.</p>
+  <p>It's a chance to express <b>creativity</b> - explore music in choir, rock band and
+    coffeehouse performances, learn a new visual art, dance, or tie-dye.</p>
 
-    <p><b>Eliot is all of these things and more!</b></p>
+  <p>It's a safe space for <b>personal growth</b>, from the profound to the silly.</p>
 
-    <p>Learn more in our <a href="">Introduction to Camp</a>. Or check out the images below.</p>
+  <p>It's a time to enjoy <b>nature-walk</b> in the woods, watch the sunset, listen
+    to the birds, and look for shells on the shore of Hood Canal.</p>
+
+  <p>It's a <b>]multi-generational community</b> of people who find their happy place at Seabeck Conference Center.</p>
+
+  <p><b>Eliot is all of these things and more!</b></p>
+
+  <p>Learn more in our <a href="">Introduction to Camp</a>. Or check out the images below.</p>
 
 </body>
+
 </html>
