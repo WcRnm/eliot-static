@@ -37,14 +37,17 @@ function handlePage(md) {
 
 function insertContent() {
     const urlParams = new URLSearchParams(window.location.search);
-    let page = urlParams.get('page');
-    if (page === null) {
-        page = 'home';
+    let link = null;
+    for (const [key, value] of urlParams) {
+        link = `${key}/${value}`;
+        break;
+    }
+    if (link === null) {
+        link = 'home';
     }
 
     try {
-        const link = `content/${page}.md`;
-        fetch(link)
+        fetch(`content/${link}.md`)
         .then(response => response.text())
         .then(md => handlePage(md))
         .catch(error => console.error(error));
