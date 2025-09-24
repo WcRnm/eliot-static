@@ -6,13 +6,13 @@ Eliot Institute has been presenting camps and conferences since 1947, and curren
 
 We gather for a variety of reasons -- to make new friends or to see old ones, for intellectual stimulation, spiritual renewal, artistic expression, to share ideas, to relax and to have fun. You're invited to become part of this unique community.
 
-# The Camps
+## The Camps
 
 July Eliot and August Eliot are seven nights; Creative Arts Eliot and Winter Eliot are four nights. Learn more about typical camp activities on our Program page. For details about this year's camps, click on a camp name on the right sidebar of this page (or scroll down if you're on a mobile device).
 
 Or check out this introductory video:
 
-# Who Comes to Camp
+## Who Comes to Camp
 
 People young and old come to Eliot, from infants to seniors. Here's the breakdown in age from a recent July Eliot as an example: 
 Introduction to Camp
@@ -21,7 +21,30 @@ Most campers are from Washington, Oregon, and British Columbia. But we have peop
 
 Our mission statement says we are a camp for "Unitarian Univeralists, their families and friends." People of other liberal faiths are also welcome, as are those without spiritual beliefs. More than half of our attendees do not list a UU church affiliation. 
 
-Over the past 7 years, the churches with the most representatives at camp have been: First Unitarian, Portland, OR; University UU, Seattle, WA; Northshore, W Vancouver BC; UU of Vancouver BC, Unitarian Church of Vancouver, WA; Shoreline UU, WA; East Shore, Bellevue WA; UU Church of Eugene, OR; Bellingham Unitarian, WA; and Northlake Unitarian, Kirkland, WA. We've also had 10 or more people from West Hills in Portland, OR; UU of Corvallis, OR; Westside, Seattle WA: South Fraser, Surrey BC; Eastrose, Portland OR, First U of Victoria, BC; Unitarian Fell. or Salt Spring Island, BC; UU of WA County, OR; Olympia UU, WA. There are 46 congregations that have had 1 - 10 people attend Eliot.
+Over the past 7 years, the churches with the most representatives at camp have been: 
+- First Unitarian, Portland, OR; 
+- University UU, Seattle, WA; 
+- Northshore, W Vancouver BC; 
+- UU of Vancouver BC, 
+- Unitarian Church of Vancouver, WA; 
+- Shoreline UU, WA; 
+- East Shore, Bellevue WA; 
+- UU Church of Eugene, OR; 
+- Bellingham Unitarian, WA; 
+- and Northlake Unitarian, Kirkland, WA.
+
+We've also had 10 or more people from 
+- West Hills in Portland, OR; 
+- UU of Corvallis, OR; 
+- Westside, Seattle WA: 
+- South Fraser, Surrey BC; 
+- Eastrose, Portland OR, 
+- First U of Victoria, BC; 
+- Unitarian Fellowship of Salt Spring Island, BC; 
+- UU of WA County, OR; 
+- Olympia UU, WA.
+
+There are 46 congregations that have had 1 - 10 people attend Eliot.
 
 Some people come as singles, some couples, and some small families. Some people come in multi-generational extended family groups of a dozen or more.
 
