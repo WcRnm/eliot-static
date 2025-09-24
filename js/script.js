@@ -1,4 +1,5 @@
 var converter = new showdown.Converter();
+converter.setOption('tables', 'on')
 
 function updatemenu() {
   if (document.getElementById('responsive-menu').checked == true) {
