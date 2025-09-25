@@ -30,9 +30,9 @@ All staff are required to sign our Camp Staff Code of Ethics and some staff posi
     - [Dean - Camp Staffing Lists](pdf/job/dean/Dean_-_Staffing_Guidelines_(2024).pdf)
 - [Early Morning Coffee Host](pdf/job/misc/Early_Morning_Coffee_Host_(2017).pdf)
 - First Aid
-    - [First Aid Coordinator](pdf/job/firstaid/First_Aid_Coordinator_(Jul_2017)(1).pdf)
+    - [First Aid Coordinator](pdf/job/firstaid/First_Aid_Coordinator_(Jul_2017).pdf)
     - [First Aid Volunteer](pdf/job/firstaid/First_Aid_Volunteer.(Jul_2017).pdf)
-    - [First Aid Information](pdf/job/firstaid/First_Aid_Information_Chart_(Jul_2017)(1).pdf)
+    - [First Aid Information](pdf/job/firstaid/First_Aid_Information_Chart_(Jul_2017).pdf)
     - [First Aid Supplies List](pdf/job/firstaid/First_Aid_Supllies_(2022).pdf)
     - [Concussion & Head Injury Information](pdf/job/firstaid/First_Aid_Info_-_Concussions__Head_Injuries__(2016).pdf)
     - [EpiPen Document](pdf/job/firstaid/EpiPen_Document_January_2019.pdf)
