@@ -2,6 +2,10 @@
 
 ## Morning
 
+<img src="img/Camp_Staff800px.jpg" 
+     alt="Camp staff at the morning program" 
+     align="right" />
+
 Mornings are the most structured part of Eliot. After breakfast there is an all-camp ingathering with a short worship and music program for all ages.
 
 After the ingathering, children and youth go to their programs. (Learn more.)

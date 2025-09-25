@@ -1,5 +1,9 @@
 # Eliot Institute Camps
 
+<img src="img/Inn_on_a_Winter_Night800px.jpg" 
+     alt="Seabeck Inn on a winter night" 
+     align="right" />
+
 Eliot Institute creates and supports an intentional, inclusive community of celebration, friendship, and joy with opportunities for exploration, spirituality, and growth for Unitarian Universalists, their families and friends.
 
 Eliot Institute has been presenting camps and conferences since 1947, and currently sponsors four camps each year at Seabeck (July, August, Creative Arts, and Winter). 
@@ -12,10 +16,14 @@ July Eliot and August Eliot are seven nights; Creative Arts Eliot and Winter Eli
 
 Or check out this introductory video:
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NI4v5gB0JrM?si=CUJiqgSPRIy7uV9m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Who Comes to Camp
 
 People young and old come to Eliot, from infants to seniors. Here's the breakdown in age from a recent July Eliot as an example: 
-Introduction to Camp
+
+<img src="img/ages.png" 
+    alt="Pie chart showing age groups attending Eliot camps" />
 
 Most campers are from Washington, Oregon, and British Columbia. But we have people come from across North America, and beyond. (At any camp, 10 - 20% or more are Canadian.)
 
@@ -52,6 +60,6 @@ July and August usually have around 240 participants and can be as high as 40% c
 
 Many campers are old-timers, having come for years or even decades. Newcomers are also a welcome and important part of our community. Newcomers may (upon request) be paired up with returning campers who give support and answer questions while serving as a "Newcomer Buddy."
 
-The Eliot community values safety, fun, and diversity. It is the policy of the Eliot Board to make every attempt to provide inclusivity and accessibility to all Eliot facilities and activities for all campers. (Learn more: Information about accomodations for disabilities. And read our Sex and Gender Diversity Policy Statement.)
+The Eliot community values safety, fun, and diversity. It is the policy of the Eliot Board to make every attempt to provide inclusivity and accessibility to all Eliot facilities and activities for all campers. (Learn more: [Information about accomodations for disabilities](?info=survival_guide). And read our [Sex and Gender Diversity Policy Statement](?info=polices).
 
-To learn more about the daily activities at camp, read The Eliot Program.
+To learn more about the daily activities at camp, read [The Eliot Program](?info=eliot_program).

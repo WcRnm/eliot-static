@@ -15,3 +15,4 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
   - build fee tables
 - Don't reload the entire page - just the content.
 - Add instructions and How-to's for updating the website.
+- Photo gallery

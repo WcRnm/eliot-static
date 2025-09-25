@@ -25,4 +25,4 @@ It's a **]multi-generational community** of people who find their happy place at
 
 **Eliot is all of these things and more!**
 
-Learn more in our <a href="">Introduction to Camp</a>. Or check out the images below.
+Learn more in our <a href="?info=introduction">Introduction to Camp</a>.

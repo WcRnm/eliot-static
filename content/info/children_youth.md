@@ -1,5 +1,9 @@
 # Children and Youth
 
+<img src="img/MAGS_on_Bouncy_Bridge.jpg" 
+     alt="MAGs on the bouncy bridge" 
+     align="right" />
+
 Eliot Institute is a true multi-generational community, with attendees ranging from birth to 90+ years old. Children may attend with a parent, grandparent or a sponsor. Each camp typically includes some newcomers, and other children who have been attending with their extended families for many years. At July and August, of the 240 campers, 40 – 50 may be kids under 18. At Winter, out of 120 campers, there may be up to 20 kids.
 
 ## Activities
@@ -51,20 +55,18 @@ Children and youth under age 18 who have demonstrated a need for supervision, ac
 
 Eliot Institute is concerned with your child’s health and safety as well as your child’s overall positive experience at Eliot. All of the staff working with children and youth have agreed to ethical standards in their work here at camp. We have also set up health and safety guidelines for your children’s time here.
 
-1. Snack. Food allergies and special dietary needs should be explained on your child's medical information form, as well as information about specific medications or medical conditions that staff should be aware of. The Children's Program Director will share information as needed with teachers and take dietary needs into account when planning the morning snack. We serve age appropriate snacks during the morning program. If you are the parent of an infant or toddler, please let the under 3’s staff know what type of snack your child may be ready for. Please label all containers brought into the baby room. Please do not bring toys with small (chokeable) parts into the under-3’s classroom.
+1. **Snack**. Food allergies and special dietary needs should be explained on your child's medical information form, as well as information about specific medications or medical conditions that staff should be aware of. The Children's Program Director will share information as needed with teachers and take dietary needs into account when planning the morning snack. We serve age appropriate snacks during the morning program. If you are the parent of an infant or toddler, please let the under 3’s staff know what type of snack your child may be ready for. Please label all containers brought into the baby room. Please do not bring toys with small (chokeable) parts into the under-3’s classroom.
 
-2. Playground. Children of all ages enjoy the playground equipment and several classes may be using playground areas with staff in the morning.  Parents are responsible for supervising their child on the playground after the morning program.
+2. **Playground**. Children of all ages enjoy the playground equipment and several classes may be using playground areas with staff in the morning.  Parents are responsible for supervising their child on the playground after the morning program.
 
-3. First Aid. A first-aid kit is available at the Inn and in each classroom area. First aid volunteers are available – for emergencies, call 911.
+3. **First Aid**. A first-aid kit is available at the Inn and in each classroom area. First aid volunteers are available – for emergencies, call 911.
 
-4. Wasps and Yellow Jackets inevitably establish nests in the wooded areas around Seabeck. Parents of children with known reactions to stings from such insects should take precautions.
+4. **Wasps and Yellow Jackets** inevitably establish nests in the wooded areas around Seabeck. Parents of children with known reactions to stings from such insects should take precautions.
 
-5. Waterfront. To swim, campers under 18 must have a swimming check and wear a swimming bracelet. Campers under 18 wishing to use the boats must be accompanied by an adult (unless they have passed the boating test) and must wear a lifejacket. (Please see waterfront rules for more details.)
+5. **Waterfront**. To swim, campers under 18 must have a swimming check and wear a swimming bracelet. Campers under 18 wishing to use the boats must be accompanied by an adult (unless they have passed the boating test) and must wear a lifejacket. (Please see [waterfront rules](pdf/policy/Eliot_Waterfront_Rules_(2025).pdf) for more details.)
 
 You can find additional helpful information on amenities available at camp on our survival guide page.
 
 ## Eliot’s Policy for the Safety of Children, Youth, and Vulnerable Adults
 
-    Vulnerable Camper Protection Policy 
-
-Click on the images to see some fun moments from past camps.
+- [Vulnerable Camper Protection Policy](pdf/policy/Vulnerable_Camper_Protection_Policy_-_DRAFT5.pdf)
