@@ -1,3 +1,7 @@
+<button>Register For Camp</button>
+
+<button>Donate</button>
+
 ## Upcoming Camps
 
 ### 2025
