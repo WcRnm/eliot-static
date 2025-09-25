@@ -1,8 +1,8 @@
 #menu {
-	background: #0099CC;
+	background: #3871C2;
 	height: 45px;
 	padding-left: 18px;
-	border-radius: 10px;
+	border-radius: 0px;
 }
 #menu ul, #menu li {
 	margin: 0 auto;

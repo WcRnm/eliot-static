@@ -10,17 +10,32 @@ function updatemenu() {
   }
 }
 
-function handleMenuText(html) {
-    const container = document.getElementById('menu_container');
-    container.innerHTML = html;
-}
-
 function insertMenu() {
     try {
         const link = `/content/menu.html`;
         fetch(link)
         .then(response => response.text())
-        .then(html => handleMenuText(html))
+        .then(html => {
+            const container = document.getElementById('menu_container');
+            container.innerHTML = html;
+        })
+        .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
+function insertSidebar() {
+    try {
+        const link = `/content/sidebar.md`;
+        fetch(link)
+        .then(response => response.text())
+        .then(md => {
+            const html = converter.makeHtml(md);
+            const container = document.getElementById('sidebar_container');
+            container.innerHTML = html;
+        })
         .catch(error => console.error(error));
     }
     catch (error) {
@@ -62,5 +77,6 @@ function insertContent() {
 
 window.onload = () => {
   insertMenu();
+  insertSidebar();
   insertContent();
 };
