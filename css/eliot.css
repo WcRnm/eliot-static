@@ -1,2 +1,17 @@
 @import "almond.css";
 @import "menu.css";
+
+.col75 {
+  flex: 75%;
+  margin: 0.5em;
+}
+
+.col25 {
+  flex: 25%;
+  margin: 0.5em;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
