@@ -1,6 +1,8 @@
 # Camp Jobs
 
-Eliot Institute camps relies on volunteers to staff our camps. Many roles include a camp credit which can reduce your cost for attending camp. If you are interested in being considered, please complete our Application for Camp Staff Jobs. 
+Eliot Institute camps relies on volunteers to staff our camps. Many roles include a camp credit which can reduce your cost for attending camp. If you are interested in being considered, please complete our [Application for Camp Staff Jobs](https://eliotinstitute.wufoo.com/forms/p1g1gs6u0y5uwea/). 
+
+## All Staff
 
 All staff are required to sign our [Camp Staff Code of Ethics](pdf/policy/Camp_Staff_Code_of_Ethics__April_2019.pdf) and some staff positions require a background check. 
 

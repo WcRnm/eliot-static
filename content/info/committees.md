@@ -2,7 +2,7 @@
 
 Eliot Institute is supported by many dedicated volunteers, including those that serve on the following committees. If you are willing to donate your time or talent, olease fill out this form to declare your interest. If you have questions about a committee, reach out to the committee chair listed. You can get their contact information from the Eliot Registrar via the contact form. 
 
-## Committee Chairs and Charters
+## Committee Chairs and Descriptions
 
 ### Canadian-American
 
@@ -115,3 +115,11 @@ Researches, recommends, and implements technological solutions to further the El
 Chair: McKenna Niemer
 
 Makes recommendations on issues affecting the youth program at Eliot camps. Provides recommendations to Deans for youth program staff. Acts as a resource to youth program staff at Eliot camps. Responsibility includes Grade 9 to age 17 inclusive.
+
+## Task Force Chairs and Descriptions
+
+### GenAI Task Force
+
+Chair: Paul David
+
+The Generative Artificial Intelligence Task Force’s role is to develop and advance community understanding of what Generative AI (Gen AI) is, and to recommend policies to the board concerning what Eliot’s relationship with Gen AI is.
