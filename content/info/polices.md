@@ -13,3 +13,5 @@
 [Visitor and Attendance Policy](pdf/policy/Attendance_and_Visitor_Policy.pdf)
 
 [Vulnerable Camper Protection Policy](pdf/policy/Vulnerable_Camper_Protection_Policy_-_DRAFT5.pdf)
+
+[Board Manual](?info=board_resources): includes articles of incorporation, bylaws, governance structure, committees, support staff, registration policies and more

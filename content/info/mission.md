@@ -3,9 +3,10 @@ Eliot Institute is a non-profit corporation affiliated with the Pacific Northwes
 # Mission Statement
 
 Eliot Institute creates and supports an intentional, inclusive community of celebration, friendship, and joy with opportunities for exploration, spirituality, and growth for Unitarian Universalists, their families and friends.
-Unitarian Universalist Principles            
 
-### We embrace the principles of the UUA to affirm and promote:
+### Unitarian Universalist Principles            
+
+*We embrace the principles of the UUA to affirm and promote:*
 
 - The inherent worth and dignity of every person;
 - Justice, equity, and compassion in human relations;
