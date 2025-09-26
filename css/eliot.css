@@ -20,3 +20,12 @@ hr {
   width: 90%;
   max-width: unset;
 }
+
+aside {
+  font-size: xx-large;
+  border: 2px;
+  border-style: solid;
+  padding: 1rem;
+  width: 75%;
+  color: #c62c0a;
+}

@@ -21,5 +21,5 @@
 
 # Exceptions: 
 
-- campers on a waitlist may cancel and receive a refund of their deposit, no matter when that cancellation occurs. 
-- campers who apply for financial assistance, receive a grant, but still feel they cannot afford to attend, may request a refund of their deposit.
+- Campers on a waitlist may cancel and receive a refund of their deposit, no matter when that cancellation occurs. 
+- Campers who apply for financial assistance, receive a grant, but still feel they cannot afford to attend, may request a refund of their deposit.

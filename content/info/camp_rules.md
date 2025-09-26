@@ -2,6 +2,10 @@
 
 ## General Guidelines
 
+<img src="img/Lifeguard.jpg"
+    alt="Lifeguard explaining waterfront rules"
+    align="right" />
+
 - Nametags should be worn at all times. This helps our community make strong connections.
 
 - In general, visitors are welcome on arrival and departure days only. For more detailed information regarding visitors, please see the section below, “Coming and Going.”

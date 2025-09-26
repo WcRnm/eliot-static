@@ -27,5 +27,3 @@ You choose how to spend your afternoon! After lunch you can rest, read, or spend
 ## Evening
 
 Evenings include a worship service, and are filled with a variety of multigenerational activities. These might include game shows, a concert, talent show, dance and coffeehouse or other fun all-camp activities.
-
-Click on the images to see what camp is like. 

@@ -16,4 +16,4 @@ Seabeck was a busy logging town and seaport more than a century ago. Seabeck tod
 
 Silverdale, the closest city, has supermarkets, pharmacies and a mall. It is a 15 minute drive from Seabeck. Scenic Beach State Park is two miles south and west of Seabeck. It has beautiful woods, a picnic area and beach, and a spectacular view.
 
-Explore more about the Seabeck Conference Center by following this link: http://www.seabeck.org/ Or check out the images below.
+Visit [Seabeck Conference Center](http://www.seabeck.org/) for more information.

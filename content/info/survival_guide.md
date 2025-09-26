@@ -36,9 +36,9 @@ For meetings and activities - the following buildings are wheelchair accessible:
 
 The following spaces require climbing a full flight of stairs: Upper Meeting House, upper Reeser. If you see an activity scheduled there that you would like to attend, ask the Volunteer Coordinator to move it to another space.
 
-For lodging: on your registration form, you will be able to mark whether you need an ADA accessible room, ground floor with level entry, ground floor with some steps OK, or need to be close to a bathroom. Learn more about housing options on the Seabeck site. Rooms with a private bath do cost more than those with a shared bath. If you have a physical need which requires a private bathroom but the cost is prohibitive, you are encouraged to apply for a scholarship to make up the difference in cost.
+For lodging: on your registration form, you will be able to mark whether you need an ADA accessible room, ground floor with level entry, ground floor with some steps OK, or need to be close to a bathroom. Learn more about housing options on the [Seabeck website](https://www.seabeck.org/lodging). Rooms with a private bath do cost more than those with a shared bath. If you have a physical need which requires a private bathroom but the cost is prohibitive, you are encouraged to apply for a scholarship to make up the difference in cost.
 
-If you have any additional questions about accessibility and accommodations, please contact the Eliot registrar, and she will help you find answers and solutions for how we can support your full participation in camp.
+If you have any additional questions about accessibility and accommodations, please contact the [Eliot registrar](mailto://registrar@eliotinstitute.org), and they will help you find answers and solutions for how we can support your full participation in camp.
 
 ## Attending with Children 3 and under
 
@@ -68,4 +68,4 @@ First Aid supplies are available in the Inn Lobby, children's program areas, and
 
 ### Medical Facilities
 
-For urgent care, follow this link for Seabeck's list of local medical facilities. To download a PDF of a map to Silverdale's medical clinics, please click here.  Please note that the former Harrison Hospital in Silverdale is now called St. Michael Medical Center.
+For urgent care, follow this link for Seabeck's list of [local medical facilities](https://www.seabeck.org/medical-facilities). To download a PDF of a map to Silverdale's medical clinics, [please click here](pdf/policy/Eliot_Emergencies_2021.pdf).  Please note that the former Harrison Hospital in Silverdale is now called St. Michael Medical Center.

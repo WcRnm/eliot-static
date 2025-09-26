@@ -65,7 +65,7 @@ Eliot Institute is concerned with your child’s health and safety as well as yo
 
 5. **Waterfront**. To swim, campers under 18 must have a swimming check and wear a swimming bracelet. Campers under 18 wishing to use the boats must be accompanied by an adult (unless they have passed the boating test) and must wear a lifejacket. (Please see [waterfront rules](pdf/policy/Eliot_Waterfront_Rules_(2025).pdf) for more details.)
 
-You can find additional helpful information on amenities available at camp on our survival guide page.
+You can find additional helpful information on amenities available at camp on our [survival guide](?info=survival_guide) page.
 
 ## Eliot’s Policy for the Safety of Children, Youth, and Vulnerable Adults
 
