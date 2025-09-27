@@ -25,12 +25,12 @@ In early June of 2024, the Seabeck Conference Center (SCC) was informed by the W
 - Maples
 - Tamarack
 
-| Age Range   | July and August Eliot | Creative Arts Eliot | Winter Eliot |
-| ----------- | --------------------- | ------------------- | ------------ |
-| 17 and Up   | $750                  | $685                | $565         |
-| 12 – 16     | $610                  | $525                | $370         |
-| 3 – 11      | $470                  | $400                | $290         |
-| 2 and Under | $50                   | $50                 | $50          |
+| Age Range   | July and August Eliot 2025 | Creative Arts Eliot 2025 | Winter Eliot 2025 |
+| ----------- | -------------------------- | ------------------------ | ----------------- |
+| 17 and Up   | $750                       | $685                     | $565              |
+| 12 – 16     | $610                       | $525                     | $370              |
+| 3 – 11      | $470                       | $400                     | $290              |
+| 2 and Under | $50                        | $50                      | $50               |
 
 
 ## Shared Bath-Deluxe
@@ -40,12 +40,12 @@ In early June of 2024, the Seabeck Conference Center (SCC) was informed by the W
 - Reeser #1-#4, #6-#8
 
 
-| Age Range | July and August Eliot | Creative Arts Eliot | Winter Eliot |
-| --------- | --------------------- | ------------------- | ------------ |
-| 17 and Up | $980                  | $865                | $730         |
-| 12 - 16   | $760                  | $660                | $370         |
-| 3 - 11    | $580                  | $515                | $290         |
-| birth - 2 | $50                   | $50                 | $50          |
+| Age Range | July and August Eliot 2025 | Creative Arts Eliot 2025 | Winter Eliot 2025 |
+| --------- | -------------------------- | ------------------------ | ----------------- |
+| 17 and Up | $980                       | $865                     | $730              |
+| 12 - 16   | $760                       | $660                     | $370              |
+| 3 - 11    | $580                       | $515                     | $290              |
+| birth - 2 | $50                        | $50                      | $50               |
 
 ## Private Bath-Historic
 - Inn #100, #201, #210
@@ -54,12 +54,12 @@ In early June of 2024, the Seabeck Conference Center (SCC) was informed by the W
 - Spruce
 
 
-| Age Range   | July and August Eliot | Creative Arts Eliot | Winter Eliot |
-| ----------- | --------------------- | ------------------- | ------------ |
-| 17 and Up   | $1,110                | $905                | $815         |
-| 12 – 16     | $895                  | $695                | $370         |
-| 3 – 11      | $680                  | $560                | $290         |
-| 2 and Under | $50                   | $50                 | $50          |
+| Age Range   | July and August Eliot 2025 | Creative Arts Eliot 2025 | Winter Eliot 2025 |
+| ----------- | -------------------------- | ------------------------ | ----------------- |
+| 17 and Up   | $1,110                     | $905                     | $815              |
+| 12 – 16     | $895                       | $695                     | $370              |
+| 3 – 11      | $680                       | $560                     | $290              |
+| 2 and Under | $50                        | $50                      | $50               |
 
 ## Private Bath-New
 
@@ -67,22 +67,22 @@ In early June of 2024, the Seabeck Conference Center (SCC) was informed by the W
 - New Pines
 - Salal
 
-| Age Range   | July and August Eliot | Creative Arts Eliot | Winter Eliot |
-| ----------- | --------------------- | ------------------- | ------------ |
-| 17 and Up   | $1,260                | $1,045              | $960         |
-| 12 – 16     | $955                  | $810                | $680         |
-| 3 – 11      | $735                  | $640                | $545         |
-| 2 and Under | $50                   | $50                 | $50          |
+| Age Range   | July and August Eliot 2025 | Creative Arts Eliot 2025 | Winter Eliot 2025 |
+| ----------- | -------------------------- | ------------------------ | ----------------- |
+| 17 and Up   | $1,260                     | $1,045                   | $960              |
+| 12 – 16     | $955                       | $810                     | $680              |
+| 3 – 11      | $735                       | $640                     | $545              |
+| 2 and Under | $50                        | $50                      | $50               |
 
 ## Surcharges and Disccounts
 
 - Single Occupancy in Multiple Occupancy Rooms
 - Shared Room Discount: At July Eliot and August Eliot, if 3 or more adults (age 18+) share a room, there is a per/adult discount. You can tell us your choice of roommates on your registration form, or let us choose for you.
 
-|                                             | July and August Eliot | Creative Arts Eliot | Winter Eliot |
-| ------------------------------------------- | --------------------- | ------------------- | ------------ |
-| Single Occupancy in Multiple Occupancy Room | +$350                 | +$200               | +$200        |
-| Shared Room, 3+ adults                      | -($50)                | -($50)              | n/a          |
+| Age Range                                   | July and August Eliot 2025 | Creative Arts Eliot 2025 | Winter Eliot 2025 |
+| ------------------------------------------- | -------------------------- | ------------------------ | ----------------- |
+| Single Occupancy in Multiple Occupancy Room | +$350                      | +$200                    | +$200             |
+| Shared Room, 3+ adults                      | -($50)                     | -($50)                   | n/a               |
 
 
 All fees for camps are payable in US funds.
