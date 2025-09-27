@@ -43,14 +43,6 @@ function insertSidebar() {
     }
 }
 
-function handlePage(md) {
-    console.log("got someting");
-    const container = document.getElementById('content_container');
-
-    const html = converter.makeHtml(md);
-    container.innerHTML = html;
-}
-
 function insertContent() {
     const urlParams = new URLSearchParams(window.location.search);
     let link = null;
@@ -65,7 +57,11 @@ function insertContent() {
     try {
         fetch(`content/${link}.md`)
         .then(response => response.text())
-        .then(md => handlePage(md))
+        .then(md => {
+            const container = document.getElementById('content_container');
+            const html = converter.makeHtml(md);
+            container.innerHTML = html;
+        })
         .catch(error => console.error(error));
     }
     catch (error) {
