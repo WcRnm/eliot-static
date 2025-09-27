@@ -1,18 +1,18 @@
 # Camp Jobs
 
-Eliot Institute camps relies on volunteers to staff our camps. Many roles include a camp credit which can reduce your cost for attending camp. If you are interested in being considered, please complete our [Application for Camp Staff Jobs](https://eliotinstitute.wufoo.com/forms/p1g1gs6u0y5uwea/). 
+Eliot Institute camps relies on volunteers to staff our camps. Many roles include a camp credit which can reduce your cost for attending camp. If you are interested in being considered, please complete our [Application for Camp Staff Jobs](https://eliotinstitute.wufoo.com/forms/p1g1gs6u0y5uwea/).
 
 ## All Staff
 
-All staff are required to sign our [Camp Staff Code of Ethics](pdf/policy/Camp_Staff_Code_of_Ethics__April_2019.pdf) and some staff positions require a background check. 
+All staff are required to sign our [Camp Staff Code of Ethics](pdf/policy/Camp_Staff_Code_of_Ethics__April_2019.pdf) and some staff positions require a background check.
 
 ## Job Descriptions
 
 - Board Representive.
-    - Job Description is located on the Board Manual, Policies, and Procedures page
+    - Job Description is located on the [Board Manual, Policies, and Procedures](info?=board_resources) page
 - Audio Visual
-     - [Audio Visual Coordinator](pdf/job/av/AV_Coordinator_(2024).pdf) 
-     - [AV How-To Manual](pdf/job/av/AV_Manual_(2024).pdf)     
+     - [Audio Visual Coordinator](pdf/job/av/AV_Coordinator_(2024).pdf)
+     - [AV How-To Manual](pdf/job/av/AV_Manual_(2024).pdf)
 - Chaplain
     - [Camp Chaplain](pdf/job/chaplain/Camp_Chaplain.(2017).pdf)
     - [Youth &amp; Young Adult Chaplain](pdf/job/chaplain/Youth-Young_Adult_Chaplain.(2017).pdf)
@@ -26,7 +26,7 @@ All staff are required to sign our [Camp Staff Code of Ethics](pdf/policy/Camp_S
      - [Workshop Registrar](pdf/job/cae/CAW_coordinator_job_description_(2022).pdf)
 - Dean
     - [Dean](pdf/job/dean/Dean_(2024).pdf.pdf)
-    - [Dean Timeline](pdf/job/dean/Dean_-_Timeline_(2024).pdf)    
+    - [Dean Timeline](pdf/job/dean/Dean_-_Timeline_(2024).pdf)
     - [Dean Staffing Guidelines](pdf/job/dean/Dean_-_Staffing_Guidelines_(2024).pdf)
     - [Dean - Theme Speaker Guidelines](pdf/job/dean/Dean_-_Theme_Speaker_(2024).pdf)
     - [Dean - Camp Staffing Lists](pdf/job/dean/Dean_-_Staffing_Guidelines_(2024).pdf)
@@ -41,14 +41,14 @@ All staff are required to sign our [Camp Staff Code of Ethics](pdf/policy/Camp_S
 - [Golf Cart Coordinator](pdf/job/misc/Golf_Cart_Coordinator_Revised_Dec_2023.pdf)
 - [House Leader](pdf/job/misc/House_Leader_(2024).pdf)
 - Music
-    - [Music Coordinator](pdf/job/music/Music_Coordinator__(2017).pdf)   
+    - [Music Coordinator](pdf/job/music/Music_Coordinator__(2017).pdf)
     - [Music Accompanist](pdf/job/music/Music_Accompanist_(2017).pdf)
     - [Choir Director](pdf/job/music/Choir_Director_(2017).pdf)
 - [Newcomer Host](pdf/job/misc/Newcomer_Host_(2024).pdf)
 - [Newsletter Editor](pdf/job/misc/Newsletter_Editor_(2024).pdf)
 - [Slide Show Creator](pdf/job/misc/Slide_Show_Creator_(2017).pdf)
 - Small Groups
-    - [Small Groups Coordinator](pdf/job/smallgrp/Small_Group_Coordinator_(2024).pdf)  
+    - [Small Groups Coordinator](pdf/job/smallgrp/Small_Group_Coordinator_(2024).pdf)
     - [Small Group Facilitator](pdf/job/smallgrp/Small_Group_Facilitators_-_(2024).pdf)
 - [Social Hour Host](pdf/job/misc/Social_Hour_Host_(2024).pdf)
 - Special Events and Activities

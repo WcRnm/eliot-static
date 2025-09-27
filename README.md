@@ -16,3 +16,13 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
 - Don't reload the entire page - just the content.
 - Add instructions and How-to's for updating the website.
 - Photo gallery
+
+# Current Website Notes
+
+[https://www.eliotinstitute.org/](https://www.eliotinstitute.org/)
+
+- Board Manual is not a menu item or linked from the board page.
+- Board Manual
+  - Items that need attention
+    - Document Management Policy (in progress)
+    - Nominations
