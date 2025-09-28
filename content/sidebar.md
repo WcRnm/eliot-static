@@ -2,10 +2,10 @@
     <button type="submit" >Register For Camp</button>
     <input type="hidden" name="info" value="camp_registration_start" />
 </form>
-
-
-<button>Donate</button>
-
+<form action="">
+    <button type="submit">Donate</button>
+    <input type="hidden" name="info" value="donate" />
+</form>
 ## Upcoming Camps
 
 ### 2025
