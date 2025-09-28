@@ -7,21 +7,23 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
 # TODO List
 
 - Update pages
-  - add images
+  - [x] add images
 - Dynamically:
   - ~~create menu~~
   - ~~create camp jobs~~
-  - create camp sidebar
-  - build fee tables
-- Don't reload the entire page - just the content.
-- Add instructions and How-to's for updating the website.
-- Photo gallery
-- Fix layout/sidebar for small screens
-- Archive: Past camp: descriptions
+  - [ ] create camp sidebar
+  - [ ] build fee tables
+- [ ] Don't reload the entire page - just the content.
+- [ ] Add instructions and How-to's for updating the website.
+- [ ] Photo gallery
+- [x] fix layout/sidebar for small screens
+- [ ] Archive: Past camp: descriptions
 - Email forms
-  - Contact
-  - Registration
+  - [ ] Contact
+  - [x] Registration
+  - [x] donate
   - options
+    - Salesforce?
     - https://www.mailgun.com/pricing/
     - https://sendgrid.com/en-us/pricing
     - https://formspree.io/plans

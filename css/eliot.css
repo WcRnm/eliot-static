@@ -16,6 +16,13 @@
   flex-direction: row;
 }
 
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 805px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
 hr {
   width: 90%;
   max-width: unset;
