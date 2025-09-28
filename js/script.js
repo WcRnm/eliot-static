@@ -51,7 +51,7 @@ function insertContent() {
         break;
     }
     if (link === null) {
-        link = 'home';
+        link = 'info/home';
     }
 
     try {

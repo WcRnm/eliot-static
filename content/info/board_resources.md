@@ -42,6 +42,8 @@ See the [Committee Page](?info=committees) for a list of committees, description
 
 - [Unitarian Universalist Association](http://www.uua.org/) (UUA)
 - [Pacific Western Region UUA](https://www.uua.org/pacific-western) (PWR)
+- [Council of Unitarian Universalist Camps and Conferences](http://www.cu2c2.org/) (CU2CU)
+  - [Eliot Membership](pdf/board/E_CU2C2.pdf)
 
 ## PART F:  REGISTRATION
 

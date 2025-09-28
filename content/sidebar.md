@@ -1,4 +1,8 @@
-<button>Register For Camp</button>
+<form action="">
+    <button type="submit" >Register For Camp</button>
+    <input type="hidden" name="info" value="camp_registration_start" />
+</form>
+
 
 <button>Donate</button>
 

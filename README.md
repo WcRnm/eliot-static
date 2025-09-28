@@ -17,6 +17,14 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
 - Add instructions and How-to's for updating the website.
 - Photo gallery
 - Fix layout/sidebar for small screens
+- Archive: Past camp: descriptions
+- Email forms
+  - Contact
+  - Registration
+  - options
+    - https://www.mailgun.com/pricing/
+    - https://sendgrid.com/en-us/pricing
+    - https://formspree.io/plans
 
 # Current Website Notes
 
@@ -27,3 +35,4 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
   - Items that need attention
     - Document Management Policy (in progress)
     - Nominations
+    - CU2CU membership
