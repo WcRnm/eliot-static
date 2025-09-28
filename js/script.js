@@ -1,6 +1,7 @@
 var converter = new showdown.Converter();
 converter.setOption('tables', 'on')
 
+// used by menu.css
 function updatemenu() {
   if (document.getElementById('responsive-menu').checked == true) {
     document.getElementById('menu').style.borderBottomRightRadius = '0';
@@ -10,7 +11,36 @@ function updatemenu() {
   }
 }
 
-function insertMenu() {
+function fixupLinks(container) {
+    const domainName = window.location.hostname;
+    const anchors = container.querySelectorAll('a');
+    anchors.forEach(anchor => {
+        // console.log(`${anchor.textContent} :: ${anchor.href}`);
+        try{
+            const url = new URL(anchor.href);
+            if (url.hostname == domainName) {
+                anchor.addEventListener('click', (e) => {
+                    const url = new URL(anchor.href);
+                    console.log(`onClick ${url.searchParams}`);
+                    let link = null;
+                    for (const [key, value] of url.searchParams) {
+                        link = `${key}/${value}`;
+                        fetchContent(link);
+                        break;
+                    }
+
+                    e.preventDefault();
+                })
+                return;
+            }
+        } catch {}
+
+
+
+    });
+}
+
+function fetchMenu() {
     try {
         const link = `/content/menu.html`;
         fetch(link)
@@ -18,6 +48,7 @@ function insertMenu() {
         .then(html => {
             const container = document.getElementById('menu_container');
             container.innerHTML = html;
+            fixupLinks(container);
         })
         .catch(error => console.error(error));
     }
@@ -26,7 +57,7 @@ function insertMenu() {
     }
 }
 
-function insertSidebar() {
+function fetchSidebar() {
     try {
         const link = `/content/sidebar.md`;
         fetch(link)
@@ -35,6 +66,7 @@ function insertSidebar() {
             const html = converter.makeHtml(md);
             const container = document.getElementById('sidebar_container');
             container.innerHTML = html;
+            fixupLinks(container);
         })
         .catch(error => console.error(error));
     }
@@ -43,17 +75,7 @@ function insertSidebar() {
     }
 }
 
-function insertContent() {
-    const urlParams = new URLSearchParams(window.location.search);
-    let link = null;
-    for (const [key, value] of urlParams) {
-        link = `${key}/${value}`;
-        break;
-    }
-    if (link === null) {
-        link = 'info/home';
-    }
-
+function fetchContent(link) {
     try {
         fetch(`content/${link}.md`)
         .then(response => response.text())
@@ -61,6 +83,7 @@ function insertContent() {
             const container = document.getElementById('content_container');
             const html = converter.makeHtml(md);
             container.innerHTML = html;
+            fixupLinks(container);
         })
         .catch(error => console.error(error));
     }
@@ -72,7 +95,18 @@ function insertContent() {
 }
 
 window.onload = () => {
-  insertMenu();
-  insertSidebar();
-  insertContent();
+    fetchMenu();
+    fetchSidebar();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    let link = null;
+    for (const [key, value] of urlParams) {
+        link = `${key}/${value}`;
+        break;
+    }
+    if (link === null) {
+        link = 'info/home';
+    }
+
+    fetchContent(link);
 };
