@@ -32,7 +32,45 @@ aside {
   font-size: xx-large;
   border: 2px;
   border-style: solid;
-  padding: 1rem;
+  padding: 1em;
   width: 75%;
   color: #c62c0a;
+}
+
+.btn {
+  display: block;
+  border-radius: 0.6em;
+  font-family: "arial-black";
+  font-weight: bold;
+  padding: 0.3em;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+a.btn
+a:link.btn,
+a:visited.btn,
+a:active.btn,
+a:focus.btn {
+  text-decoration: none;
+  color: #FFF;
+}
+
+a:hover.btn {
+  text-decoration: none;
+  color: #FFF;
+}
+
+
+.register {
+  background: #3871c2;
+  font-size: xx-large;
+  color: #FFF;
+}
+
+.donate {
+  background: #589112;
+  font-size: x-large;
+  color: #FFF;
 }
