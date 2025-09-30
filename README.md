@@ -10,6 +10,7 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
 - [ ] Improve layout - font, background color, etc.
 - [ ] Photo gallery
 - [ ] Archive: Past camp: descriptions
+- [ ] fix PDF links
 - Email forms
   - [ ] Contact
   - options
