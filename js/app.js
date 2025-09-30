@@ -1,5 +1,6 @@
-var converter = new showdown.Converter();
-converter.setOption('tables', 'on')
+const MD = new showdown.Converter();
+MD.setOption('tables', 'on');
+MD.setOption('metadata', 'on');
 
 // used by menu.css
 function updatemenu() {
@@ -11,6 +12,9 @@ function updatemenu() {
   }
 }
 
+// --------------------------------------------------------------
+// For internal pages, add an onclick handler.
+// For pdfs and external links, open in a separate tab
 function fixupLinks(container) {
     const domainName = window.location.hostname;
     const anchors = container.querySelectorAll('a');
@@ -28,13 +32,16 @@ function fixupLinks(container) {
                         e.preventDefault();
                         break;
                     }
+
+                    if (link === null) {
+                        anchor.target = '_other';
+                    }
                 })
                 return;
+            } else {
+                anchor.target = '_other';
             }
         } catch {}
-
-
-
     });
 }
 
@@ -61,7 +68,7 @@ function fetchSidebar() {
         fetch(link)
         .then(response => response.text())
         .then(md => {
-            const html = converter.makeHtml(md);
+            const html = MD.makeHtml(md);
             const container = document.getElementById('sidebar_container');
             container.innerHTML = html;
             fixupLinks(container);
@@ -79,7 +86,7 @@ function fetchContent(link) {
         .then(response => response.text())
         .then(md => {
             const container = document.getElementById('content_container');
-            const html = converter.makeHtml(md);
+            const html = MD.makeHtml(md);
             container.innerHTML = html;
             fixupLinks(container);
         })
@@ -88,8 +95,43 @@ function fetchContent(link) {
     catch (error) {
         console.error(error);
     }
+}
 
-    return;
+function fetchCamp(year, name) {
+    try {
+        const url = `content/camp/${year}_${name}.md`;
+        fetch(url)
+        .then(response => response.text())
+        .then(md => {
+            const html = MD.makeHtml(md);
+            const campInfo = jsyaml.load(MD.getMetadata(md));
+            console.log(campInfo.camp);
+        })
+        .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
+function fetchCamps() {
+    try {
+        const link = `/content/camp/camps.yaml`;
+        fetch(link)
+        .then(response => response.text())
+        .then(data => {
+            const campData = jsyaml.load(data);
+            campData.forEach((campYear) => {
+                campYear.camps.forEach((name) => {
+                    fetchCamp(campYear.year, name);
+                });
+            });
+        })
+        .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
 }
 
 window.onload = () => {
@@ -107,4 +149,5 @@ window.onload = () => {
     }
 
     fetchContent(link);
+    fetchCamps();
 };

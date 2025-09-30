@@ -9,7 +9,7 @@ All staff are required to sign our [Camp Staff Code of Ethics](pdf/policy/Camp_S
 ## Job Descriptions
 
 - Board Representive.
-    - Job Description is located on the [Board Manual, Policies, and Procedures](info?=board_resources) page
+    - Job Description is located on the [Board Manual, Policies, and Procedures](?info=board_resources) page
 - Audio Visual
      - [Audio Visual Coordinator](pdf/job/av/AV_Coordinator_(2024).pdf)
      - [AV How-To Manual](pdf/job/av/AV_Manual_(2024).pdf)

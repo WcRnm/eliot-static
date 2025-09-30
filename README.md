@@ -18,6 +18,7 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
   - [ ] add newsletter link
   - [ ] Camp info
 - [ ] past camps
+- [ ] implement history (back button)
 
 
 # Current Website Notes
