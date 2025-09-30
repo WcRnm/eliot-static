@@ -11,13 +11,14 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
 - [ ] Photo gallery
 - [ ] Archive: Past camp: descriptions
 - [ ] fix PDF links
-- Email forms
-  - [ ] Contact
-  - options
-    - Salesforce?
-    - https://www.mailgun.com/pricing/
-    - https://sendgrid.com/en-us/pricing
-    - https://formspree.io/plans
+  - [ ] open in new tab
+- [ ] Contact page - email address and phone number only
+- [ ] Email list for newsletter - TBD
+- [ ] sidebar
+  - [ ] add newsletter link
+  - [ ] Camp info
+- [ ] past camps
+
 
 # Current Website Notes
 

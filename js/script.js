@@ -15,7 +15,6 @@ function fixupLinks(container) {
     const domainName = window.location.hostname;
     const anchors = container.querySelectorAll('a');
     anchors.forEach(anchor => {
-        // console.log(`${anchor.textContent} :: ${anchor.href}`);
         try{
             const url = new URL(anchor.href);
             if (url.hostname == domainName) {
@@ -26,10 +25,9 @@ function fixupLinks(container) {
                     for (const [key, value] of url.searchParams) {
                         link = `${key}/${value}`;
                         fetchContent(link);
+                        e.preventDefault();
                         break;
                     }
-
-                    e.preventDefault();
                 })
                 return;
             }
