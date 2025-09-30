@@ -2,6 +2,8 @@ const MD = new showdown.Converter();
 MD.setOption('tables', 'on');
 MD.setOption('metadata', 'on');
 
+const g_allCamps = [];
+
 // used by menu.css
 function updatemenu() {
   if (document.getElementById('responsive-menu').checked == true) {
@@ -103,9 +105,12 @@ function fetchCamp(year, name) {
         fetch(url)
         .then(response => response.text())
         .then(md => {
-            const html = MD.makeHtml(md);
             const campInfo = jsyaml.load(MD.getMetadata(md));
-            console.log(campInfo.camp);
+            if (campInfo) {
+                campInfo.url = url;
+                console.log(campInfo.camp);
+                g_allCamps.push(campInfo);
+            }
         })
         .catch(error => console.error(error));
     }
