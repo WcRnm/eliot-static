@@ -2,7 +2,8 @@ const MD = new showdown.Converter();
 MD.setOption('tables', 'on');
 MD.setOption('metadata', 'on');
 
-const g_allCamps = [];
+const g_camps = [];
+const g_newsletters = [];
 
 // used by menu.css
 function updatemenu() {
@@ -109,7 +110,7 @@ function fetchCamp(year, name) {
             if (campInfo) {
                 campInfo.url = url;
                 console.log(campInfo.camp);
-                g_allCamps.push(campInfo);
+                g_camps.push(campInfo);
             }
         })
         .catch(error => console.error(error));
@@ -121,7 +122,7 @@ function fetchCamp(year, name) {
 
 function fetchCamps() {
     try {
-        const link = `/content/camp/camps.yaml`;
+        const link = `/data/camps.yaml`;
         fetch(link)
         .then(response => response.text())
         .then(data => {
@@ -139,9 +140,26 @@ function fetchCamps() {
     }
 }
 
+function fetchNewsletters() {
+    try {
+        const link = `/data/newsletters.yaml`;
+        fetch(link)
+        .then(response => response.text())
+        .then(data => {
+            const newsData = jsyaml.load(data);
+            newsData.forEach((news) => {
+                g_newsletters.push(newsData);
+            });
+        })
+        .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
 window.onload = () => {
     fetchMenu();
-    fetchSidebar();
 
     const urlParams = new URLSearchParams(window.location.search);
     let link = null;
@@ -155,4 +173,6 @@ window.onload = () => {
 
     fetchContent(link);
     fetchCamps();
+    fetchNewsletters();
+    fetchSidebar();
 };
