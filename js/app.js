@@ -102,7 +102,7 @@ function fetchContent(link) {
 
 function fetchCamp(year, name) {
     try {
-        const url = `content/camp/${year}_${name}.md`;
+        const url = `content/camp/year/${year}_${name}.md`;
         fetch(url)
         .then(response => response.text())
         .then(md => {

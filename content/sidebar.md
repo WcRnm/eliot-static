@@ -7,9 +7,9 @@
 ## Upcoming Camps
 
 ### 2025
-- [Winter](?camp=2025_winter)
+- [Winter](?camp=2025/winter)
 
 ### 2026
-- [July](?camp=2026_july)
-- [August](?camp=2026_august)
-- [Creative Arts](?camp=2026_cae)
+- [July](?camp=2026/july)
+- [August](?camp=2026/august)
+- [Creative Arts](?camp=2026/cae)
