@@ -4,15 +4,17 @@ MD.setOption('metadata', true);
 
 const g_camps = [];
 const g_newsletters = [];
+let g_campTable = null;
+let g_campTBody = null;
 
 // used by menu.css
 function updatemenu() {
-  if (document.getElementById('responsive-menu').checked == true) {
-    document.getElementById('menu').style.borderBottomRightRadius = '0';
-    document.getElementById('menu').style.borderBottomLeftRadius = '0';
-  }else{
-    document.getElementById('menu').style.borderRadius = '10px';
-  }
+    if (document.getElementById('responsive-menu').checked == true) {
+        document.getElementById('menu').style.borderBottomRightRadius = '0';
+        document.getElementById('menu').style.borderBottomLeftRadius = '0';
+    } else {
+        document.getElementById('menu').style.borderRadius = '10px';
+    }
 }
 
 // --------------------------------------------------------------
@@ -22,7 +24,7 @@ function fixupLinks(container) {
     const domainName = window.location.hostname;
     const anchors = container.querySelectorAll('a');
     anchors.forEach(anchor => {
-        try{
+        try {
             const url = new URL(anchor.href);
             if (url.hostname == domainName) {
                 anchor.addEventListener('click', (e) => {
@@ -44,7 +46,7 @@ function fixupLinks(container) {
             } else {
                 anchor.target = '_other';
             }
-        } catch {}
+        } catch { }
     });
 }
 
@@ -52,108 +54,142 @@ function fetchMenu() {
     try {
         const link = `/content/menu.html`;
         fetch(link)
-        .then(response => response.text())
-        .then(html => {
-            const container = document.getElementById('menu_container');
-            container.innerHTML = html;
-            fixupLinks(container);
-        })
-        .catch(error => console.error(error));
+            .then(response => response.text())
+            .then(html => {
+                const container = document.getElementById('menu_container');
+                container.innerHTML = html;
+                fixupLinks(container);
+            })
+            .catch(error => console.error(error));
     }
     catch (error) {
         console.error(error);
     }
+}
+
+function createRow(data, isHeader) {
+    const row = document.createElement('tr');
+    data.forEach(text => {
+        const th = document.createElement(isHeader ? 'th' : 'td');
+        th.textContent = text;
+        row.appendChild(th);
+    });
+    return row;
+}
+
+function buildCampTable() {
+    const headerData = ['Start', 'End', 'Camp'];
+
+    g_campTable = document.createElement('table');
+    const thead = g_campTable.createTHead();
+    thead.appendChild(createRow(headerData));
+    g_campTable.appendChild(thead);
+
+    g_campTBody = g_campTable.createTBody();
+    g_campTable.appendChild(g_campTBody);
 }
 
 function fetchSidebar() {
     try {
         const link = `/content/sidebar.md`;
         fetch(link)
-        .then(response => response.text())
-        .then(md => {
-            const html = MD.makeHtml(md);
-            const container = document.getElementById('sidebar_container');
-            container.innerHTML = html;
-            fixupLinks(container);
-        })
-        .catch(error => console.error(error));
+            .then(response => response.text())
+            .then(md => {
+                const html = MD.makeHtml(md);
+                let container = document.getElementById('sidebar_container');
+                container.innerHTML = html;
+                fixupLinks(container);
+            })
+            .catch(error => console.error(error));
     }
     catch (error) {
         console.error(error);
     }
 }
 
-function fetchContent(link) {
+async function fetchContent(link) {
     try {
         fetch(`content/${link}.md`)
-        .then(response => response.text())
-        .then(md => {
-            const container = document.getElementById('content_container');
-            const html = MD.makeHtml(md);
-            container.innerHTML = html;
-            fixupLinks(container);
-        })
-        .catch(error => console.error(error));
+            .then(response => response.text())
+            .then(md => {
+                const container = document.getElementById('content_container');
+                const html = MD.makeHtml(md);
+                container.innerHTML = html;
+                fixupLinks(container);
+            })
+            .catch(error => console.error(error));
     }
     catch (error) {
         console.error(error);
     }
 }
 
-function fetchCamp(year, name) {
+async function fetchCamp(year, name) {
     try {
         const url = `content/camp/${year}/${name}.md`;
         fetch(url)
-        .then(response => response.text())
-        .then(md => {
-            // this step is required
-            const html = MD.makeHtml(md);
-            const campInfo = MD.getMetadata();
-            if (campInfo) {
-                campInfo.url = url;
-                console.log(campInfo);
-                g_camps.push(campInfo);
-            }
-        })
-        .catch(error => console.error(error));
+            .then(response => response.text())
+            .then(md => {
+                // this step is required
+                const html = MD.makeHtml(md);
+                const campInfo = MD.getMetadata();
+                if (campInfo) {
+                    campInfo.url = url;
+                    console.log(campInfo);
+                    g_camps.push(campInfo);
+
+                    const row = createRow([
+                                    campInfo.start,
+                                    campInfo.end,
+                                    `${campInfo.name} ${campInfo.year}`
+                    ]);
+                    g_campTBody.appendChild(row);
+                }
+            })
+            .catch(error => console.error(error));
     }
     catch (error) {
         console.error(error);
     }
 }
 
-function fetchCamps() {
+async function fetchCamps() {
     try {
         const link = `/data/camps.yaml`;
         fetch(link)
-        .then(response => response.text())
-        .then(data => {
-            const campData = jsyaml.load(data);
-            campData.forEach((campYear) => {
-                campYear.camps.forEach((name) => {
-                    fetchCamp(campYear.year, name);
+            .then(response => response.text())
+            .then(data => {
+                const campData = jsyaml.load(data);
+                campData.forEach((campYear) => {
+                    campYear.camps.forEach((name) => {
+                        fetchCamp(campYear.year, name);
+                    });
                 });
-            });
-        })
-        .catch(error => console.error(error));
+
+                // TODO: add each camp to table when fetched
+                container = document.getElementById('upcomming');
+                container.appendChild(g_campTable);
+
+            })
+            .catch(error => console.error(error));
     }
     catch (error) {
         console.error(error);
     }
 }
 
-function fetchNewsletters() {
+async function fetchNewsletters() {
     try {
         const link = `/data/newsletters.yaml`;
         fetch(link)
-        .then(response => response.text())
-        .then(data => {
-            const newsData = jsyaml.load(data);
-            newsData.forEach((news) => {
-                g_newsletters.push(newsData);
-            });
-        })
-        .catch(error => console.error(error));
+            .then(response => response.text())
+            .then(data => {
+                const newsData = jsyaml.load(data);
+                newsData.forEach((news) => {
+                    g_newsletters.push(newsData);
+                });
+            })
+            .catch(error => console.error(error));
     }
     catch (error) {
         console.error(error);
@@ -161,6 +197,7 @@ function fetchNewsletters() {
 }
 
 window.onload = () => {
+    buildCampTable();
     fetchMenu();
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -174,7 +211,7 @@ window.onload = () => {
     }
 
     fetchContent(link);
-    fetchCamps();
     fetchNewsletters();
     fetchSidebar();
+    fetchCamps();
 };

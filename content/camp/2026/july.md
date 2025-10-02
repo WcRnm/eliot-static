@@ -1,5 +1,6 @@
 ---
-camp:       July Eliot 2026
+name:       July Eliot
+year:       2026
 start:      Sat Jul 11
 end:        Sat Jul 18
 speaker:    Zr. Alex Kapitan

@@ -1,5 +1,6 @@
 ---
-camp:       Winter Eliot 2025
+name:       Winter Eliot
+year:       2025
 start:      Sun Dec 28
 end:        Thu Jan 1
 speaker:    Melanie DeMore

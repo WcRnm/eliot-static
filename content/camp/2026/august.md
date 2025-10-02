@@ -1,5 +1,6 @@
 ---
-camp:       August Eliot 2026
+name:       August Eliot
+year:       2026
 start:      Sat Aug 1
 end:        Sat Aug 8
 speaker:    Will Hornyak
