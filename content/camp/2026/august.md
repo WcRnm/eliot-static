@@ -1,7 +1,7 @@
 ---
 camp:       August Eliot 2026
-start:      2026-08-01
-end:        2026-08-08
+start:      Sat Aug 1
+end:        Sat Aug 8
 speaker:    Will Hornyak
 topic:      Sheherazade's Caravan
 ---

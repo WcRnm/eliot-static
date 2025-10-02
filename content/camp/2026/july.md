@@ -1,7 +1,7 @@
 ---
 camp:       July Eliot 2026
-start:      2026-07-11
-end:        2026-07-18
+start:      Sat Jul 11
+end:        Sat Jul 18
 speaker:    Zr. Alex Kapitan
 topic:      Exploring and Celebrating Gender Diversity, Trans Justice, and Faith
 ---

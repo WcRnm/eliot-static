@@ -1,6 +1,6 @@
 const MD = new showdown.Converter();
-MD.setOption('tables', 'on');
-MD.setOption('metadata', 'on');
+MD.setOption('tables', true);
+MD.setOption('metadata', true);
 
 const g_camps = [];
 const g_newsletters = [];
@@ -102,14 +102,16 @@ function fetchContent(link) {
 
 function fetchCamp(year, name) {
     try {
-        const url = `content/camp/year/${year}_${name}.md`;
+        const url = `content/camp/${year}/${name}.md`;
         fetch(url)
         .then(response => response.text())
         .then(md => {
-            const campInfo = jsyaml.load(MD.getMetadata(md));
+            // this step is required
+            const html = MD.makeHtml(md);
+            const campInfo = MD.getMetadata();
             if (campInfo) {
                 campInfo.url = url;
-                console.log(campInfo.camp);
+                console.log(campInfo);
                 g_camps.push(campInfo);
             }
         })

@@ -1,7 +1,7 @@
 ---
 camp:       Winter Eliot 2025
-start:      2025-12-28
-end:        2026-01-01
+start:      Sun Dec 28
+end:        Thu Jan 1
 speaker:    Melanie DeMore
 topic:      Stick Pounding
 ---

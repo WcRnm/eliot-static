@@ -1,7 +1,7 @@
 ---
 camp:       Creative Arts Eliot 2026
-start:      2026-08-08
-end:        2026-08-12
+start:      Sat Aug 8
+end:        Wed Aug 12
 topic:      Your Choice of Workshops
 ---
 
