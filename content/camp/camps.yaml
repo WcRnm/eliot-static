@@ -1,0 +1,57 @@
+# Eliot Camps
+2026:
+  - file:       cae.md
+    name:       Creative Arts Eliot
+    topic:      Your Choice of Workshops
+    start:      Sat Aug 8
+    end:        Wed Aug 12
+
+  - file:       august.md
+    name:       August Eliot
+    speaker:    Will Hornyak
+    topic:      Sheherazade's Caravan
+    start:      Sat Aug 1
+    end:        Sat Aug 8
+
+  - file:       july.md
+    name:       July Eliot
+    speaker:    Zr. Alex Kapitan
+    topic:      Exploring and Celebrating Gender Diversity, Trans Justice, and Faith
+    start:      Sat Jul 11
+    end:        Sat Jul 18
+
+2025:
+  - file:       winter.md
+    name:       Winter Eliot
+    speaker:    Melanie DeMore
+    topic:      Stick Pounding
+    start:      Sun Dec 28
+    end:        Thu Jan 1
+
+  - file:
+    name:       Creative Arts Eliot
+    topic:      Your Choice of Workshops
+    start:      Sat Aug 9
+    end:        Wed Aug 13
+
+  - file:
+    name:       August Eliot
+    speaker:    Guy Nelson
+    topic:      Creativity Games & Storytelling
+    start:      Sat Aug 2
+    end:        Sat Aug 9
+
+  - file:
+    name:       July Eliot
+    speaker:    Lea Morris
+    topic:      "Joyful Noise: Sing Out, Be Free"
+    start:      Sat Jul 11
+    end:        Sat Jul 18
+
+2024:
+  - file:
+    name:       Winter Eliot
+    speaker:    Elin Kelsey
+    topic:      The Practice of Evidence-Based Hope
+    start:      Sat Dec 28
+    end:        Wed Jan 1

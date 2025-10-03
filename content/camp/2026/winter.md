@@ -1,11 +1,3 @@
----
-camp:       Winter Eliot 2026
-start:      2026-12-28
-end:        2027-01-01
-speaker:    TBA
-topic:      TBA
----
-
 # Winter Eliot 2026
 
 Monday, December 28, 2026 from 02:30 PM to Friday, January 01, 2027 to 11:45 AM

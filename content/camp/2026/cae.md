@@ -1,11 +1,3 @@
----
-name:       Creative Arts Eliot
-year:       2026
-start:      Sat Aug 8
-end:        Wed Aug 12
-topic:      Your Choice of Workshops
----
-
 # Creative Arts Eliot 2026: Your Choice of Workshops
 
 Saturday, August 08, 2026 from 04:00 PM to Wednesday, August 12, 2026 to 02:30 PM
