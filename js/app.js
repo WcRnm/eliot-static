@@ -4,6 +4,7 @@ MD.setOption('metadata', true);
 
 const g_camps = [];
 const g_newsletters = [];
+let g_campData = {};
 let g_campTable = null;
 let g_campTBody = null;
 
@@ -153,22 +154,42 @@ async function fetchCamp(year, name) {
     }
 }
 
+async function fetchCampYear(year) {
+    try {
+        const url = `content/camp/${year}/camps.toml`;
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                const camps = toml.parse(data);
+                console.log(`---- ${year} ----`)
+                console.log(camps);
+                for (let [camp, name] of Object.entries(g_campData.camps)) {
+                    fetchCamp(year, camp);
+                }
+            })
+            .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
 async function fetchCamps() {
     try {
-        const link = `/data/camps.yaml`;
+        const link = `/data/camps.toml`;
         fetch(link)
             .then(response => response.text())
             .then(data => {
-                const campData = jsyaml.load(data);
-                campData.forEach((campYear) => {
-                    campYear.camps.forEach((name) => {
-                        fetchCamp(campYear.year, name);
-                    });
+                g_campData =  toml.parse(data);
+                console.log(g_campData);
+
+                g_campData.years.forEach((year) => {
+                    fetchCampYear(year);
                 });
 
                 // TODO: add each camp to table when fetched
-                container = document.getElementById('upcomming');
-                container.appendChild(g_campTable);
+                //container = document.getElementById('upcomming');
+                //container.appendChild(g_campTable);
 
             })
             .catch(error => console.error(error));
