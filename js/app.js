@@ -4,9 +4,9 @@ MD.setOption('metadata', true);
 
 const g_camps = [];
 const g_newsletters = [];
-let g_campData = {};
-let g_campTable = null;
-let g_campTBody = null;
+let g_campData = {};        // camp names & years
+let g_campTable = null;     // sidebar table
+let g_campTBody = null;     // sidebar table
 
 // used by menu.css
 function updatemenu() {
@@ -72,7 +72,7 @@ function createRow(data, isHeader) {
     const row = document.createElement('tr');
     data.forEach(text => {
         const th = document.createElement(isHeader ? 'th' : 'td');
-        th.textContent = text;
+        th.innerHTML = text;
         row.appendChild(th);
     });
     return row;
@@ -100,6 +100,9 @@ function fetchSidebar() {
                 let container = document.getElementById('sidebar_container');
                 container.innerHTML = html;
                 fixupLinks(container);
+
+                container = document.getElementById('upcomming');
+                container.appendChild(g_campTable);
             })
             .catch(error => console.error(error));
     }
@@ -133,16 +136,55 @@ async function fetchCamp(year, name) {
             .then(md => {
                 // this step is required
                 const html = MD.makeHtml(md);
-                const campInfo = MD.getMetadata();
-                if (campInfo) {
-                    campInfo.url = url;
-                    console.log(campInfo);
-                    g_camps.push(campInfo);
+            })
+            .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
+function formatDate(date) {
+    const options = {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+        timeZone: "America/Los_Angeles"
+    };
+    let strDate = date.toLocaleDateString("en-US", options);
+    strDate = strDate.replaceAll(",", "");
+    strDate = strDate.replaceAll(" ", "<br>");
+
+    return strDate;
+}
+
+async function fetchCampYear(year) {
+    try {
+        const url = `content/camp/${year}/camps.json`;
+        fetch(url)
+            .then(response => response.json())
+            .then(camps => {
+                console.log(`---- ${year} ----`)
+
+                for (let [camp, info] of Object.entries(camps)) {
+                    info.name = `${g_campData.camps[camp]}`;
+                    info.year = year;
+                    info.url = `content/camp/${year}/${camp}.md`;
+                    if (info.md === undefined) {
+                        info.md = false;
+                    }
+                    if (info.hide === undefined) {
+                        info.hide = info.md;
+                    }
+                    info.start = new Date(info.start);
+                    info.end = new Date(info.end);
+                    console.log(info);
+                    g_camps.push(info);
 
                     const row = createRow([
-                                    campInfo.start,
-                                    campInfo.end,
-                                    `${campInfo.name} ${campInfo.year}`
+                                    formatDate(info.start),
+                                    formatDate(info.end),
+                                    `${info.name} ${info.year}`
                     ]);
                     g_campTBody.appendChild(row);
                 }
@@ -154,33 +196,13 @@ async function fetchCamp(year, name) {
     }
 }
 
-async function fetchCampYear(year) {
-    try {
-        const url = `content/camp/${year}/camps.toml`;
-        fetch(url)
-            .then(response => response.text())
-            .then(data => {
-                const camps = toml.parse(data);
-                console.log(`---- ${year} ----`)
-                console.log(camps);
-                for (let [camp, name] of Object.entries(g_campData.camps)) {
-                    fetchCamp(year, camp);
-                }
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
 async function fetchCamps() {
     try {
-        const link = `/data/camps.toml`;
+        const link = `/data/camps.json`;
         fetch(link)
-            .then(response => response.text())
+            .then(response => response.json())
             .then(data => {
-                g_campData =  toml.parse(data);
+                g_campData = data;
                 console.log(g_campData);
 
                 g_campData.years.forEach((year) => {
@@ -188,8 +210,6 @@ async function fetchCamps() {
                 });
 
                 // TODO: add each camp to table when fetched
-                //container = document.getElementById('upcomming');
-                //container.appendChild(g_campTable);
 
             })
             .catch(error => console.error(error));
@@ -201,11 +221,10 @@ async function fetchCamps() {
 
 async function fetchNewsletters() {
     try {
-        const link = `/data/newsletters.yaml`;
+        const link = `/data/newsletters.json`;
         fetch(link)
-            .then(response => response.text())
-            .then(data => {
-                const newsData = jsyaml.load(data);
+            .then(response => response.json())
+            .then(newsData => {
                 newsData.forEach((news) => {
                     g_newsletters.push(newsData);
                 });

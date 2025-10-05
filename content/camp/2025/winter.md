@@ -1,12 +1,3 @@
----
-name:       Winter Eliot
-year:       2025
-start:      Sun Dec 28
-end:        Thu Jan 1
-speaker:    Melanie DeMore
-topic:      Stick Pounding
----
-
 # Winter Eliot 2025: "Stick Pounding" with Melanie DeMore
 
 Sunday, December 28, 2025 from 02:30 PM to Thursday, January 01, 2026 to 11:45 AM
