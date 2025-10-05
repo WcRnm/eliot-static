@@ -72,13 +72,17 @@ function fetchMenu() {
 function createRow(data, isHeader) {
     const row = document.createElement('tr');
     let i = 0;
-    data.forEach(text => {
+    data.forEach(cellContent => {
         const th = document.createElement(isHeader ? 'th' : 'td');
         if (i++ < 2) {
             // hide the first two rows - start and end date, used for sorting
             th.classList.add('hidden');
         }
-        th.innerHTML = text;
+        if (typeof cellContent === 'object') {
+            th.appendChild(cellContent);
+        } else {
+            th.innerHTML = cellContent;
+        }
         row.appendChild(th);
     });
     return row;
@@ -86,7 +90,7 @@ function createRow(data, isHeader) {
 
 function buildCampTable() {
     // first two columns are hidden
-    const headerData = ['0', '0', 'Start', 'End', 'Camp'];
+    const headerData = ['0', 'Start', 'End', 'Camp'];
 
     g_campTable = document.createElement('table');
     const thead = g_campTable.createTHead();
@@ -174,18 +178,29 @@ async function fetchCamp(year, name) {
     }
 }
 
-function formatDate(date) {
-    const options = {
-        weekday: 'short',
-        month: 'short',
-        day: 'numeric',
-        timeZone: "America/Los_Angeles"
-    };
-    let strDate = date.toLocaleDateString("en-US", options);
-    strDate = strDate.replaceAll(",", "");
-    strDate = strDate.replaceAll(" ", "<br>");
+function formatCampDate(date) {
+    let options = { weekday: 'short', timeZone: "UTC" };
+    const weekday = date.toLocaleDateString("en-US", options);
+    options = { month: 'short', timeZone: "UTC" };
+    const month = date.toLocaleDateString("en-US", options);
+    options = { day: 'numeric', timeZone: "UTC" };
+    const day = date.toLocaleDateString("en-US", options);
 
-    return strDate;
+    const card = DOM.createArticle('date');
+
+    let e = DOM.createDiv('month');
+    e.textContent = month;
+    card.appendChild(e);
+
+    e = DOM.createDiv('day');
+    e.textContent = day;
+    card.appendChild(e);
+
+    e = DOM.createDiv('weekday');
+    e.textContent = weekday;
+    card.appendChild(e);
+
+    return card;
 }
 
 async function fetchCampYear(year) {
@@ -215,8 +230,7 @@ async function fetchCampYear(year) {
                         const row = createRow([
                             info.start.getMilliseconds(),
                             info.end.getMilliseconds(),
-                            formatDate(info.start),
-                            formatDate(info.end),
+                            formatCampDate(info.start),
                             `${info.name} ${info.year}`
                         ]);
                         g_campTBody.appendChild(row);

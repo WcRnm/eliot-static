@@ -81,9 +81,24 @@ a.btn {
 }
 
 /* ------------------------------------------------------------------
-  Hidden columns
+  Camp sidebar table
 */
 
 .hidden {
   display: none;
+}
+
+.date {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.month {
+  font-size: smaller;
+}
+.weekday {
+  font-size: smaller;
+}
+.day {
+  font-size: larger;
 }
