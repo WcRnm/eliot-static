@@ -101,14 +101,33 @@ function buildCampTable() {
     g_campTable.appendChild(g_campTBody);
 }
 
+function sortTable(table, col, reverse) {
+    let tb = table.tBodies[0],
+        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+        i;
+    reverse = -((+reverse) || -1);
+    tr = tr.sort(function (a, b) {
+        return reverse // `-1 *` if want opposite order
+            * (a.cells[col].textContent.trim()
+                .localeCompare(b.cells[col].textContent.trim())
+               );
+    });
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
 function sortCampTable() {
+    sortTable(g_campTable, 0, 0);
+}
+
+function sortCampTable2() {
+    let i;
     let shouldSwitch = false;
     let table = g_campTBody;
     let switching = true;
     while (switching) {
         switching = false;
         const rows = table.rows;
-        for (let i = 0; i < (rows.length - 1); i++) {
+        for (i = 0; i < (rows.length - 2); i++) {
             shouldSwitch = false;
             const rowX = rows[i].getElementsByTagName("td");
             const rowY = rows[i+1].getElementsByTagName("td");
@@ -258,21 +277,23 @@ async function fetchCampYear(year) {
                         info.md = false;
                     }
                     if (info.hide === undefined) {
-                        info.hide = info.md;
+                        info.hide = info.md === undefined;
                     }
                     info.start = new Date(info.start);
                     info.end = new Date(info.end);
                     console.log(info);
                     g_camps.push(info);
 
-                    if (info.end >= now) {
-                        const row = createRow([
-                            info.start.getTime(),
-                            info.end.getTime(),
-                            formatCampCard(info)
-                        ]);
-                        g_campTBody.appendChild(row);
-                        sortCampTable();
+                    if (!info.hide) {
+                        if (info.end >= now) {
+                            const row = createRow([
+                                info.start.getTime(),
+                                info.end.getTime(),
+                                formatCampCard(info)
+                            ]);
+                            g_campTBody.appendChild(row);
+                            sortCampTable();
+                        }
                     }
                 }
             })
