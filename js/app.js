@@ -70,7 +70,7 @@ function fetchMenu() {
 }
 
 function createRow(data, isHeader) {
-    const row = document.createElement('tr');
+    const row = DOM.elem('tr', 'camp-row');
     let i = 0;
     data.forEach(cellContent => {
         const th = document.createElement(isHeader ? 'th' : 'td');
@@ -90,9 +90,9 @@ function createRow(data, isHeader) {
 
 function buildCampTable() {
     // first two columns are hidden
-    const headerData = ['0', 'Start', 'End', 'Camp'];
+    const headerData = ['0', '0', 'Camps'];
 
-    g_campTable = document.createElement('table');
+    g_campTable = DOM.elem('table', 'camp-table');
     const thead = g_campTable.createTHead();
     thead.appendChild(createRow(headerData));
     g_campTable.appendChild(thead);
@@ -102,16 +102,18 @@ function buildCampTable() {
 }
 
 function sortCampTable() {
-    let rows, i, x, y, shouldSwitch;
+    let shouldSwitch = false;
     let table = g_campTBody;
     let switching = true;
     while (switching) {
         switching = false;
-        rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
+        const rows = table.rows;
+        for (let i = 0; i < (rows.length - 1); i++) {
             shouldSwitch = false;
-            x = parseInt(rows[i].getElementsByTagName("td")[0].innerHTML);
-            y = parseInt(rows[i + 1].getElementsByTagName("td")[0].innerHTML);
+            const rowX = rows[i].getElementsByTagName("td");
+            const rowY = rows[i+1].getElementsByTagName("td");
+            const x = parseInt(rowX[0].innerHTML);
+            const y = parseInt(rowY[0].innerHTML);
             if (x > y) {
                 shouldSwitch = true;
                 break;
@@ -178,7 +180,7 @@ async function fetchCamp(year, name) {
     }
 }
 
-function formatCampDate(date) {
+function dateParts(date) {
     let options = { weekday: 'short', timeZone: "UTC" };
     const weekday = date.toLocaleDateString("en-US", options);
     options = { month: 'short', timeZone: "UTC" };
@@ -186,19 +188,56 @@ function formatCampDate(date) {
     options = { day: 'numeric', timeZone: "UTC" };
     const day = date.toLocaleDateString("en-US", options);
 
+    return {
+        "weekday": weekday,
+        "month": month,
+        "day": day
+    }
+}
+
+function formatCampDate(date) {
+    const dp = dateParts(date);
+
     const card = DOM.createArticle('date');
 
-    let e = DOM.createDiv('month');
-    e.textContent = month;
+    let e = DOM.div('month');
+    e.textContent = dp.month;
     card.appendChild(e);
 
-    e = DOM.createDiv('day');
-    e.textContent = day;
+    e = DOM.div('day');
+    e.textContent = dp.day;
     card.appendChild(e);
 
-    e = DOM.createDiv('weekday');
-    e.textContent = weekday;
+    e = DOM.div('weekday');
+    e.textContent = dp.weekday;
     card.appendChild(e);
+
+    return card;
+}
+
+function formatCampCard(info) {
+    const card = DOM.article('camp');
+
+    const campName = DOM.div('camp-name');
+    campName.textContent = `${info.name} ${info.year}`;
+    card.appendChild(campName);
+
+    if (info.topic) {
+        const campTopic = DOM.div('camp-topic');
+        campTopic.textContent = `"${info.topic}"`;
+        card.appendChild(campTopic);
+    }
+    if (info.speaker) {
+        const speaker = DOM.div('camp-speaker');
+        speaker.textContent = `with ${info.speaker}`;
+        card.appendChild(speaker);
+    }
+
+    const dateline = DOM.div('camp-start');
+    const start = dateParts(info.start);
+    const end = dateParts(info.end);
+    dateline.innerHTML = `${start.weekday} ${start.month} ${start.day} &mdash; ${end.weekday} ${end.month} ${end.day}`;
+    card.appendChild(dateline);
 
     return card;
 }
@@ -228,12 +267,12 @@ async function fetchCampYear(year) {
 
                     if (info.end >= now) {
                         const row = createRow([
-                            info.start.getMilliseconds(),
-                            info.end.getMilliseconds(),
-                            formatCampDate(info.start),
-                            `${info.name} ${info.year}`
+                            info.start.getTime(),
+                            info.end.getTime(),
+                            formatCampCard(info)
                         ]);
                         g_campTBody.appendChild(row);
+                        sortCampTable();
                     }
                 }
             })

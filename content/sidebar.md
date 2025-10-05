@@ -4,6 +4,4 @@
 <a class="donate btn"
    href="?info=donate">Donate</a>
 
-## Upcoming Camps
-
 <div id="upcomming"></div>

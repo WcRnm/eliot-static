@@ -88,17 +88,31 @@ a.btn {
   display: none;
 }
 
-.date {
-  text-align: center;
-  font-weight: bolder;
+.camp-name {
+  font-size: larger;
+  text-transform: capitalize;
+  margin-bottom: 0.2em;
 }
 
-.month {
+.camp-topic {
+  font-weight: bolder;
+  margin-bottom: 0.2em;
+}
+.camp-speaker {
+  font-style: italic;
+  text-align: right;
+  margin-bottom: 0.2em;
+}
+.camp-start {
   font-size: smaller;
 }
-.weekday {
-  font-size: smaller;
+
+table.camp-table {
+  margin: 0;
+  padding: 0;
 }
-.day {
-  font-size: larger;
+
+article.camp {
+  margin: 0;
+  padding: 0;
 }
