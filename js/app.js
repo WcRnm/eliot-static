@@ -7,6 +7,7 @@ const g_newsletters = [];
 let g_campData = {};        // camp names & years
 let g_campTable = null;     // sidebar table
 let g_campTBody = null;     // sidebar table
+let now = new Date();
 
 // used by menu.css
 function updatemenu() {
@@ -70,8 +71,13 @@ function fetchMenu() {
 
 function createRow(data, isHeader) {
     const row = document.createElement('tr');
+    let i = 0;
     data.forEach(text => {
         const th = document.createElement(isHeader ? 'th' : 'td');
+        if (i++ < 2) {
+            // hide the first two rows - start and end date, used for sorting
+            th.classList.add('hidden');
+        }
         th.innerHTML = text;
         row.appendChild(th);
     });
@@ -79,7 +85,8 @@ function createRow(data, isHeader) {
 }
 
 function buildCampTable() {
-    const headerData = ['Start', 'End', 'Camp'];
+    // first two columns are hidden
+    const headerData = ['0', '0', 'Start', 'End', 'Camp'];
 
     g_campTable = document.createElement('table');
     const thead = g_campTable.createTHead();
@@ -88,6 +95,29 @@ function buildCampTable() {
 
     g_campTBody = g_campTable.createTBody();
     g_campTable.appendChild(g_campTBody);
+}
+
+function sortCampTable() {
+    let rows, i, x, y, shouldSwitch;
+    let table = g_campTBody;
+    let switching = true;
+    while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            x = parseInt(rows[i].getElementsByTagName("td")[0].innerHTML);
+            y = parseInt(rows[i + 1].getElementsByTagName("td")[0].innerHTML);
+            if (x > y) {
+                shouldSwitch = true;
+                break;
+            }
+        }
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+        }
+    }
 }
 
 function fetchSidebar() {
@@ -181,12 +211,16 @@ async function fetchCampYear(year) {
                     console.log(info);
                     g_camps.push(info);
 
-                    const row = createRow([
-                                    formatDate(info.start),
-                                    formatDate(info.end),
-                                    `${info.name} ${info.year}`
-                    ]);
-                    g_campTBody.appendChild(row);
+                    if (info.end >= now) {
+                        const row = createRow([
+                            info.start.getMilliseconds(),
+                            info.end.getMilliseconds(),
+                            formatDate(info.start),
+                            formatDate(info.end),
+                            `${info.name} ${info.year}`
+                        ]);
+                        g_campTBody.appendChild(row);
+                    }
                 }
             })
             .catch(error => console.error(error));
@@ -198,6 +232,7 @@ async function fetchCampYear(year) {
 
 async function fetchCamps() {
     try {
+        now = new Date();
         const link = `/data/camps.json`;
         fetch(link)
             .then(response => response.json())

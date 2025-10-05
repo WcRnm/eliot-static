@@ -63,3 +63,7 @@ a.btn {
   font-size: x-large;
   color: #FFF;
 }
+
+.hidden {
+  display: none;
+}
