@@ -8,9 +8,9 @@
   <link rel="shortcut icon" href="favicon.png" />
   <link rel="stylesheet" href="css/eliot.css">
 
-  <script src="js/showdown.min.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/js-yaml.min.js"></script>
+  <script type="text/javascript" src="js/showdown.min.js"></script>
+  <script type="text/javascript" src="js/dom.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </head>
 
 <body>
@@ -22,19 +22,12 @@
     </div>
     <div id="menu_container"></div>
   </header>
-
-  <div class="row">
-    <div class="col25">
-      <div id="sidebar_container">
-      </div>
+  <main>
+    <div class="row">
+      <div class="col25" id="sidebar_container"></div>
+      <div class="col75" id="content_container"></div>
     </div>
-    <main>
-      <div class="col75">
-        <div id="content_container"></div>
-      </div>
-    </main>
-  </div>
-
+  </main>
   <footer>
     <hr>
     <small>&copy; 2025 Eliot Institute</small><br>

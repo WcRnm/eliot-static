@@ -19,6 +19,8 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
   - [ ] Camp info
 - [ ] past camps
 - [ ] implement history (back button)
+- [ ] Dates - https://github.com/datejs/Datejs
+- [ ] scrap camp descriptions
 
 
 # Current Website Notes

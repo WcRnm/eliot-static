@@ -1,6 +1,9 @@
-@import "almond.min.css";
+@import "pico/pico.classless.blue.min.css";
 @import "menu.css";
 
+/* ------------------------------------------------------------------
+  Columns
+*/
 .col75 {
   flex: 75%;
   margin: 0.5em;
@@ -16,27 +19,40 @@
   flex-direction: row;
 }
 
-/* Responsive layout - makes a one column layout instead of a two-column layout */
+/*
+  Responsive layout
+    makes a one column layout instead of a two-column layout
+*/
 @media (max-width: 805px) {
   .row {
     flex-direction: column;
   }
 }
 
+/* ------------------------------------------------------------------
+  Horizontal Rule
+*/
 hr {
   width: 90%;
   max-width: unset;
 }
 
+/* ------------------------------------------------------------------
+  Colorful aside box for important things to note
+*/
 aside {
   font-size: xx-large;
   border: 2px;
   border-style: solid;
-  padding: 1em;
-  width: 75%;
+  padding: 0.2em;
+  margin: 0.1em;
+  width: 100%;
   color: #c62c0a;
 }
 
+/* ------------------------------------------------------------------
+  Register and Donate buttons
+*/
 .btn {
   display: block;
   border-radius: 0.6em;
@@ -62,4 +78,40 @@ a.btn {
   background: #589112;
   font-size: x-large;
   color: #FFF;
+}
+
+/* ------------------------------------------------------------------
+  Camp sidebar table
+*/
+
+.hidden {
+  display: none;
+}
+
+.camp-name {
+  font-size: larger;
+  text-transform: capitalize;
+  margin-bottom: 0.2em;
+}
+.camp-start {
+  margin-bottom: 0.2em;
+  font-size: smaller;
+  text-align: right;
+}
+.camp-topic {
+  font-weight: bolder;
+  margin-bottom: 0.2em;
+}
+.camp-speaker {
+  font-style: italic;
+  text-align: right;
+}
+
+table.camp-table {
+  margin: 0;
+  padding: 0;
+}
+
+article.camp {
+  margin: 0;
 }

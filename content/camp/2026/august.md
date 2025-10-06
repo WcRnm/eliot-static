@@ -1,13 +1,5 @@
----
-name:       August Eliot
-year:       2026
-start:      Sat Aug 1
-end:        Sat Aug 8
-speaker:    Will Hornyak
-topic:      Sheherazade's Caravan
----
-
 # August Eliot 2026
+
 ## "Sheherazade's Caravan" with Will Hornyak
 
 Saturday, August 01, 2026 from 02:30 PM to Saturday, August 08, 2026 to 11:45 AM

@@ -4,8 +4,10 @@ MD.setOption('metadata', true);
 
 const g_camps = [];
 const g_newsletters = [];
-let g_campTable = null;
-let g_campTBody = null;
+let g_campData = {};        // camp names & years
+let g_campTable = null;     // sidebar table
+let g_campTBody = null;     // sidebar table
+let now = new Date();
 
 // used by menu.css
 function updatemenu() {
@@ -68,25 +70,79 @@ function fetchMenu() {
 }
 
 function createRow(data, isHeader) {
-    const row = document.createElement('tr');
-    data.forEach(text => {
+    const row = DOM.elem('tr', 'camp-row');
+    let i = 0;
+    data.forEach(cellContent => {
         const th = document.createElement(isHeader ? 'th' : 'td');
-        th.textContent = text;
+        if (i++ < 2) {
+            // hide the first two rows - start and end date, used for sorting
+            th.classList.add('hidden');
+        }
+        if (typeof cellContent === 'object') {
+            th.appendChild(cellContent);
+        } else {
+            th.innerHTML = cellContent;
+        }
         row.appendChild(th);
     });
     return row;
 }
 
 function buildCampTable() {
-    const headerData = ['Start', 'End', 'Camp'];
+    // first two columns are hidden
+    const headerData = ['0', '0', 'Camps'];
 
-    g_campTable = document.createElement('table');
+    g_campTable = DOM.elem('table', 'camp-table');
     const thead = g_campTable.createTHead();
     thead.appendChild(createRow(headerData));
     g_campTable.appendChild(thead);
 
     g_campTBody = g_campTable.createTBody();
     g_campTable.appendChild(g_campTBody);
+}
+
+function sortTable(table, col, reverse) {
+    let tb = table.tBodies[0],
+        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+        i;
+    reverse = -((+reverse) || -1);
+    tr = tr.sort(function (a, b) {
+        return reverse // `-1 *` if want opposite order
+            * (a.cells[col].textContent.trim()
+                .localeCompare(b.cells[col].textContent.trim())
+               );
+    });
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function sortCampTable() {
+    sortTable(g_campTable, 0, 0);
+}
+
+function sortCampTable2() {
+    let i;
+    let shouldSwitch = false;
+    let table = g_campTBody;
+    let switching = true;
+    while (switching) {
+        switching = false;
+        const rows = table.rows;
+        for (i = 0; i < (rows.length - 2); i++) {
+            shouldSwitch = false;
+            const rowX = rows[i].getElementsByTagName("td");
+            const rowY = rows[i+1].getElementsByTagName("td");
+            const x = parseInt(rowX[0].innerHTML);
+            const y = parseInt(rowY[0].innerHTML);
+            if (x > y) {
+                shouldSwitch = true;
+                break;
+            }
+        }
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+        }
+    }
 }
 
 function fetchSidebar() {
@@ -99,6 +155,9 @@ function fetchSidebar() {
                 let container = document.getElementById('sidebar_container');
                 container.innerHTML = html;
                 fixupLinks(container);
+
+                container = document.getElementById('upcomming');
+                container.appendChild(g_campTable);
             })
             .catch(error => console.error(error));
     }
@@ -132,18 +191,113 @@ async function fetchCamp(year, name) {
             .then(md => {
                 // this step is required
                 const html = MD.makeHtml(md);
-                const campInfo = MD.getMetadata();
-                if (campInfo) {
-                    campInfo.url = url;
-                    console.log(campInfo);
-                    g_camps.push(campInfo);
+            })
+            .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
 
-                    const row = createRow([
-                                    campInfo.start,
-                                    campInfo.end,
-                                    `${campInfo.name} ${campInfo.year}`
-                    ]);
-                    g_campTBody.appendChild(row);
+function dateParts(date) {
+    let options = { weekday: 'short', timeZone: "UTC" };
+    const weekday = date.toLocaleDateString("en-US", options);
+    options = { month: 'short', timeZone: "UTC" };
+    const month = date.toLocaleDateString("en-US", options);
+    options = { day: 'numeric', timeZone: "UTC" };
+    const day = date.toLocaleDateString("en-US", options);
+
+    return {
+        "weekday": weekday,
+        "month": month,
+        "day": day
+    }
+}
+
+function formatCampDate(date) {
+    const dp = dateParts(date);
+
+    const card = DOM.createArticle('date');
+
+    let e = DOM.div('month');
+    e.textContent = dp.month;
+    card.appendChild(e);
+
+    e = DOM.div('day');
+    e.textContent = dp.day;
+    card.appendChild(e);
+
+    e = DOM.div('weekday');
+    e.textContent = dp.weekday;
+    card.appendChild(e);
+
+    return card;
+}
+
+function formatCampCard(info) {
+    const card = DOM.article('camp');
+
+    const campName = DOM.div('camp-name');
+    const a = DOM.anchor(`?camp=${info.year}/${info.camp}`, `${info.name} ${info.year}`);
+    campName.appendChild(a);
+    card.appendChild(campName);
+
+    const dateline = DOM.div('camp-start');
+    const start = dateParts(info.start);
+    const end = dateParts(info.end);
+    dateline.innerHTML = `${start.weekday} ${start.month} ${start.day} &mdash; ${end.weekday} ${end.month} ${end.day}`;
+    card.appendChild(dateline);
+
+    if (info.topic) {
+        const campTopic = DOM.div('camp-topic');
+        campTopic.textContent = `"${info.topic}"`;
+        card.appendChild(campTopic);
+    }
+
+    if (info.speaker) {
+        const speaker = DOM.div('camp-speaker');
+        speaker.textContent = `with ${info.speaker}`;
+        card.appendChild(speaker);
+    }
+
+    return card;
+}
+
+async function fetchCampYear(year) {
+    try {
+        const url = `content/camp/${year}/camps.json`;
+        fetch(url)
+            .then(response => response.json())
+            .then(camps => {
+                //console.log(`---- ${year} ----`)
+
+                for (let [camp, info] of Object.entries(camps)) {
+                    info.camp = camp;
+                    info.name = `${g_campData.camps[camp]}`;
+                    info.year = year;
+                    info.url = `content/camp/${year}/${camp}.md`;
+                    if (info.md === undefined) {
+                        info.md = false;
+                    }
+                    if (info.hide === undefined) {
+                        info.hide = info.md === undefined;
+                    }
+                    info.start = new Date(info.start);
+                    info.end = new Date(info.end);
+                    //console.log(info);
+                    g_camps.push(info);
+
+                    if (!info.hide) {
+                        if (info.end >= now) {
+                            const row = createRow([
+                                info.start.getTime(),
+                                info.end.getTime(),
+                                formatCampCard(info)
+                            ]);
+                            g_campTBody.appendChild(row);
+                            sortCampTable();
+                        }
+                    }
                 }
             })
             .catch(error => console.error(error));
@@ -155,20 +309,19 @@ async function fetchCamp(year, name) {
 
 async function fetchCamps() {
     try {
-        const link = `/data/camps.yaml`;
+        now = new Date();
+        const link = `/data/camps.json`;
         fetch(link)
-            .then(response => response.text())
+            .then(response => response.json())
             .then(data => {
-                const campData = jsyaml.load(data);
-                campData.forEach((campYear) => {
-                    campYear.camps.forEach((name) => {
-                        fetchCamp(campYear.year, name);
-                    });
+                g_campData = data;
+                //console.log(g_campData);
+
+                g_campData.years.forEach((year) => {
+                    fetchCampYear(year);
                 });
 
                 // TODO: add each camp to table when fetched
-                container = document.getElementById('upcomming');
-                container.appendChild(g_campTable);
 
             })
             .catch(error => console.error(error));
@@ -180,11 +333,10 @@ async function fetchCamps() {
 
 async function fetchNewsletters() {
     try {
-        const link = `/data/newsletters.yaml`;
+        const link = `/data/newsletters.json`;
         fetch(link)
-            .then(response => response.text())
-            .then(data => {
-                const newsData = jsyaml.load(data);
+            .then(response => response.json())
+            .then(newsData => {
                 newsData.forEach((news) => {
                     g_newsletters.push(newsData);
                 });
