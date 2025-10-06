@@ -6,12 +6,23 @@ class DOM {
         }
         return div;
     }
+
     static div(cls) {
         return this.elem('div', cls);
     }
+
     static article(cls) {
         return this.elem('article', cls);
     }
+
+    static anchor(url, text) {
+        const a = DOM.elem('a');
+        a.href = url;
+        a.title = text;
+        a.textContent = text;
+        return a;
+    }
+
     static addClass(elem, cls) {
         elem.classList.add(cls);
     }

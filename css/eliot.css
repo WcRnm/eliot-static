@@ -93,7 +93,11 @@ a.btn {
   text-transform: capitalize;
   margin-bottom: 0.2em;
 }
-
+.camp-start {
+  margin-bottom: 0.2em;
+  font-size: smaller;
+  text-align: right;
+}
 .camp-topic {
   font-weight: bolder;
   margin-bottom: 0.2em;
@@ -101,10 +105,6 @@ a.btn {
 .camp-speaker {
   font-style: italic;
   text-align: right;
-  margin-bottom: 0.2em;
-}
-.camp-start {
-  font-size: smaller;
 }
 
 table.camp-table {
@@ -114,5 +114,4 @@ table.camp-table {
 
 article.camp {
   margin: 0;
-  padding: 0;
 }

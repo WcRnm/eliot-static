@@ -238,25 +238,27 @@ function formatCampCard(info) {
     const card = DOM.article('camp');
 
     const campName = DOM.div('camp-name');
-    campName.textContent = `${info.name} ${info.year}`;
+    const a = DOM.anchor(`?camp=${info.year}/${info.camp}`, `${info.name} ${info.year}`);
+    campName.appendChild(a);
     card.appendChild(campName);
-
-    if (info.topic) {
-        const campTopic = DOM.div('camp-topic');
-        campTopic.textContent = `"${info.topic}"`;
-        card.appendChild(campTopic);
-    }
-    if (info.speaker) {
-        const speaker = DOM.div('camp-speaker');
-        speaker.textContent = `with ${info.speaker}`;
-        card.appendChild(speaker);
-    }
 
     const dateline = DOM.div('camp-start');
     const start = dateParts(info.start);
     const end = dateParts(info.end);
     dateline.innerHTML = `${start.weekday} ${start.month} ${start.day} &mdash; ${end.weekday} ${end.month} ${end.day}`;
     card.appendChild(dateline);
+
+    if (info.topic) {
+        const campTopic = DOM.div('camp-topic');
+        campTopic.textContent = `"${info.topic}"`;
+        card.appendChild(campTopic);
+    }
+
+    if (info.speaker) {
+        const speaker = DOM.div('camp-speaker');
+        speaker.textContent = `with ${info.speaker}`;
+        card.appendChild(speaker);
+    }
 
     return card;
 }
@@ -267,9 +269,10 @@ async function fetchCampYear(year) {
         fetch(url)
             .then(response => response.json())
             .then(camps => {
-                console.log(`---- ${year} ----`)
+                //console.log(`---- ${year} ----`)
 
                 for (let [camp, info] of Object.entries(camps)) {
+                    info.camp = camp;
                     info.name = `${g_campData.camps[camp]}`;
                     info.year = year;
                     info.url = `content/camp/${year}/${camp}.md`;
@@ -281,7 +284,7 @@ async function fetchCampYear(year) {
                     }
                     info.start = new Date(info.start);
                     info.end = new Date(info.end);
-                    console.log(info);
+                    //console.log(info);
                     g_camps.push(info);
 
                     if (!info.hide) {
@@ -312,7 +315,7 @@ async function fetchCamps() {
             .then(response => response.json())
             .then(data => {
                 g_campData = data;
-                console.log(g_campData);
+                //console.log(g_campData);
 
                 g_campData.years.forEach((year) => {
                     fetchCampYear(year);
