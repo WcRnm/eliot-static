@@ -1,13 +1,12 @@
 # Winter Eliot 2026
 
-Monday, December 28, 2026 from 02:30 PM to Friday, January 01, 2027 to 11:45 AM
-
-## Presenter to Be Announced
+<div id="camp-card"></div>
 
 ### Program Description:
 
+To be announced.
 
-## Additional Activities
+### Additional Activities
 
 Morning program is just one aspect of Winter Eliot!
 

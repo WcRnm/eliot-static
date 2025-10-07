@@ -1,14 +1,6 @@
-# Winter Eliot 2025: "Stick Pounding" with Melanie DeMore
+# Winter Eliot 2025
 
-Sunday, December 28, 2025 from 02:30 PM to Thursday, January 01, 2026 to 11:45 AM
-
-## Stick Pounding
-
-<Layout camp={frontmatter}>
-<img
-    src="/img/speakers/melanie_demore.jpg"
-    alt="Melanie DeMore"
-    width="300" />
+<div id="camp-card"></div>
 
 ### Program Description:
 

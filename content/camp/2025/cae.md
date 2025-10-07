@@ -1,6 +1,6 @@
 # Creative Arts Eliot 2025
 
-Saturday, August 09, 2025 from 04:00 PM to Wednesday, August 13, 2025 to 02:30 PM
+<div id="camp-card"></div>
 
 Please join us for an amazing creative experience in a relaxed, non-judgemental atmosphere! You'll get to choose a morning workshop from the workshop options listed below. Afternoons and evenings are full of lots of other great summer camp activities.
 Registration Details

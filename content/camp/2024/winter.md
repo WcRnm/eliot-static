@@ -1,14 +1,6 @@
-# Winter Eliot 2024: "The Practice of Evidence-Based Hope" with Elin Kelsey
+# Winter Eliot 2024
 
-Saturday, December 28, 2024 from 02:30 PM to Wednesday, January 01, 2025 to 11:45 AM
-
-## The Practice of Evidence-Based Hope
-
-<img
-    src="/img/speakers/Elin_Kelsey_Photo_Credit-_Esme_Johnson.jpg"
-    alt="Melanie DeMore"
-    width="300" />
-
+<div id="camp-card"></div>
 
 ### Program Description:
 

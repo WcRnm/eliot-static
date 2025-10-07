@@ -23,6 +23,19 @@ class DOM {
         return a;
     }
 
+    static img(path, altText) {
+        const img = DOM.elem('img');
+        img.src = `/img/${path}`;
+        img.alt = altText;
+        img.style.width = '300px';
+
+        if (altText) {
+            img.setAttribute("alt", altText);
+        }
+
+        return img;
+    }
+
     static addClass(elem, cls) {
         elem.classList.add(cls);
     }

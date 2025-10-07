@@ -1,12 +1,6 @@
-# July Eliot 2025: "Joyful Noise: Sing Out, Be Free" with Lea Morris
-Saturday, July 12, 2025 from 02:30 PM to Saturday, July 19, 2025 to 11:45 AM
+# July Eliot 2025
 
-## Joyful Noise: Sing Out, Be Free
-
-<img
-    src="/img/speakers/lea_morris.jpg"
-    alt="Lea Morris"
-    width="300" />
+<div id="camp-card"></div>
 
 ### Program Description
 

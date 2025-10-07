@@ -1,13 +1,8 @@
 # July Eliot 2026
 
-## Exploring and Celebrating Gender Diversity, Trans Justice, and Faith with Zr. Alex Kapitan
+<div id="camp-card"></div>
 
-Saturday, July 11, 2026 from 02:30 PM to Saturday, July 18, 2026 to 11:45 AM
-
-Exploring and Celebrating Gender Diversity, Trans Justice, and Faith
-
-
-## Morning Program Description
+### Program Description
 
 Unitarian Universalism teaches that all of who you are belongs, all of who you are matters, all of who you are is worthy. In this faith, diversity is sacred and gender and sexuality are sources of wholeness and authenticity. Yet we receive far too many messages every day to the contrary. The pressure to conform and perpetuate stereotypes and norms is immense, and a coordinated anti-trans political movement has swept the country in recent years, spreading disinformation and dehumanization.
 
@@ -23,7 +18,7 @@ Alex is the co-founder of the Transforming Hearts Collective, an organizing mini
 
 Alex worked for many years at the UUA’s national office supporting Welcoming Congregation, anti-racism, and social justice projects, and is also a past steering committee member for TRUUsT, the organization of trans UU religious professionals. Ze lives in western Massachusetts with per partner Teo Drake and a menagerie of furry and feathered friends.
 
-## Additional Activities
+### Additional Activities
 
 Morning program is just one aspect of July Eliot!
 

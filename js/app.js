@@ -52,6 +52,56 @@ function fixupLinks(container) {
     });
 }
 
+function formatDateLong(date) {
+    const options = {
+        weekday: 'short',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        timeZone: "UTC"
+    };
+    return date.toLocaleString('en-US', options);
+}
+
+function fixupCampCard(year, camp) {
+    try {
+        fetch(`content/camp/${year}/camps.json`)
+            .then(response => response.json())
+            .then(json => {
+                const dateDiv = document.getElementById('camp-card');
+                if (dateDiv) {
+                    const campInfo = json[camp];
+
+                    const card = DOM.article();
+
+                    let e = DOM.elem('h2');
+                    e.textContent = campInfo.speaker
+                                        ? `"${campInfo.topic}" with ${campInfo.speaker}`
+                                        : campInfo.topic;
+                    card.appendChild(e);
+
+                    e = DOM.elem('p');
+                    e.textContent = campInfo.speaker;
+                    const start = formatDateLong(new Date(campInfo.start));
+                    const end = formatDateLong(new Date(campInfo.end));
+                    e.textContent = `${start} -- ${end}`;
+                    card.appendChild(e);
+
+                    if (campInfo.img && campInfo.speaker) {
+                        const img = DOM.img(campInfo.img, campInfo.speaker)
+                        card.appendChild(img);
+                    }
+
+                    dateDiv.appendChild(card);
+                }
+            })
+            .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
 function fetchMenu() {
     try {
         const link = `/content/menu.html`;
@@ -69,103 +119,6 @@ function fetchMenu() {
     }
 }
 
-function createRow(data, isHeader) {
-    const row = DOM.elem('tr', 'camp-row');
-    let i = 0;
-    data.forEach(cellContent => {
-        const th = document.createElement(isHeader ? 'th' : 'td');
-        if (i++ < 2) {
-            // hide the first two rows - start and end date, used for sorting
-            th.classList.add('hidden');
-        }
-        if (typeof cellContent === 'object') {
-            th.appendChild(cellContent);
-        } else {
-            th.innerHTML = cellContent;
-        }
-        row.appendChild(th);
-    });
-    return row;
-}
-
-function buildCampTable() {
-    // first two columns are hidden
-    const headerData = ['0', '0', 'Camps'];
-
-    g_campTable = DOM.elem('table', 'camp-table');
-    const thead = g_campTable.createTHead();
-    thead.appendChild(createRow(headerData));
-    g_campTable.appendChild(thead);
-
-    g_campTBody = g_campTable.createTBody();
-    g_campTable.appendChild(g_campTBody);
-}
-
-function sortTable(table, col, reverse) {
-    let tb = table.tBodies[0],
-        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
-        i;
-    reverse = -((+reverse) || -1);
-    tr = tr.sort(function (a, b) {
-        return reverse // `-1 *` if want opposite order
-            * (a.cells[col].textContent.trim()
-                .localeCompare(b.cells[col].textContent.trim())
-               );
-    });
-    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
-}
-
-function sortCampTable() {
-    sortTable(g_campTable, 0, 0);
-}
-
-function sortCampTable2() {
-    let i;
-    let shouldSwitch = false;
-    let table = g_campTBody;
-    let switching = true;
-    while (switching) {
-        switching = false;
-        const rows = table.rows;
-        for (i = 0; i < (rows.length - 2); i++) {
-            shouldSwitch = false;
-            const rowX = rows[i].getElementsByTagName("td");
-            const rowY = rows[i+1].getElementsByTagName("td");
-            const x = parseInt(rowX[0].innerHTML);
-            const y = parseInt(rowY[0].innerHTML);
-            if (x > y) {
-                shouldSwitch = true;
-                break;
-            }
-        }
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-        }
-    }
-}
-
-function fetchSidebar() {
-    try {
-        const link = `/content/sidebar.md`;
-        fetch(link)
-            .then(response => response.text())
-            .then(md => {
-                const html = MD.makeHtml(md);
-                let container = document.getElementById('sidebar_container');
-                container.innerHTML = html;
-                fixupLinks(container);
-
-                container = document.getElementById('upcomming');
-                container.appendChild(g_campTable);
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
 async function fetchContent(link) {
     try {
         fetch(`content/${link}.md`)
@@ -175,92 +128,21 @@ async function fetchContent(link) {
                 const html = MD.makeHtml(md);
                 container.innerHTML = html;
                 fixupLinks(container);
+
+                // is this a camp page?
+                console.log(`link: ${link}`)
+                if (link.startsWith('camp/')) {
+                    const parts = link.split('/');
+                    const year = parts[1];
+                    const camp = parts[2];
+                    fixupCampCard(year, camp);
+                }
             })
             .catch(error => console.error(error));
     }
     catch (error) {
         console.error(error);
     }
-}
-
-async function fetchCamp(year, name) {
-    try {
-        const url = `content/camp/${year}/${name}.md`;
-        fetch(url)
-            .then(response => response.text())
-            .then(md => {
-                // this step is required
-                const html = MD.makeHtml(md);
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
-function dateParts(date) {
-    let options = { weekday: 'short', timeZone: "UTC" };
-    const weekday = date.toLocaleDateString("en-US", options);
-    options = { month: 'short', timeZone: "UTC" };
-    const month = date.toLocaleDateString("en-US", options);
-    options = { day: 'numeric', timeZone: "UTC" };
-    const day = date.toLocaleDateString("en-US", options);
-
-    return {
-        "weekday": weekday,
-        "month": month,
-        "day": day
-    }
-}
-
-function formatCampDate(date) {
-    const dp = dateParts(date);
-
-    const card = DOM.createArticle('date');
-
-    let e = DOM.div('month');
-    e.textContent = dp.month;
-    card.appendChild(e);
-
-    e = DOM.div('day');
-    e.textContent = dp.day;
-    card.appendChild(e);
-
-    e = DOM.div('weekday');
-    e.textContent = dp.weekday;
-    card.appendChild(e);
-
-    return card;
-}
-
-function formatCampCard(info) {
-    const card = DOM.article('camp');
-
-    const campName = DOM.div('camp-name');
-    const a = DOM.anchor(`?camp=${info.year}/${info.camp}`, `${info.name} ${info.year}`);
-    campName.appendChild(a);
-    card.appendChild(campName);
-
-    const dateline = DOM.div('camp-start');
-    const start = dateParts(info.start);
-    const end = dateParts(info.end);
-    dateline.innerHTML = `${start.weekday} ${start.month} ${start.day} &mdash; ${end.weekday} ${end.month} ${end.day}`;
-    card.appendChild(dateline);
-
-    if (info.topic) {
-        const campTopic = DOM.div('camp-topic');
-        campTopic.textContent = `"${info.topic}"`;
-        card.appendChild(campTopic);
-    }
-
-    if (info.speaker) {
-        const speaker = DOM.div('camp-speaker');
-        speaker.textContent = `with ${info.speaker}`;
-        card.appendChild(speaker);
-    }
-
-    return card;
 }
 
 async function fetchCampYear(year) {
@@ -269,8 +151,6 @@ async function fetchCampYear(year) {
         fetch(url)
             .then(response => response.json())
             .then(camps => {
-                //console.log(`---- ${year} ----`)
-
                 for (let [camp, info] of Object.entries(camps)) {
                     info.camp = camp;
                     info.name = `${g_campData.camps[camp]}`;
@@ -284,20 +164,9 @@ async function fetchCampYear(year) {
                     }
                     info.start = new Date(info.start);
                     info.end = new Date(info.end);
-                    //console.log(info);
-                    g_camps.push(info);
 
-                    if (!info.hide) {
-                        if (info.end >= now) {
-                            const row = createRow([
-                                info.start.getTime(),
-                                info.end.getTime(),
-                                formatCampCard(info)
-                            ]);
-                            g_campTBody.appendChild(row);
-                            sortCampTable();
-                        }
-                    }
+                    g_camps.push(info);
+                    addCampToTable(info);
                 }
             })
             .catch(error => console.error(error));
@@ -320,9 +189,6 @@ async function fetchCamps() {
                 g_campData.years.forEach((year) => {
                     fetchCampYear(year);
                 });
-
-                // TODO: add each camp to table when fetched
-
             })
             .catch(error => console.error(error));
     }
