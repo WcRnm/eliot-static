@@ -2,12 +2,6 @@
 
 <div id="camp-card"></div>
 
-<img
-    src="/img/speakers/Alex_Kapitan_2022_photo.jpg"
-    alt="Zr. Alex Kapitan"
-    width="300" />
-
-
 ### Program Description
 
 Unitarian Universalism teaches that all of who you are belongs, all of who you are matters, all of who you are is worthy. In this faith, diversity is sacred and gender and sexuality are sources of wholeness and authenticity. Yet we receive far too many messages every day to the contrary. The pressure to conform and perpetuate stereotypes and norms is immense, and a coordinated anti-trans political movement has swept the country in recent years, spreading disinformation and dehumanization.

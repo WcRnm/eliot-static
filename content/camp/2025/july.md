@@ -2,11 +2,6 @@
 
 <div id="camp-card"></div>
 
-<img
-    src="/img/speakers/lea_morris.jpg"
-    alt="Lea Morris"
-    width="300" />
-
 ### Program Description
 
 Explorations in community music, creativity and well-being. Can singing, dancing and playing together make us healthier individuals contributing to a healthier society?

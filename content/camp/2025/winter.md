@@ -2,11 +2,6 @@
 
 <div id="camp-card"></div>
 
-<img
-    src="/img/speakers/melanie_demore.jpg"
-    alt="Melanie DeMore"
-    width="300" />
-
 ### Program Description:
 
 Learn the basics of Gullah Stick Pounding. We will create a foot stomping, hand-clapping rhythmic community and combine it with singing spirituals and songs of protest and peace. Participants will learn about Gullah/Geechee culture through its dynamic music and rhythmic heart.   We will create and affirm our common agreed upon language through the making of sticks and sharing our stories and those of our ancestors.We will, as a community, turn the whole place into a living, breathing drum.

@@ -2,10 +2,6 @@
 
 <div id="camp-card"></div>
 
-<img src="/img/speakers/Will_Hornyak.jpg"
-    alt="Will Hornyak"
-    width="300" />
-
 ### Program Description
 
 Sheherazade was a legendary storyteller who changed the fate of a realm, healed the heart of a sultan gone mad and saved countless lives by telling stories.  Her feat offers a rich trove of ideas for stories and storytelling as change agents in the lives of individuals and societies.  Employing the metaphor of a caravan of pilgrims upon a quest, we’ll travel each day into new landscapes of myth, story and poetry.  We’ll explore how stories and the ritual of telling them can weave threads of community, inspire vision and offer healing for weary spirits and souls. We’ll draw upon the wisdom of a wide variety oral traditions to kindle the flame of our own storytelling and discussion.  Feeding the story fire each day with our own ideas and interpretations, we’ll bring fresh insights into our caravan through the timeless ritual of storytelling.

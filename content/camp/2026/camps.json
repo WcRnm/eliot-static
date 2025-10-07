@@ -1,6 +1,7 @@
 {
     "july": {
         "speaker" : "Zr. Alex Kapitan",
+        "img"     : "speakers/Alex_Kapitan_2022_photo.jpg",
         "topic"   : "Exploring and Celebrating Gender Diversity, Trans Justice, and Faith",
         "start"   : "2026-07-11",
         "end"     : "2026-07-18",
@@ -8,6 +9,7 @@
     },
     "august": {
         "speaker" : "Will Hornyak",
+        "img"     : "speakers/Will_Hornyak.jpg",
         "topic"   : "Sheherazade's Caravan",
         "start"   : "2026-08-01",
         "end"     : "2026-08-08",

@@ -2,12 +2,6 @@
 
 <div id="camp-card"></div>
 
-<img
-    src="/img/speakers/Elin_Kelsey_Photo_Credit-_Esme_Johnson.jpg"
-    alt="Melanie DeMore"
-    width="300" />
-
-
 ### Program Description:
 
 Climate change, COVID-19, armed conflicts - the collective  impact of these global issues impacts our own feelings of well-being and those of the people we love. With problems deemed more newsworthy than solutions, we are awash in a 24/7 newscycle that reinforces the myth that it is already too late or that issues are too big or too broken to change.  In this multi-day workshop, we’ll engage in a series of practices to honor our feelings and to empower ourselves by challenging the narrative of fatalistic doomism and shifting toward evidence-based hope.

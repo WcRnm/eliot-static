@@ -87,6 +87,11 @@ function fixupCampCard(year, camp) {
                     e.textContent = `${start} -- ${end}`;
                     card.appendChild(e);
 
+                    if (campInfo.img && campInfo.speaker) {
+                        const img = DOM.img(campInfo.img, campInfo.speaker)
+                        card.appendChild(img);
+                    }
+
                     dateDiv.appendChild(card);
                 }
             })
