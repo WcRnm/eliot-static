@@ -73,8 +73,11 @@ function fixupCampCard(year, camp) {
                     const campInfo = json[camp];
 
                     const card = DOM.article();
+                    let e = DOM.elem('h1');
+                    e.textContent = `${g_campData.camps[camp]} ${year}`;
+                    card.appendChild(e);
 
-                    let e = DOM.elem('h2');
+                    e = DOM.elem('h2');
                     e.textContent = campInfo.speaker
                                         ? `"${campInfo.topic}" with ${campInfo.speaker}`
                                         : campInfo.topic;

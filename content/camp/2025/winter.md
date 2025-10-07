@@ -1,5 +1,3 @@
-# Winter Eliot 2025
-
 <div id="camp-card"></div>
 
 ### Program Description:
@@ -12,7 +10,7 @@ Melanie DeMore is a 3 time Grammy nominated singer/composer, choral conductor, m
 
 This video is a short documentary by Melanie about stick pounding:
 
-## Additional Activities
+### Additional Activities
 
 Morning program is just one aspect of Winter Eliot!
 

@@ -1,5 +1,3 @@
-# August Eliot 2026
-
 <div id="camp-card"></div>
 
 ### Program Description

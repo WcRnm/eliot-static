@@ -1,5 +1,3 @@
-# August Eliot 2025
-
 <div id="camp-card"></div>
 
 ### Program Description

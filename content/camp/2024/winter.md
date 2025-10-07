@@ -1,5 +1,3 @@
-# Winter Eliot 2024
-
 <div id="camp-card"></div>
 
 ### Program Description:
