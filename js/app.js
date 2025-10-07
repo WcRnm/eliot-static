@@ -4,9 +4,7 @@ MD.setOption('metadata', true);
 
 const g_camps = [];
 const g_newsletters = [];
-let g_campData = {};        // camp names & years
-let g_campTable = null;     // sidebar table
-let g_campTBody = null;     // sidebar table
+let g_campGeneral = {};     // camp names & years
 let now = new Date();
 
 // used by menu.css
@@ -74,7 +72,7 @@ function fixupCampCard(year, camp) {
 
                     const card = DOM.article();
                     let e = DOM.elem('h1');
-                    e.textContent = `${g_campData.camps[camp]} ${year}`;
+                    e.textContent = `${g_campGeneral.names[camp]} ${year}`;
                     card.appendChild(e);
 
                     e = DOM.elem('h2');
@@ -156,7 +154,7 @@ async function fetchCampYear(year) {
             .then(camps => {
                 for (let [camp, info] of Object.entries(camps)) {
                     info.camp = camp;
-                    info.name = `${g_campData.camps[camp]}`;
+                    info.name = `${g_campGeneral.names[camp]}`;
                     info.year = year;
                     info.url = `content/camp/${year}/${camp}.md`;
                     if (info.md === undefined) {
@@ -182,14 +180,13 @@ async function fetchCampYear(year) {
 async function fetchCamps() {
     try {
         now = new Date();
-        const link = `/data/camps.json`;
+        const link = `/content/camp/general.json`;
         fetch(link)
             .then(response => response.json())
             .then(data => {
-                g_campData = data;
-                //console.log(g_campData);
+                g_campGeneral = data;
 
-                g_campData.years.forEach((year) => {
+                g_campGeneral.years.forEach((year) => {
                     fetchCampYear(year);
                 });
             })

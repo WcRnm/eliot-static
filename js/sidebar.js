@@ -1,3 +1,6 @@
+let g_campTable = null;     // sidebar table
+let g_campTBody = null;     // sidebar table
+
 function fetchSidebar() {
     try {
         const link = `/content/sidebar.md`;
