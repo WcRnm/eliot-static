@@ -1,6 +1,6 @@
-# Creative Arts Eliot 2024: Your Choice of Workshops
+# Creative Arts Eliot 2024
 
-<div id="camp-dates">DATE PLACEHOLDER</div>
+<div id="camp-card"></div>
 
 <div id="workshops"></din>
 

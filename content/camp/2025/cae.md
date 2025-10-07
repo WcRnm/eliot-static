@@ -1,6 +1,6 @@
 # Creative Arts Eliot 2025
 
-<div id="camp-dates">DATE PLACEHOLDER</div>
+<div id="camp-card"></div>
 
 Please join us for an amazing creative experience in a relaxed, non-judgemental atmosphere! You'll get to choose a morning workshop from the workshop options listed below. Afternoons and evenings are full of lots of other great summer camp activities.
 Registration Details

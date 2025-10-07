@@ -1,8 +1,6 @@
-# Winter Eliot 2024: "The Practice of Evidence-Based Hope" with Elin Kelsey
+# Winter Eliot 2024
 
-<div id="camp-dates">DATE PLACEHOLDER</div>
-
-## The Practice of Evidence-Based Hope
+<div id="camp-card"></div>
 
 <img
     src="/img/speakers/Elin_Kelsey_Photo_Credit-_Esme_Johnson.jpg"

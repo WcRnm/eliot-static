@@ -1,8 +1,6 @@
-# Winter Eliot 2025: "Stick Pounding" with Melanie DeMore
+# Winter Eliot 2025
 
-<div id="camp-dates">DATE PLACEHOLDER</div>
-
-## Stick Pounding
+<div id="camp-card"></div>
 
 <img
     src="/img/speakers/melanie_demore.jpg"

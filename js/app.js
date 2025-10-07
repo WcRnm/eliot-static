@@ -52,6 +52,51 @@ function fixupLinks(container) {
     });
 }
 
+function formatDateLong(date) {
+    const options = {
+        weekday: 'short',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        timeZone: "UTC"
+    };
+    return date.toLocaleString('en-US', options);
+}
+
+function fixupCampCard(year, camp) {
+    try {
+        fetch(`content/camp/${year}/camps.json`)
+            .then(response => response.json())
+            .then(json => {
+                const dateDiv = document.getElementById('camp-card');
+                if (dateDiv) {
+                    const campInfo = json[camp];
+
+                    const card = DOM.article();
+
+                    let e = DOM.elem('h2');
+                    e.textContent = campInfo.speaker
+                                        ? `"${campInfo.topic}" with ${campInfo.speaker}`
+                                        : campInfo.topic;
+                    card.appendChild(e);
+
+                    e = DOM.elem('p');
+                    e.textContent = campInfo.speaker;
+                    const start = formatDateLong(new Date(campInfo.start));
+                    const end = formatDateLong(new Date(campInfo.end));
+                    e.textContent = `${start} -- ${end}`;
+                    card.appendChild(e);
+
+                    dateDiv.appendChild(card);
+                }
+            })
+            .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
 function fetchMenu() {
     try {
         const link = `/content/menu.html`;
@@ -78,22 +123,15 @@ async function fetchContent(link) {
                 const html = MD.makeHtml(md);
                 container.innerHTML = html;
                 fixupLinks(container);
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
 
-async function fetchCamp(year, name) {
-    try {
-        const url = `content/camp/${year}/${name}.md`;
-        fetch(url)
-            .then(response => response.text())
-            .then(md => {
-                // this step is required
-                const html = MD.makeHtml(md);
+                // is this a camp page?
+                console.log(`link: ${link}`)
+                if (link.startsWith('camp/')) {
+                    const parts = link.split('/');
+                    const year = parts[1];
+                    const camp = parts[2];
+                    fixupCampCard(year, camp);
+                }
             })
             .catch(error => console.error(error));
     }
@@ -108,8 +146,6 @@ async function fetchCampYear(year) {
         fetch(url)
             .then(response => response.json())
             .then(camps => {
-                //console.log(`---- ${year} ----`)
-
                 for (let [camp, info] of Object.entries(camps)) {
                     info.camp = camp;
                     info.name = `${g_campData.camps[camp]}`;
@@ -123,9 +159,8 @@ async function fetchCampYear(year) {
                     }
                     info.start = new Date(info.start);
                     info.end = new Date(info.end);
-                    //console.log(info);
-                    g_camps.push(info);
 
+                    g_camps.push(info);
                     addCampToTable(info);
                 }
             })
@@ -149,9 +184,6 @@ async function fetchCamps() {
                 g_campData.years.forEach((year) => {
                     fetchCampYear(year);
                 });
-
-                // TODO: add each camp to table when fetched
-
             })
             .catch(error => console.error(error));
     }

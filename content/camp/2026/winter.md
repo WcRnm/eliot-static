@@ -1,13 +1,12 @@
 # Winter Eliot 2026
 
-<div id="camp-dates">DATE PLACEHOLDER</div>
-
-## Presenter to Be Announced
+<div id="camp-card"></div>
 
 ### Program Description:
 
+To be announced.
 
-## Additional Activities
+### Additional Activities
 
 Morning program is just one aspect of Winter Eliot!
 

@@ -1,8 +1,6 @@
-# July Eliot 2025: "Joyful Noise: Sing Out, Be Free" with Lea Morris
+# July Eliot 2025
 
-<div id="camp-dates">DATE PLACEHOLDER</div>
-
-## Joyful Noise: Sing Out, Be Free
+<div id="camp-card"></div>
 
 <img
     src="/img/speakers/lea_morris.jpg"

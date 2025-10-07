@@ -1,8 +1,6 @@
 # August Eliot 2026
 
-<div id="camp-dates">DATE PLACEHOLDER</div>
-
-## "Sheherazade's Caravan: A Journey of Telling Stories and Changing Lives" with Will Hornyak
+<div id="camp-card"></div>
 
 <img src="/img/speakers/Will_Hornyak.jpg"
     alt="Will Hornyak"

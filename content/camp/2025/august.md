@@ -1,8 +1,6 @@
-# August Eliot 2025: "Creativity Games & Storytelling" with Guy Nelson
+# August Eliot 2025
 
-<div id="camp-dates">DATE PLACEHOLDER</div>
-
-## Creativity Games and Storytelling
+<div id="camp-card"></div>
 
 <img src="/img/speakers/guy_nelson.jpg"
     alt="Guy Nelson"
