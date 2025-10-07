@@ -1,11 +1,14 @@
 # August Eliot 2026
 
-## "Sheherazade's Caravan" with Will Hornyak
+<div id="camp-dates">DATE PLACEHOLDER</div>
 
-Saturday, August 01, 2026 from 02:30 PM to Saturday, August 08, 2026 to 11:45 AM
-Sheherazade's Caravan: A Journey of Telling Stories and Changing Lives
+## "Sheherazade's Caravan: A Journey of Telling Stories and Changing Lives" with Will Hornyak
 
-## Program Description
+<img src="/img/speakers/Will_Hornyak.jpg"
+    alt="Will Hornyak"
+    width="300" />
+
+### Program Description
 
 Sheherazade was a legendary storyteller who changed the fate of a realm, healed the heart of a sultan gone mad and saved countless lives by telling stories.  Her feat offers a rich trove of ideas for stories and storytelling as change agents in the lives of individuals and societies.  Employing the metaphor of a caravan of pilgrims upon a quest, we’ll travel each day into new landscapes of myth, story and poetry.  We’ll explore how stories and the ritual of telling them can weave threads of community, inspire vision and offer healing for weary spirits and souls. We’ll draw upon the wisdom of a wide variety oral traditions to kindle the flame of our own storytelling and discussion.  Feeding the story fire each day with our own ideas and interpretations, we’ll bring fresh insights into our caravan through the timeless ritual of storytelling.
 
@@ -17,7 +20,7 @@ About our Teacher:  Storyteller Will Hornyak weaves a wide web of myths, legends
 
 “You’re the funniest most serious person I ever met!”  Metolious Elementary Fourth Grader
 
-## Additional Activities
+### Additional Activities
 
 Morning program is just one aspect of August Eliot!
 

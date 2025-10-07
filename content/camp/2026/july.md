@@ -1,10 +1,14 @@
 # July Eliot 2026
 
+<div id="camp-dates"></div>
+
 ## Exploring and Celebrating Gender Diversity, Trans Justice, and Faith with Zr. Alex Kapitan
 
-Saturday, July 11, 2026 from 02:30 PM to Saturday, July 18, 2026 to 11:45 AM
 
-Exploring and Celebrating Gender Diversity, Trans Justice, and Faith
+<img
+    src="/img/speakers/Alex_Kapitan_2022_photo.jpg"
+    alt="Zr. Alex Kapitan"
+    width="300" />
 
 
 ## Morning Program Description

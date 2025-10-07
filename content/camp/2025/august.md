@@ -1,5 +1,6 @@
 # August Eliot 2025: "Creativity Games & Storytelling" with Guy Nelson
-Saturday, August 02, 2025 from 02:30 PM to Saturday, August 09, 2025 to 11:45 AM
+
+<div id="camp-dates">DATE PLACEHOLDER</div>
 
 ## Creativity Games and Storytelling
 
