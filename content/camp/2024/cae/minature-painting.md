@@ -1,6 +1,9 @@
-## Shannon Wells-Moran • Painting Miniature Models
+---
+topic: "Painting Miniature Models"
+presenter: "Shannon Wells-Moran"
+---
 
-Shannon Wells-MoranShannon Miniatures
+<div id="workshop-card></div>
 
 ### Program Description
 

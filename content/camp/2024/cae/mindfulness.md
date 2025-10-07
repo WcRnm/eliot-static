@@ -1,6 +1,9 @@
-## Margo Benedetto • Bringing Mindfulness to the Creative Process
+---
+topic: "Bringing Mindfulness to the Creative Process"
+presenter: "Margo Benedetto"
+---
 
-Margo Benedetto
+<div id="workshop-card></div>
 
 ### Program Description
 

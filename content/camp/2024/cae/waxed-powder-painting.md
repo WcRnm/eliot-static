@@ -1,6 +1,9 @@
-## Corey Pressman • Waxed Powder Painting
+---
+topic: "Waxed Powder Painting"
+presenter: "Corey Pressman"
+---
 
-Corey Pressman
+<div id="workshop-card></div>
 
 ###  Program Description
 
