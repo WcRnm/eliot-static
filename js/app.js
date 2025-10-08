@@ -21,7 +21,6 @@ function updatemenu() {
 // For internal pages, add an onclick handler.
 // For pdfs and external links, open in a separate tab
 function fixupLinks(container, page) {
-    console.log(`fixupLinks; ${page}`)
     const domainName = window.location.hostname;
     const anchors = container.querySelectorAll('a');
     anchors.forEach(anchor => {
@@ -29,13 +28,10 @@ function fixupLinks(container, page) {
             return;
         }
         try {
-            console.log(`fixupLinks; ${anchor.href}`)
             const url = new URL(anchor.href);
             if (url.hostname == domainName) {
                 anchor.addEventListener('click', (e) => {
-                    console.log(`onClick; ${anchor.href}`)
                     const url = new URL(anchor.href);
-                    console.log(`onClick ${url.searchParams}`);
                     let link = null;
                     for (const [key, value] of url.searchParams) {
                         link = `${key}/${value}`;
@@ -67,6 +63,10 @@ function fixupLinks(container, page) {
 // handle the backbutton
 window.addEventListener("popstate", (event) => {
     console.log(`history state: ${JSON.stringify(event.state)}`);
+    if (event.state && event.state.url) {
+        const url = new URL(event.state.url);
+        fetchContentFromSearchParams(url.searchParams);
+    }
 });
 
 function formatDateLong(date) {
@@ -136,6 +136,19 @@ function fetchMenu() {
     catch (error) {
         console.error(error);
     }
+}
+
+async function fetchContentFromSearchParams(params) {
+    let link = null;
+    for (const [key, value] of params) {
+        link = `${key}/${value}`;
+        break;
+    }
+    if (link === null) {
+        link = 'info/home';
+    }
+
+    await fetchContent(link);
 }
 
 async function fetchContent(link) {
@@ -245,16 +258,7 @@ window.onload = () => {
     fetchMenu();
 
     const urlParams = new URLSearchParams(window.location.search);
-    let link = null;
-    for (const [key, value] of urlParams) {
-        link = `${key}/${value}`;
-        break;
-    }
-    if (link === null) {
-        link = 'info/home';
-    }
-
-    fetchContent(link);
+    fetchContentFromSearchParams(urlParams);
     fetchNewsletters();
     fetchSidebar();
     fetchCamps();
