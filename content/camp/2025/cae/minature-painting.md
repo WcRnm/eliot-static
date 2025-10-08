@@ -1,6 +1,6 @@
 ---
-topic: "Painting Miniature Models"
-presenter: "Shannon Wells-Moran"
+topic: Painting Miniature Models
+presenter: Shannon Wells-Moran
 ---
 
 ### Program Description
@@ -10,6 +10,4 @@ Do you enjoy playing tabletop games like Dungeons and Dragons, but are tired of 
 ### Biography
 
 Shannon is a self-taught miniature painter from Portland, OR, who has been painting models and miniatures for five years. He works as a part-time commission painter and full-time in social services. When he is not painting, he enjoys drumming, sculpting, and using his painted miniatures in games of Dungeons and Dragons, Star Wars: Armada, and Star Wars: Shatterpoint.
-
-Website: swellsmoran.com
 

@@ -82,7 +82,6 @@ function fixupCampCard(year, camp) {
                     card.appendChild(e);
 
                     e = DOM.elem('p');
-                    e.textContent = campInfo.speaker;
                     const start = formatDateLong(new Date(campInfo.start));
                     const end = formatDateLong(new Date(campInfo.end));
                     e.textContent = `${start} -- ${end}`;
@@ -130,13 +129,21 @@ async function fetchContent(link) {
                 container.innerHTML = html;
                 fixupLinks(container);
 
-                // is this a camp page?
-                console.log(`link: ${link}`)
-                if (link.startsWith('camp/')) {
-                    const parts = link.split('/');
-                    const year = parts[1];
-                    const camp = parts[2];
-                    fixupCampCard(year, camp);
+                const parts = link.split('/');
+                const year = parts.length > 1 ? parts[1] : null;
+                const camp = parts.length > 2 ? parts[2] : null;
+
+                if (year && camp) {
+                    // is this a camp page?
+                    console.log(`link: ${link}`)
+                    if (link.startsWith('camp/')) {
+                        fixupCampCard(year, camp);
+                    }
+
+                    const workshopDiv = document.getElementById('workshop-area');
+                    if (workshopDiv) {
+                        fetchWorkshops(workshopDiv, year, camp);
+                    }
                 }
             })
             .catch(error => console.error(error));

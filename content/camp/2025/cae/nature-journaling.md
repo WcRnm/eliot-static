@@ -1,6 +1,6 @@
 ---
-topic: "Watercolor Nature Journaling"
-presenter: "Elizabeth Higgins"
+topic: Watercolor Nature Journaling
+presenter: Elizabeth Higgins
 ---
 
 ### Program Description
@@ -11,4 +11,4 @@ Nature connection, creativity and mindfulness come together in the practice of n
 
 Elizabeth Higgins is an artist, instructor and nature connection guide who teaches classes and workshops that connect people to nature, mindfulness and creativity. She has taught nature journaling classes and watercolor classes for over a decade. She is known for her calm, supportive teaching style and her approach is centered on the belief that both nature and creative expression are crucial components of human well-being.
 
-Website: www.elizabethmhiggins.com
+Website: [www.elizabethmhiggins.com](https://www.elizabethmhiggins.com)

@@ -1,6 +1,7 @@
-## Francisco Ruiz • Circle Singing - Your Voice
-
-Francisco Ruiz
+---
+topic: "Circle Singing - Your Voice"
+presenter: "Francisco Ruiz"
+---
 
 ### Program Description:
 

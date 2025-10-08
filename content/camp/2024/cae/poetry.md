@@ -1,6 +1,7 @@
-## Lynn Ungar • Poetry as a Spiritual Practice
-
-Ungar photo
+---
+topic: "Poetry as a Spiritual Practice"
+presenter: "Lynn Ungar"
+---
 
 ### Program Description
 

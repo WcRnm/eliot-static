@@ -1,6 +1,6 @@
 ---
-topic: "Waxed Powder Painting"
-presenter: "Corey Pressman"
+topic: Waxed Powder Painting
+presenter: Corey Pressman
 ---
 
 ###  Program Description
@@ -15,6 +15,6 @@ Corey S. Pressman is an artist, writer, and teacher living in the Pacific Northw
 
 ### Links
 
-https://www.instagram.com/cspressman/
-https://coreypressman.com/artworks
-https://www.waterstonegallery.com/kingofnocountry
+- [www.instagram.com/cspressman/](https://www.instagram.com/cspressman/)
+- [coreypressman.com/artworks](https://coreypressman.com/artworks)
+- [www.waterstonegallery.com/kingofnocountry](https://www.waterstonegallery.com/kingofnocountry)
