@@ -2,21 +2,22 @@
 @import "menu.css";
 
 /* ------------------------------------------------------------------
-  Columns
+  Row/Columns
 */
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  white-space:unset;
+}
+
 .col75 {
   flex: 75%;
-  margin: 0.5em;
+  width: 75%;
 }
 
 .col25 {
   flex: 25%;
-  margin: 0.5em;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
 }
 
 /*

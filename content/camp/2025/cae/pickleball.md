@@ -3,8 +3,6 @@ topic: Pickleball
 presenter: Karen Stratton
 ---
 
-<div id="workshop-card></div>
-
 ### Workshop Description
 
 Pickleball is a fast growing sport that is addictive, fun, and quick to learn. If you spend 4 mornings at Creative Arts Eliot learning the basics, you will know how to dink, smash, serve, and volley. You'll figure out how to keep score and what the kitchen is all about. As the days go by, we'll get into strategy for more successful games. (In the unlikely case that the weather is bad, there's always YouTube videos to learn from.)

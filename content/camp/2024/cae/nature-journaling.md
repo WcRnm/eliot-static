@@ -2,7 +2,6 @@
 topic: "Watercolor Nature Journaling"
 presenter: "Elizabeth Higgins"
 ---
-<div id="workshop-card></div>
 
 ### Program Description
 

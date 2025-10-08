@@ -24,9 +24,18 @@ function fetchWorkshop(workshopDiv, baseUrl, workshop) {
                 const html = MD.makeHtml(md);
                 const meta = MD.getMetadata();
 
+                let hr = DOM.elem('hr');
+                workshopDiv.appendChild(hr);
+
                 let e = DOM.elem('h3');
                 e.innerHTML = `${meta.topic}<br>${meta.presenter}`;
                 workshopDiv.appendChild(e);
+
+                //const card = DOM.article();
+                const div = DOM.div();
+                div.innerHTML = html;
+                //card.appendChild(div);
+                workshopDiv.appendChild(div);
             })
     }
     catch (error) {

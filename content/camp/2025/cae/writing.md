@@ -3,8 +3,6 @@ topic: This I Believe - Exploring & Expressing Our Heartfelt Beliefs Through Sho
 presenter: Amanda Aikman
 ---
 
-<div id="workshop-card></div>
-
 ## Workshop Description
 
 ”I am not going to talk about religious beliefs but about matters so obvious that it has gone out of style to mention them. I believe in my neighbors.”

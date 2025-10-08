@@ -3,9 +3,6 @@ topic: World Music Singing
 presenter: Anne Weiss
 ---
 
-<div id="workshop-card></div>
-
-
 ### Workshop Description
 
 This fun, inclusive workshop will include songs and styles from  around the world... all the while improving your singing skills! All levels of singing experience are welcome!  We'll learn African, folk, gospel, Balkan, rounds, Mexican songs, and more by ear, many on the topic of peace and social justice. Along the way, we’ll also improve on pitch, breath, and harmony. Sight reading ability is a plus, but not required. Looking forward to singing with you!
