@@ -8,11 +8,11 @@ function fetchSidebar() {
             .then(response => response.text())
             .then(md => {
                 const html = MD.makeHtml(md);
-                let container = document.getElementById('sidebar_container');
+                const container = document.getElementById('sidebar_container');
                 container.innerHTML = html;
 
-                container = document.getElementById('upcomming');
-                container.appendChild(g_campTable);
+                const tableContainer = document.getElementById('upcomming');
+                tableContainer.appendChild(g_campTable);
 
                 fixupLinks(container, link);
             })
