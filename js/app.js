@@ -20,16 +20,18 @@ function updatemenu() {
 // --------------------------------------------------------------
 // For internal pages, add an onclick handler.
 // For pdfs and external links, open in a separate tab
-function fixupLinks(container) {
+function fixupLinks(container, page) {
     const domainName = window.location.hostname;
     const anchors = container.querySelectorAll('a');
     anchors.forEach(anchor => {
+        if (!anchor.href) {
+            return;
+        }
         try {
             const url = new URL(anchor.href);
             if (url.hostname == domainName) {
                 anchor.addEventListener('click', (e) => {
                     const url = new URL(anchor.href);
-                    console.log(`onClick ${url.searchParams}`);
                     let link = null;
                     for (const [key, value] of url.searchParams) {
                         link = `${key}/${value}`;
@@ -40,15 +42,32 @@ function fixupLinks(container) {
 
                     if (link === null) {
                         anchor.target = '_other';
+                    } else {
+                        history.pushState({
+                            url: anchor.href
+                        }, "", url);
                     }
                 })
                 return;
             } else {
                 anchor.target = '_other';
             }
-        } catch { }
+        }
+        catch (error) {
+            console.log(`   error; ${anchor.href}`)
+            console.error(error);
+        }
     });
 }
+
+// handle the backbutton
+window.addEventListener("popstate", (event) => {
+    console.log(`history state: ${JSON.stringify(event.state)}`);
+    if (event.state && event.state.url) {
+        const url = new URL(event.state.url);
+        fetchContentFromSearchParams(url.searchParams);
+    }
+});
 
 function formatDateLong(date) {
     const options = {
@@ -110,13 +129,26 @@ function fetchMenu() {
             .then(html => {
                 const container = document.getElementById('menu_container');
                 container.innerHTML = html;
-                fixupLinks(container);
+                fixupLinks(container, 'menu.html');
             })
             .catch(error => console.error(error));
     }
     catch (error) {
         console.error(error);
     }
+}
+
+async function fetchContentFromSearchParams(params) {
+    let link = null;
+    for (const [key, value] of params) {
+        link = `${key}/${value}`;
+        break;
+    }
+    if (link === null) {
+        link = 'info/home';
+    }
+
+    await fetchContent(link);
 }
 
 async function fetchContent(link) {
@@ -127,7 +159,7 @@ async function fetchContent(link) {
                 const container = document.getElementById('content_container');
                 const html = MD.makeHtml(md);
                 container.innerHTML = html;
-                fixupLinks(container);
+                fixupLinks(container, `${link}.md`);
 
                 const parts = link.split('/');
                 const year = parts.length > 1 ? parts[1] : null;
@@ -226,16 +258,7 @@ window.onload = () => {
     fetchMenu();
 
     const urlParams = new URLSearchParams(window.location.search);
-    let link = null;
-    for (const [key, value] of urlParams) {
-        link = `${key}/${value}`;
-        break;
-    }
-    if (link === null) {
-        link = 'info/home';
-    }
-
-    fetchContent(link);
+    fetchContentFromSearchParams(urlParams);
     fetchNewsletters();
     fetchSidebar();
     fetchCamps();
