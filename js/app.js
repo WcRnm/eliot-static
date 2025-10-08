@@ -20,14 +20,20 @@ function updatemenu() {
 // --------------------------------------------------------------
 // For internal pages, add an onclick handler.
 // For pdfs and external links, open in a separate tab
-function fixupLinks(container) {
+function fixupLinks(container, page) {
+    console.log(`fixupLinks; ${page}`)
     const domainName = window.location.hostname;
     const anchors = container.querySelectorAll('a');
     anchors.forEach(anchor => {
+        if (!anchor.href) {
+            return;
+        }
         try {
+            console.log(`fixupLinks; ${anchor.href}`)
             const url = new URL(anchor.href);
             if (url.hostname == domainName) {
                 anchor.addEventListener('click', (e) => {
+                    console.log(`onClick; ${anchor.href}`)
                     const url = new URL(anchor.href);
                     console.log(`onClick ${url.searchParams}`);
                     let link = null;
@@ -40,15 +46,28 @@ function fixupLinks(container) {
 
                     if (link === null) {
                         anchor.target = '_other';
+                    } else {
+                        history.pushState({
+                            url: anchor.href
+                        }, "", url);
                     }
                 })
                 return;
             } else {
                 anchor.target = '_other';
             }
-        } catch { }
+        }
+        catch (error) {
+            console.log(`   error; ${anchor.href}`)
+            console.error(error);
+        }
     });
 }
+
+// handle the backbutton
+window.addEventListener("popstate", (event) => {
+    console.log(`history state: ${JSON.stringify(event.state)}`);
+});
 
 function formatDateLong(date) {
     const options = {
@@ -110,7 +129,7 @@ function fetchMenu() {
             .then(html => {
                 const container = document.getElementById('menu_container');
                 container.innerHTML = html;
-                fixupLinks(container);
+                fixupLinks(container, 'menu.html');
             })
             .catch(error => console.error(error));
     }
@@ -127,7 +146,7 @@ async function fetchContent(link) {
                 const container = document.getElementById('content_container');
                 const html = MD.makeHtml(md);
                 container.innerHTML = html;
-                fixupLinks(container);
+                fixupLinks(container, `${link}.md`);
 
                 const parts = link.split('/');
                 const year = parts.length > 1 ? parts[1] : null;

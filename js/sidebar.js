@@ -10,10 +10,11 @@ function fetchSidebar() {
                 const html = MD.makeHtml(md);
                 let container = document.getElementById('sidebar_container');
                 container.innerHTML = html;
-                fixupLinks(container);
 
                 container = document.getElementById('upcomming');
                 container.appendChild(g_campTable);
+
+                fixupLinks(container, link);
             })
             .catch(error => console.error(error));
     }
@@ -146,6 +147,8 @@ function formatCampCard(info) {
         speaker.textContent = `with ${info.speaker}`;
         card.appendChild(speaker);
     }
+
+    fixupLinks(card, `card=${info.year}/${info.camp}`);
 
     return card;
 }
