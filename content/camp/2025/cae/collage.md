@@ -1,6 +1,6 @@
 ---
-topic: "Dynamic Mixed Media Collage"
-speaker: "Glenda Goodrich"
+topic: Dynamic Mixed Media Collage
+presenter: Glenda Goodrich
 ---
 
 <div id="workshop-card></div>

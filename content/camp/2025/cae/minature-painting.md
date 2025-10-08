@@ -1,6 +1,6 @@
 ---
-topic: "Painting Miniature Models"
-speaker: "Shannon Wells-Moran"
+topic: Painting Miniature Models
+presenter: Shannon Wells-Moran
 ---
 
 <div id="workshop-card></div>

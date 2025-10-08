@@ -1,6 +1,6 @@
 ---
-topic: "Pickleball"
-speaker: "Karen Stratton"
+topic: Pickleball
+presenter: Karen Stratton
 ---
 
 <div id="workshop-card></div>

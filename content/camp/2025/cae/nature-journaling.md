@@ -1,6 +1,6 @@
 ---
-topic: "Watercolor Nature Journaling"
-presenter: "Elizabeth Higgins"
+topic: Watercolor Nature Journaling
+presenter: Elizabeth Higgins
 ---
 
 <div id="workshop-card></div>

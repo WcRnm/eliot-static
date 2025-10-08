@@ -1,6 +1,6 @@
 ---
-topic: "World Music Singing"
-speaker: "Anne Weiss"
+topic: World Music Singing
+presenter: Anne Weiss
 ---
 
 <div id="workshop-card></div>

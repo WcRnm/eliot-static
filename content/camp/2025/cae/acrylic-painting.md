@@ -1,6 +1,6 @@
 ---
-topic: "Adventures in Acrylic Painting"
-speaker: "Amy Dapice"
+topic: Adventures in Acrylic Painting
+presenter: Amy Dapice
 ---
 
 <div id="workshop-card></div>

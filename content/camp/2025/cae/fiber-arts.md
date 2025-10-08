@@ -1,6 +1,6 @@
 ---
-topic: "Crazy About Stitching"
-speaker: "Drew Betz"
+topic: Crazy About Stitching
+presenter: Drew Betz
 ---
 
 <div id="workshop-card></div>

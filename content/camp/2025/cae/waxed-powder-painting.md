@@ -1,6 +1,6 @@
 ---
-topic: "Waxed Powder Painting"
-presenter: "Corey Pressman"
+topic: Waxed Powder Painting
+presenter: Corey Pressman
 ---
 
 <div id="workshop-card></div>

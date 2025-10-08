@@ -1,5 +1,5 @@
 ---
-topic: "This I Believe: Exploring & Expressing Our Heartfelt Beliefs Through Short Essays"
+topic: This I Believe - Exploring & Expressing Our Heartfelt Beliefs Through Short Essays
 presenter: Amanda Aikman
 ---
 
