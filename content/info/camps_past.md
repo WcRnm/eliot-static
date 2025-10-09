@@ -1,5 +1,5 @@
 ---
-- filter: past
+filter: past
 ---
 
 # Past Camps

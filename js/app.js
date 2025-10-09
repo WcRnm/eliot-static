@@ -5,7 +5,6 @@ MD.setOption('metadata', true);
 const g_camps = [];
 const g_newsletters = [];
 let g_campGeneral = {};     // camp names & years
-let now = new Date();
 
 // used by menu.css
 function updatemenu() {
@@ -151,6 +150,31 @@ async function fetchContentFromSearchParams(params) {
     await fetchContent(link);
 }
 
+async function fetchCampList(container, filter) {
+    const past = filter === 'past';
+    const now = new Date();
+    const pastCamps = [];
+
+    // sort descending
+    g_camps.sort((a, b) => {
+        return b.start - a.start;
+    });
+
+    // filter out future camps
+    g_camps.forEach(info => {
+        if (info.end < now) {
+            pastCamps.push(info);
+        }
+    });
+
+    console.log('-- past camps ---');
+    pastCamps.forEach(info => {
+        console.log(`  ${info.year} ${info.camp}`);
+        const card = formatCampCard(info);
+        container.appendChild(card);
+    });
+}
+
 async function fetchContent(link) {
     try {
         fetch(`content/${link}.md`)
@@ -158,6 +182,7 @@ async function fetchContent(link) {
             .then(md => {
                 const container = document.getElementById('content_container');
                 const html = MD.makeHtml(md);
+                const meta = MD.getMetadata();
                 container.innerHTML = html;
                 fixupLinks(container, `${link}.md`);
 
@@ -176,6 +201,12 @@ async function fetchContent(link) {
                     if (workshopDiv) {
                         fetchWorkshops(workshopDiv, year, camp);
                     }
+
+                } else {
+                    const campDiv = document.getElementById('camp-area');
+                    if (campDiv) {
+                        fetchCampList(campDiv, meta.filter);
+                    }
                 }
             })
             .catch(error => console.error(error));
@@ -186,6 +217,7 @@ async function fetchContent(link) {
 }
 
 async function fetchCampYear(year) {
+    const now = new Date();
     try {
         const url = `content/camp/${year}/camps.json`;
         fetch(url)
@@ -206,7 +238,7 @@ async function fetchCampYear(year) {
                     info.end = new Date(info.end);
 
                     g_camps.push(info);
-                    addCampToTable(info);
+                    addCampToTable(info, now);
                 }
             })
             .catch(error => console.error(error));
@@ -218,7 +250,6 @@ async function fetchCampYear(year) {
 
 async function fetchCamps() {
     try {
-        now = new Date();
         const link = `/content/camp/general.json`;
         fetch(link)
             .then(response => response.json())

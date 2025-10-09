@@ -42,7 +42,7 @@ function createRow(data, isHeader) {
     return row;
 }
 
-function addCampToTable(info) {
+function addCampToTable(info, now) {
     if (!info.hide) {
         if (info.end >= now) {
             const row = createRow([
