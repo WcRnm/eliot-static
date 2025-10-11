@@ -7,8 +7,9 @@ const c_campTypes = [
 
 const MAX_PAST_YEARS = 10;
 const MAX_FUTURE_YEARS = 2;
+const REFRESH_INTERVAL_SEC = 1 * 24 * 60 * 60;
 
-const g_camps = [];
+let g_camps = [];
 
 async function fetchCampList(container, filter) {
     const past = filter === 'past';
@@ -35,57 +36,6 @@ async function fetchCampList(container, filter) {
     });
 }
 
-async function fetchCampYearPrev(year) {
-    const now = new Date();
-    try {
-        const url = `content/camp/${year}/camps.json`;
-        fetch(url)
-            .then(response => response.json())
-            .then(camps => {
-                for (let [camp, info] of Object.entries(camps)) {
-                    info.camp = camp;
-                    info.name = `${g_campGeneral.names[camp]}`;
-                    info.year = year;
-                    info.url = `content/camp/${year}/${camp}.md`;
-                    if (info.md === undefined) {
-                        info.md = false;
-                    }
-                    if (info.hide === undefined) {
-                        info.hide = info.md === undefined;
-                    }
-                    info.start = new Date(info.start);
-                    info.end = new Date(info.end);
-
-                    g_camps.push(info);
-                    addCampToTable(info, now);
-                }
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
-async function fetchCampsPrev() {
-    try {
-        const link = `/content/camp/general.json`;
-        fetch(link)
-            .then(response => response.json())
-            .then(data => {
-                g_campGeneral = data;
-
-                g_campGeneral.years.forEach((year) => {
-                    fetchCampYearPrev(year);
-                });
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
 function storeCamp(type, year, md) {
     const html = MD.makeHtml(md);
     const meta = MD.getMetadata();
@@ -94,13 +44,14 @@ function storeCamp(type, year, md) {
             html,
             meta
         };
+        // TODO: validate camp metadata
+        console.log(`store: ${camp.meta.name}`);
 
         if (g_camps[year] === undefined) {
             g_camps[year] = [];
         }
         g_camps[year][type] = camp;
 
-        console.log(`store: ${camp.meta.name}`);
     } catch (error) {
         console.error(error);
     }
@@ -115,7 +66,6 @@ async function fetchCamp(type, year) {
         .then(response => response.text())
         .then(md => {
             storeCamp(type, year, md);
-            // todo: update camp info
             success = true;
         })
         .catch(error => console.error(error));
@@ -133,6 +83,11 @@ async function fetchCampYear(year) {
 }
 
 async function fetchCamps() {
+    g_camps = [];
     const baseYear = new Date().getFullYear();
-    let success = await fetchCampYear(baseYear);
+    await fetchCampYear(baseYear);
+    let nextYear = await fetchCampYear(baseYear + 1);
+    let prevYear = await fetchCampYear(baseYear - 1);
+
+    setTimeout(fetchCamps, (REFRESH_INTERVAL_SEC * 1000));
 }
