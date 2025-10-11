@@ -1,6 +1,8 @@
 ---
 topic: Dynamic Mixed Media Collage
 presenter: Glenda Goodrich
+img: cae25_goodrich.jpg
+    cae25_goodrich_art.jpg
 ---
 
 ### Workshop Description

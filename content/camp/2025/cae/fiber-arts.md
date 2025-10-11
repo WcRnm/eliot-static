@@ -1,6 +1,10 @@
 ---
 topic: Crazy About Stitching
 presenter: Drew Betz
+img: cae25_betz.jpg
+    cae25_betz-art-1.jpg
+    cae25_betz-art-2.jpg
+    cae25_betz-art-3.jpg
 ---
 
 ### Workshop Description

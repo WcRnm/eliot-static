@@ -89,6 +89,13 @@ function fixupCampCard(year, camp) {
                     const campInfo = json[camp];
 
                     const card = DOM.article();
+
+                    if (campInfo.img && campInfo.speaker) {
+                        const img = DOM.img(`/img/${campInfo.img}`, campInfo.speaker)
+                        DOM.addClass(img, 'float-right-300');
+                        card.appendChild(img);
+                    }
+
                     let e = DOM.elem('h1');
                     e.textContent = `${g_campGeneral.names[camp]} ${year}`;
                     card.appendChild(e);
@@ -104,11 +111,6 @@ function fixupCampCard(year, camp) {
                     const end = formatDateLong(new Date(campInfo.end));
                     e.textContent = `${start} -- ${end}`;
                     card.appendChild(e);
-
-                    if (campInfo.img && campInfo.speaker) {
-                        const img = DOM.img(campInfo.img, campInfo.speaker)
-                        card.appendChild(img);
-                    }
 
                     dateDiv.appendChild(card);
                 }

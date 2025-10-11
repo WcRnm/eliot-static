@@ -24,8 +24,17 @@ function fetchWorkshop(workshopDiv, baseUrl, workshop) {
                 const html = MD.makeHtml(md);
                 const meta = MD.getMetadata();
 
+                console.log(meta.img);
+
                 let hr = DOM.elem('hr');
                 workshopDiv.appendChild(hr);
+
+                if (meta.img) {
+                    const images = meta.img.split(' ');
+                    const img = DOM.img(`${baseUrl}/${images[0]}`, meta.presenter);
+                    DOM.addClass(img, 'float-right-300');
+                    workshopDiv.appendChild(img);
+                }
 
                 let e = DOM.elem('h3');
                 e.innerHTML = `${meta.topic}<br>${meta.presenter}`;

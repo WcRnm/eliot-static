@@ -120,3 +120,12 @@ table.camp-table {
 article.camp {
   margin: 0;
 }
+
+/* ------------------------------------------------------------------
+  images
+*/
+
+.float-right-300 {
+  float: right;
+  width: 300px;
+}

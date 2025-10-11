@@ -1,6 +1,7 @@
 ---
 topic: Waxed Powder Painting
 presenter: Corey Pressman
+img: cae25_pressman.jpg
 ---
 
 ###  Program Description

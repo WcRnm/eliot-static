@@ -1,6 +1,7 @@
 ---
 topic: Watercolor Nature Journaling
 presenter: Elizabeth Higgins
+img: cae25_higgins.jpg
 ---
 
 ### Program Description
