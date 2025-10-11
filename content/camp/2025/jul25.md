@@ -1,3 +1,16 @@
+---
+name:       July Eliot 2025
+start:      2025-07-11
+end:        2025-07-18
+show:       true
+
+title:      Joyful Noise
+subtitle:   Sing Out, Be Free
+speaker:    Lea Morris
+
+img:
+    lea_morris_600x600.jpg   "Lea Morris"
+---
 <div id="camp-card"></div>
 
 ### Program Description

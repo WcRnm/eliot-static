@@ -1,3 +1,16 @@
+---
+name:       Winter Eliot 2025
+start:      2025-12-28
+end:        2026-12-01
+show:       true
+
+title:      Stick Pounding
+subtitle:
+speaker:    Melanie DeMore
+
+img:
+    melanie_demore_600x325.jpg   "Melanie DeMore"
+---
 <div id="camp-card"></div>
 
 ### Program Description:

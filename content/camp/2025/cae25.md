@@ -1,3 +1,23 @@
+---
+name:   Creative Arts Eliot 2025
+start:  2025-08-09
+end:    2025-08-13
+show:   true
+
+title:  Your Choice of Workshops
+
+workshops:
+    acrylic-painting
+    collage
+    essays
+    fiber-arts
+    minature-painting
+    nature-journaling
+    picklball
+    singing
+    waxed-powder-painting
+    writing
+---
 <div id="camp-card"></div>
 
 Please join us for an amazing creative experience in a relaxed, non-judgemental atmosphere! You'll get to choose a morning workshop from the workshop options listed below. Afternoons and evenings are full of lots of other great summer camp activities.
