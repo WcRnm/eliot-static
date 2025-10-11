@@ -1,13 +1,8 @@
 {
   "names": {
-    "july":   "July Eliot",
-    "august": "August Eliot",
-    "cae":    "Creative Arts Eliot",
-    "winter": "Winter Eliot"
-  },
-  "years": [
-    2026,
-    2025,
-    2024
-  ]
+    "jul": "July Eliot",
+    "aug": "August Eliot",
+    "cae": "Creative Arts Eliot",
+    "win": "Winter Eliot"
+  }
 }

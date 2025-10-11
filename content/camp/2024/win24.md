@@ -1,3 +1,17 @@
+---
+name:       Winter Eliot 2024
+start:      2024-12-28
+end:        2024-12-01
+show:       true
+
+title:      The Practice of Evidence-Based Hope
+subtitle:
+speaker:    Elin Kelsey
+
+img:
+    elin_kelsey_600x800     "Elin Kelsey"
+---
+
 <div id="camp-card"></div>
 
 ### Program Description:

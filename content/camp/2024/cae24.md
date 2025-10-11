@@ -1,3 +1,22 @@
+---
+name:   Creative Arts Eliot 2024
+start:  2024-08-10
+end:    2024-08-14
+show:   true
+
+title:  Your Choice of Workshops
+
+workshops:
+    fiber-arts
+    minature-painting
+    mindfulness
+    nature-journaling
+    poetry
+    singing
+    waxed-powder-painting
+    writing
+---
+
 Please join us for an amazing creative experience in a relaxed, non-judgemental atmosphere! You'll get to choose a morning workshop from the workshop options listed below. Afternoons and evenings are full of lots of other great summer camp activities.
 Registration Details
 
