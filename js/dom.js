@@ -25,9 +25,8 @@ class DOM {
 
     static img(path, altText) {
         const img = DOM.elem('img');
-        img.src = `/img/${path}`;
+        img.src = path;
         img.alt = altText;
-        img.style.width = '300px';
 
         if (altText) {
             img.setAttribute("alt", altText);
