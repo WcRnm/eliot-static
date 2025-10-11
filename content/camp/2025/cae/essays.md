@@ -1,9 +1,3 @@
----
-topic: This I Believe - Exploring & Expressing Our Heartfelt Beliefs Through Short Essays
-presenter: Amanda Aikman
-img: cae25_aikman.jpg
----
-
 ## Workshop Description
 
 ”I am not going to talk about religious beliefs but about matters so obvious that it has gone out of style to mention them. I believe in my neighbors.”

@@ -1,12 +1,3 @@
----
-topic: Crazy About Stitching
-presenter: Drew Betz
-img: cae25_betz.jpg
-    cae25_betz-art-1.jpg
-    cae25_betz-art-2.jpg
-    cae25_betz-art-3.jpg
----
-
 ### Workshop Description
 
 We will be exploring the use of embroidery and other embellishments to enhance traditional forms found in quilt making.  Participants will create a basic quilt block or background piece on which to work.  Several methods of crazy quilt block construction will be demonstrated that can be used to create a background on which to stitch.  In addition, forms that lend themselves to embellishment will be shared.  Fabric choices can include cotton, wool, silk and linen.  Scraps are welcome additions to the crazy quilt genera. Embroidery stitches that are easy to use will be demonstrated and/or reviewed. Beginners, intermediate and advanced stitchers are all welcome and will find a challenge to enjoy.

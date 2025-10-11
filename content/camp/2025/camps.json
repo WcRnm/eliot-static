@@ -1,32 +1,159 @@
 {
-    "july": {
-        "speaker" : "Lea Morris",
-        "img"     : "speakers/lea_morris.jpg",
-        "topic"   : "Joyful Noise: Sing Out, Be Free",
-        "start"   : "2025-07-11",
-        "end"     : "2025-07-18",
-        "md"      : true
+  "july": {
+    "title": "Joyful Noise: Sing Out, Be Free",
+    "subtitle": "",
+    "speaker": {
+      "name": "Lea Morris",
+      "img": "speakers/lea_morris.jpg",
     },
-    "august": {
-        "speaker" : "Guy Nelson",
-        "img"     : "speakers/guy_nelson.jpg",
-        "topic"   : "Creativity Games & Storytelling",
-        "start"   : "2025-08-02",
-        "end"     : "2025-08-09",
-        "md"      : true
+    "start": "2025-07-11",
+    "end": "2025-07-18",
+    "info": true
+  },
+  "august": {
+    "title": "Creativity Games & Storytelling",
+    "subtitle": "",
+    "speaker": {
+      "name": "Guy Nelson",
+      "img": "speakers/guy_nelson.jpg"
     },
-    "cae": {
-        "topic"   : "Your Choice of Workshops",
-        "start"   : "2025-08-09",
-        "end"     : "2025-08-13",
-        "md"      : true
+    "start": "2025-08-02",
+    "end": "2025-08-09",
+    "info": true
+  },
+  "winter": {
+    "title": "Stick Pounding",
+    "subtitle": "",
+    "speaker": {
+      "name": "Melanie DeMore",
+      "img": "speakers/melanie_demore.jpg"
     },
-    "winter": {
-        "speaker" : "Melanie DeMore",
-        "img"     : "speakers/melanie_demore.jpg",
-        "topic"   : "Stick Pounding",
-        "start"   : "2025-12-28",
-        "end"     : "2026-12-01",
-        "md"      : true
-    }
+    "start": "2025-12-28",
+    "end": "2026-12-01",
+    "info": true
+  },
+  "cae": {
+    "title": "Your Choice of Workshops",
+    "start": "2025-08-09",
+    "end": "2025-08-13",
+    "info": true,
+    "workshops": [
+      {
+        "info": "acrylic-painting",
+        "title": "Adventures in Acrylic Painting",
+        "subtitle": "",
+        "presenter": {
+          "name": "Amy Dapice",
+          "img": "dapice.jpg"
+        }
+      },
+      {
+        "info": "collage",
+        "title": "Dynamic Mixed Media Collage",
+        "subtitle": "",
+        "presenter": {
+          "name": "Glenda Goodrich",
+          "img": "goodrich.jpg"
+        },
+        "samples": [
+          {
+            "img": "goodrich_art.jpg",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "info": "essays",
+        "title": "This I Believe",
+        "subtitle": "Exploring & Expressing Our Heartfelt Beliefs Through Short Essays",
+        "presenter": {
+          "name": "Amanda Aikman",
+          "img": "aikman.jpg"
+        }
+      },
+      {
+        "info": "fiber-arts",
+        "title": "Crazy About Stitching",
+        "subtitle": "",
+        "presenter": {
+          "name": "Drew Betz",
+          "img": "betz.jpg"
+        },
+        "samples": [
+          {
+            "img": "betz-art-1.jpg",
+            "desc": ""
+          },
+          {
+            "img": "betz-art-2.jpg",
+            "desc": ""
+          },
+          {
+            "img": "betz-art-3.jpg",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "info": "minature-painting",
+        "title": "Painting Miniature Models",
+        "subtitle": "",
+        "presenter": {
+          "name": "Shannon Wells-Moran",
+          "img": "wells-moran.jpg"
+        },
+        "samples": [
+          {
+            "img": "shannon_miniatures.jpg",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "info": "nature-journaling",
+        "title": "Watercolor Nature Journaling",
+        "subtitle": "",
+        "presenter": {
+          "name": "Elizabeth Higgins",
+          "img": "higgins.jpg"
+        }
+      },
+      {
+        "info": "pickleball",
+        "title": "Pickleball",
+        "subtitle": "",
+        "presenter": {
+          "name": "Karen Stratton",
+          "img": "stratton.jpg"
+        }
+      },
+      {
+        "info": "singing",
+        "title": "World Music Singing",
+        "subtitle": "",
+        "presenter": {
+          "name": "Anne Weiss",
+          "img": "weiss.jpg"
+        }
+      },
+      {
+        "info": "waxed-powder-painting",
+        "title": "Waxed Powder Painting",
+        "subtitle": "",
+        "presenter": {
+          "name": "Corey Pressman",
+          "img": "pressman.jpg"
+        }
+      },
+      {
+        "info": "writing",
+        "title": "Writing Your Story",
+        "subtitle": "",
+        "presenter": {
+          "name": "Bryan Willis",
+          "img": "willis.jpg"
+        }
+      }
+    ]
+  }
 }

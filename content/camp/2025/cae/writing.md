@@ -1,10 +1,3 @@
----
-# CAE Workshop
-topic:      Writing Your Story
-presenter:  Bryan Willis
-img:        cae25_willis.jpg
----
-
 #### Workshop Description
 
 Open to everyone who enjoys writing. Our workshop will

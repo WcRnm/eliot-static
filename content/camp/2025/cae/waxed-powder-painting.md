@@ -1,9 +1,3 @@
----
-topic: Waxed Powder Painting
-presenter: Corey Pressman
-img: cae25_pressman.jpg
----
-
 ###  Program Description
 
 This workshop experience will introduce students to the unique art form known as waxed powder painting. Waxed powder painting involves directly applying powdered pigments to a surface (usually paper) and finishing the work with various wax media.The workshop will cover the mixing, handling, and application of powder pigment, the benefits of various paper types, stencil cutting, and the manufacture and application strategies of both cold and encaustic wax media.

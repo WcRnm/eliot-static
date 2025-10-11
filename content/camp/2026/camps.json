@@ -1,32 +1,46 @@
 {
     "july": {
-        "speaker" : "Zr. Alex Kapitan",
-        "img"     : "speakers/Alex_Kapitan_2022_photo.jpg",
-        "topic"   : "Exploring and Celebrating Gender Diversity, Trans Justice, and Faith",
-        "start"   : "2026-07-11",
-        "end"     : "2026-07-18",
-        "md"      : true
+        "title": "Exploring and Celebrating Gender Diversity, Trans Justice, and Faith",
+        "subtitle": "",
+        "speaker": {
+            "name": "Zr. Alex Kapitan",
+            "img": "speakers/Alex_Kapitan_2022_photo.jpg"
+        },
+        "dates": {
+            "start": "2026-07-11",
+            "end": "2026-07-18"
+        },
+        "info": true
     },
     "august": {
-        "speaker" : "Will Hornyak",
-        "img"     : "speakers/Will_Hornyak.jpg",
-        "topic"   : "Sheherazade's Caravan",
-        "start"   : "2026-08-01",
-        "end"     : "2026-08-08",
-        "md"      : true
+        "title": "Sheherazade's Caravan",
+        "subtitle": "",
+        "speaker": {
+            "name": "Will Hornyak",
+            "img": "speakers/Will_Hornyak.jpg"
+        },
+        "start": "2026-08-01",
+        "end": "2026-08-08",
+        "info": true
     },
     "cae": {
-        "topic"   : "Your Choice of Workshops",
-        "start"   : "2026-08-08",
-        "end"     : "2026-08-12",
-        "md"      : true
+        "title": "Your Choice of Workshops",
+        "subtitle": "",
+        "start": "2026-08-08",
+        "end": "2026-08-12",
+        "info": true
     },
     "winter": {
-        "speaker" : "TBD",
-        "topic"   : "TBD",
-        "start"   : "2026-12-28",
-        "end"     : "2027-12-01",
-        "md"      : false,
-        "hide"    : true
+        "title": "To be announced...",
+        "subtitle": "",
+        "speaker": {
+            "name": "To be announced...",
+            "img": ""
+        },
+        "dates": {
+            "start": "2026-12-28",
+            "end": "2027-12-01"
+        },
+        "info": false
     }
 }

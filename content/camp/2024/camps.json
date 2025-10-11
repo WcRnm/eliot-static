@@ -1,10 +1,114 @@
 {
-    "winter": {
-        "speaker" : "Elin Kelsey",
-        "img"     : "speakers/Elin_Kelsey_Photo_Credit-_Esme_Johnson.jpg",
-        "topic"   : "The Practice of Evidence-Based Hope",
-        "start"   : "2024-12-28",
-        "end"     : "2024-12-01",
-        "md"      : true
+  "july": {
+    "title": "Creativity Games and Storytelling",
+    "subtitle": "",
+    "speaker": {
+      "name": "Guy Nelson",
+      "img": "speakers/guy_nelson.jpg"
+    },
+    "dates": {
+      "start": "2024-07-13",
+      "end": "2024-07-20"
     }
+  },
+  "august": {
+    "title": "Exploring and Celebrating Sexuality, Gender, and Faith",
+    "subtitle": "",
+    "speaker": {
+      "name": "Zr. Alex Kapitan",
+      "img": ""
+    },
+    "dates": {
+      "start": "2024-08-03",
+      "end": "2024-08-10"
+    }
+  },
+  "winter": {
+    "title": "The Practice of Evidence-Based Hope",
+    "subtitle": "",
+    "speaker": {
+      "name": "Elin Kelsey",
+      "img": "speakers/Elin_Kelsey_Photo_Credit-_Esme_Johnson.jpg"
+    },
+    "dates": {
+      "start": "2024-12-28",
+      "end": "2024-12-01"
+    },
+    "info": true
+  },
+  "cae": {
+    "title": "Your Choice of Workshops",
+    "subtitle": "",
+    "dates": {
+      "start": "2024-08-10",
+      "end": "2024-08-14"
+    },
+    "info": true,
+    "workshops": [
+      {
+        "info": "fiber-arts",
+        "title": "Creative Embroidery with Felted Wool",
+        "presenter": {
+          "name": "Drew Betz",
+          "img": "betz.jpg"
+        }
+      },
+      {
+        "info": "minature-painting",
+        "title": "Painting Miniature Models",
+        "presenter": {
+          "name": "Shannon Wells-Moran",
+          "img": "wells-moran.jpg"
+        }
+      },
+      {
+        "info": "mindfulness",
+        "title": "Bringing Mindfulness to the Creative Process",
+        "presenter": {
+          "name": "Margo Benedetto",
+          "img": ""
+        }
+      },
+      {
+        "info": "nature-journaling",
+        "title": "Watercolor Nature Journaling",
+        "presenter": {
+          "name": "Elizabeth Higgins",
+          "img": "higgins.jpg"
+        }
+      },
+      {
+        "info": "poetry",
+        "title": "Poetry as a Spiritual Practice",
+        "presenter": {
+          "name": "Lynn Ungar",
+          "img": ""
+        }
+      },
+      {
+        "info": "singing",
+        "title": "Circle Singing - Your Voice",
+        "presenter": {
+          "name": "Francisco Ruiz",
+          "img": ""
+        }
+      },
+      {
+        "info": "waxed-powder-painting",
+        "title": "Waxed Powder Painting",
+        "presenter": {
+          "name": "Corey Pressman",
+          "img": "pressman.jpg"
+        }
+      },
+      {
+        "info": "writing",
+        "title": "Writing Your Story",
+        "presenter": {
+          "name": "Bryan Willis",
+          "img": "willis.jpg"
+        }
+      }
+    ]
+  }
 }
