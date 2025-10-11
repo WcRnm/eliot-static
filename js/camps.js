@@ -12,29 +12,38 @@ const REFRESH_INTERVAL_SEC = 1 * 24 * 60 * 60;
 let g_camps = [];
 let g_now = new Date();
 
-async function fetchCampList(container, filter) {
-    const past = filter === 'past';
-    const now = new Date();
-    const pastCamps = [];
+function fixupCampCard(container, year, camp) {
+    try {
+        const info = g_camps[year][camp].meta;
+        const card = DOM.article();
 
-    // sort descending
-    g_camps.sort((a, b) => {
-        return b.start - a.start;
-    });
-
-    // filter out future camps
-    g_camps.forEach(info => {
-        if (info.end < now) {
-            pastCamps.push(info);
+        if (info.img && info.speaker) {
+            const img = DOM.img(`/img/${info.img}`, info.speaker)
+            DOM.addClass(img, 'float-right-300');
+            card.appendChild(img);
         }
-    });
 
-    console.log('-- past camps ---');
-    pastCamps.forEach(info => {
-        console.log(`  ${info.year} ${info.camp}`);
-        const card = formatCampCard(info);
+        let e = DOM.elem('h1');
+        e.textContent = info.name;
+        card.appendChild(e);
+
+        e = DOM.elem('h2');
+        e.textContent = info.speaker
+                            ? `"${info.title}" with ${info.speaker}`
+                            : info.title;
+        card.appendChild(e);
+
+        e = DOM.elem('p');
+        const start = formatDateLong(new Date(info.start));
+        const end = formatDateLong(new Date(info.end));
+        e.textContent = `${start} -- ${end}`;
+        card.appendChild(e);
+
         container.appendChild(card);
-    });
+    }
+    catch (error) {
+        console.error(error);
+    }
 }
 
 function storeCamp(type, year, md, mdFile) {
@@ -44,7 +53,7 @@ function storeCamp(type, year, md, mdFile) {
     // TODO: validate camp metadata
 
     // fix up the meta data
-    meta.show = meta.show == "false" ? false : true;
+    meta.show = !(meta.show == "false");
     if (meta.show === false) {
         return;
     }
@@ -56,7 +65,7 @@ function storeCamp(type, year, md, mdFile) {
 
     try {
         const camp = {
-            html,
+            html, // TODO: do not refetch the camp html - used the cached version
             meta
         };
         console.log(`store: ${camp.meta.name}`);
