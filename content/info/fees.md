@@ -6,7 +6,7 @@ New campers in 2025 get a $50 per person discount off listed fees!
 
 Registration fees for Eliot are all inclusive, covering: housing, all meals, the morning programs and other camp activities.
 
-For each camp, the costs vary based on the program, the length of the camp (how many nights) and on which housing you choose. Accommodations range from historic shared-bath economy houses to new, deluxe rooms with private bathrooms. 
+For each camp, the costs vary based on the program, the length of the camp (how many nights) and on which housing you choose. Accommodations range from historic shared-bath economy houses to new, deluxe rooms with private bathrooms.
 
 **You can find detailed descriptions of each lodging option at [Seabeck Conference Center Housing](https://www.seabeck.org/lodging)**.
 
@@ -35,10 +35,10 @@ In early June of 2024, the Seabeck Conference Center (SCC) was informed by the W
 
 ## Shared Bath-Deluxe
 
-- Inn #202 - #209, 
-- Annex, 
+- Inn #202 - #209,
+- Annex,
 - Reeser #1-#4, #6-#8
-	
+
 
 | Age Range | July and August Eliot | Creative Arts Eliot | Winter Eliot |
 | --------- | --------------------- | ------------------- | ------------ |
@@ -52,7 +52,7 @@ In early June of 2024, the Seabeck Conference Center (SCC) was informed by the W
 - Reeser #5
 - Madrona #1 and #3
 - Spruce
-	
+
 
 | Age Range   | July and August Eliot | Creative Arts Eliot | Winter Eliot |
 | ----------- | --------------------- | ------------------- | ------------ |
@@ -66,7 +66,7 @@ In early June of 2024, the Seabeck Conference Center (SCC) was informed by the W
 - Huckleberry
 - New Pines
 - Salal
-	
+
 | Age Range   | July and August Eliot | Creative Arts Eliot | Winter Eliot |
 | ----------- | --------------------- | ------------------- | ------------ |
 | 17 and Up   | $1,260                | $1,045              | $960         |
@@ -78,7 +78,7 @@ In early June of 2024, the Seabeck Conference Center (SCC) was informed by the W
 
 - Single Occupancy in Multiple Occupancy Rooms
 - Shared Room Discount: At July Eliot and August Eliot, if 3 or more adults (age 18+) share a room, there is a per/adult discount. You can tell us your choice of roommates on your registration form, or let us choose for you.
-	
+
 |                                             | July and August Eliot | Creative Arts Eliot | Winter Eliot |
 | ------------------------------------------- | --------------------- | ------------------- | ------------ |
 | Single Occupancy in Multiple Occupancy Room | +$350                 | +$200               | +$200        |
