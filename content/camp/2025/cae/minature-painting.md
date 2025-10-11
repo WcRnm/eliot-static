@@ -1,6 +1,8 @@
 ---
 topic: Painting Miniature Models
 presenter: Shannon Wells-Moran
+img: cae25_wells-moran.jpg
+    cae25_shannon_miniatures.jpg
 ---
 
 ### Program Description

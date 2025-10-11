@@ -24,6 +24,8 @@ function fetchWorkshop(workshopDiv, baseUrl, workshop) {
                 const html = MD.makeHtml(md);
                 const meta = MD.getMetadata();
 
+                console.log(meta.img);
+
                 let hr = DOM.elem('hr');
                 workshopDiv.appendChild(hr);
 

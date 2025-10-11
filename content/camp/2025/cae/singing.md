@@ -1,6 +1,7 @@
 ---
 topic: World Music Singing
 presenter: Anne Weiss
+img: cae25_weiss.jpg
 ---
 
 ### Workshop Description

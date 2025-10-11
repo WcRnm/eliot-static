@@ -1,6 +1,7 @@
 ---
 topic: Pickleball
 presenter: Karen Stratton
+img: cae25_stratton.jpg
 ---
 
 ### Workshop Description

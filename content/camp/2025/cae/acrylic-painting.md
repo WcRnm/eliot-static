@@ -1,6 +1,7 @@
 ---
 topic: Adventures in Acrylic Painting
 presenter: Amy Dapice
+img: cae24_dapice.jpg
 ---
 
 ### Workshop Description
