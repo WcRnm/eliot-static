@@ -1,3 +1,16 @@
+---
+name:       July Eliot 2026
+start:      2026-07-11
+end:        2026-07-18
+show:       true
+
+title:      Exploring and Celebrating Gender Diversity, Trans Justice, and Faith
+subtitle:
+speaker:    Zr. Alex Kapitan
+
+img:
+    alex_kapitan_600x701.jpg   "Zr. Alex Kapitan"
+---
 <div id="camp-card"></div>
 
 ### Program Description

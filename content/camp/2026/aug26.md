@@ -1,3 +1,17 @@
+---
+name:       August Eliot 2026
+start:      2026-08-01
+end:        2026-08-08
+show:       true
+
+title:      Sheherazade's Caravan
+subtitle:   A Journey of Telling Stories and Changing Lives
+speaker:    Will Hornyak
+
+# list of images and alt text
+img:
+    hornyak_480x616.jpg   "Will Hornyak"
+---
 <div id="camp-card"></div>
 
 ### Program Description

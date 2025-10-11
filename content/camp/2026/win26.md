@@ -1,3 +1,16 @@
+---
+name:       Winter Eliot 2026
+start:      2026-12-28
+end:        2026-01-01
+show:       false
+
+title:      To be announced ...
+subtitle:
+speaker:    To be announced ...
+
+#img:
+#    photo.jpg   "Speaker TBA"
+---
 <div id="camp-card"></div>
 
 ### Program Description:
