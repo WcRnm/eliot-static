@@ -12,7 +12,6 @@ speaker:    Will Hornyak
 img:
     hornyak_480x616.jpg   "Will Hornyak"
 ---
-<div id="camp-card"></div>
 
 ### Program Description
 

@@ -11,7 +11,6 @@ speaker:    Zr. Alex Kapitan
 img:
     alex_kapitan_600x701.jpg   "Zr. Alex Kapitan"
 ---
-<div id="camp-card"></div>
 
 ### Program Description
 

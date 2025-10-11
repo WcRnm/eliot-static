@@ -11,7 +11,6 @@ speaker:    Guy Nelson
 img:
     guy_nelson_600x900   "Guy Nelson"
 ---
-<div id="camp-card"></div>
 
 ### Program Description
 

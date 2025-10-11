@@ -11,7 +11,6 @@ speaker:    To be announced ...
 #img:
 #    photo.jpg   "Speaker TBA"
 ---
-<div id="camp-card"></div>
 
 ### Program Description:
 

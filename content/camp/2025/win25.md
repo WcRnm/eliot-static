@@ -11,7 +11,6 @@ speaker:    Melanie DeMore
 img:
     melanie_demore_600x325.jpg   "Melanie DeMore"
 ---
-<div id="camp-card"></div>
 
 ### Program Description:
 
