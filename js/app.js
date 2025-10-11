@@ -2,7 +2,6 @@ const MD = new showdown.Converter();
 MD.setOption('tables', true);
 MD.setOption('metadata', true);
 
-const g_camps = [];
 const g_newsletters = [];
 let g_campGeneral = {};     // camp names & years
 
@@ -152,31 +151,6 @@ async function fetchContentFromSearchParams(params) {
     await fetchContent(link);
 }
 
-async function fetchCampList(container, filter) {
-    const past = filter === 'past';
-    const now = new Date();
-    const pastCamps = [];
-
-    // sort descending
-    g_camps.sort((a, b) => {
-        return b.start - a.start;
-    });
-
-    // filter out future camps
-    g_camps.forEach(info => {
-        if (info.end < now) {
-            pastCamps.push(info);
-        }
-    });
-
-    console.log('-- past camps ---');
-    pastCamps.forEach(info => {
-        console.log(`  ${info.year} ${info.camp}`);
-        const card = formatCampCard(info);
-        container.appendChild(card);
-    });
-}
-
 async function fetchContent(link) {
     try {
         fetch(`content/${link}.md`)
@@ -218,57 +192,6 @@ async function fetchContent(link) {
     }
 }
 
-async function fetchCampYear(year) {
-    const now = new Date();
-    try {
-        const url = `content/camp/${year}/camps.json`;
-        fetch(url)
-            .then(response => response.json())
-            .then(camps => {
-                for (let [camp, info] of Object.entries(camps)) {
-                    info.camp = camp;
-                    info.name = `${g_campGeneral.names[camp]}`;
-                    info.year = year;
-                    info.url = `content/camp/${year}/${camp}.md`;
-                    if (info.md === undefined) {
-                        info.md = false;
-                    }
-                    if (info.hide === undefined) {
-                        info.hide = info.md === undefined;
-                    }
-                    info.start = new Date(info.start);
-                    info.end = new Date(info.end);
-
-                    g_camps.push(info);
-                    addCampToTable(info, now);
-                }
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
-async function fetchCamps() {
-    try {
-        const link = `/content/camp/general.json`;
-        fetch(link)
-            .then(response => response.json())
-            .then(data => {
-                g_campGeneral = data;
-
-                g_campGeneral.years.forEach((year) => {
-                    fetchCampYear(year);
-                });
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
 async function fetchNewsletters() {
     try {
         const link = `/data/newsletters.json`;
@@ -287,10 +210,10 @@ async function fetchNewsletters() {
 }
 
 window.onload = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+
     buildCampTable();
     fetchMenu();
-
-    const urlParams = new URLSearchParams(window.location.search);
     fetchContentFromSearchParams(urlParams);
     fetchNewsletters();
     fetchSidebar();
