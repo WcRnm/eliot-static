@@ -1,3 +1,13 @@
+---
+title:      Adventures in Acrylic Painting
+subtitle:
+show:       true
+
+presenter:  Amy Dapice
+
+img:
+    dapice_600x800.jpg  "Amy Dapice"
+---
 ### Workshop Description
 
 Acrylic painting is one of the most versatile and playful mediums available for artists! It can be transparent or opaque, used as a wash or laid on thick with a palette knife. Best of all, it dries quickly allowing for layering and a spontaneous way of working. Students of all levels will enjoy and benefit from this workshop, which includes tried and true techniques as well as more unconventional tips and tricks. Instructor Amy Dapice takes a step by step approach from drawing to finished paintings, providing solid instruction as well as a big dose of inspiration and plain old fun!

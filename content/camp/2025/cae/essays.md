@@ -1,3 +1,13 @@
+---
+title:      This I Believe
+subtitle:   Exploring & Expressing Our Heartfelt Beliefs Through Short Essays
+show:       true
+
+presenter:  Amanda Aikman
+
+img:
+    aikman_600x676.jpg       "Amanda Aikman"
+---
 ## Workshop Description
 
 ”I am not going to talk about religious beliefs but about matters so obvious that it has gone out of style to mention them. I believe in my neighbors.”

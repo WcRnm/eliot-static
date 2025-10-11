@@ -1,9 +1,9 @@
 ---
-title: Workshop Name
-subtitle: Optional subtitle
+title:      Workshop Name
+subtitle:   Optional subtitle
+show:       false
 
-# presenter's name
-presenter: Presenter's Name
+presenter:  Presenter's Name
 
 # List of images and alt text (in quotes)
 # first image is typically the presenter.

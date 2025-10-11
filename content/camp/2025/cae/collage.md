@@ -1,3 +1,15 @@
+---
+title:      Dynamic Mixed Media Collage
+subtitle:
+show:       true
+
+presenter:  Glenda Goodrich
+
+img:
+    goodrich_600x450.jpg        "Glenda Goodrich"
+    goodrich-art_600x600.jpg    "Collage samples"
+---
+
 ### Workshop Description
 
 In this combination workshop we will explore true mixed media by combining paper collage, painting, stenciling, and Posca pens, to reveal “windows” of collaged delight. Students will choose image templates ranging from birds to bouquets and create vibrant ready-to-frame artworks. Come and engage in this critic-free environment that encourages relaxed playful expression. No drawing or collage experience needed. GG will provide you with step-by-step instruction and guidance to create delightful little works of art to hang on your wall or give as gifts.

@@ -1,3 +1,14 @@
+---
+title:      Painting Miniature Models
+subtitle:
+show:       true
+
+presenter:  Shannon Wells-Moran
+
+img:
+    wells-moran_600x1067.jpg    "Shannon Wells-Moran"
+    shannon_miniatures_600x337  "Painted miniature models; Robots, Enchantress, Demon Fighter"
+---
 ### Program Description
 
 Do you enjoy playing tabletop games like Dungeons and Dragons, but are tired of using bare plastic figurines? Are you a sculptor wanting to add color and depth to your creations? In this workshop, we’ll learn how to use acrylic paints to breathe life into three-dimensional miniatures, starting with the basic steps to paint your first miniature, and moving up to skills and techniques used by the masters of realist painting. This is a workshop for everyone, from beginners who have never touched a paintbrush, to traditional painters looking to transfer their skills to the third dimension, or even experienced modelmakers and miniature painters who want to hone their craft.

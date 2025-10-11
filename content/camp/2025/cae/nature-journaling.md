@@ -1,3 +1,13 @@
+---
+title:      Watercolor Nature Journaling
+subtitle:
+show:       true
+
+presenter:  Elizabeth Higgins
+
+img:
+    higgins_600x637.jpg       "Elizabeth Higgins"
+---
 ### Program Description
 
 Nature connection, creativity and mindfulness come together in the practice of nature journaling in this workshop that will give participants the skills and space to connect to themselves, to nature and to one another through nature journaling. Participants will learn a variety of techniques in watercoloring, stamp-carving, drawing and writing and be given prompts and guidance to create their own “conversation with Nature” in the way that feels authentic to themselves.  No experience is necessary, just bring a journal and your desire to express yourself using basic art supplies. We will spend time indoors and outside, observing, appreciating, reflecting on and celebrating the nature around us.

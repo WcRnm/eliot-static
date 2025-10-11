@@ -1,3 +1,13 @@
+---
+title:      Writing Your Story
+subtitle:
+show:       true
+
+presenter:  Bryan Willis
+
+img:
+    willis_329x434.jpg       "Bryan Willis"
+---
 #### Workshop Description
 
 Open to everyone who enjoys writing. Our workshop will
