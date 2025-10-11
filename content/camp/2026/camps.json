@@ -23,13 +23,6 @@
         "end": "2026-08-08",
         "info": true
     },
-    "cae": {
-        "title": "Your Choice of Workshops",
-        "subtitle": "",
-        "start": "2026-08-08",
-        "end": "2026-08-12",
-        "info": true
-    },
     "winter": {
         "title": "To be announced...",
         "subtitle": "",
@@ -42,5 +35,12 @@
             "end": "2027-12-01"
         },
         "info": false
+    },
+    "cae": {
+        "title": "Your Choice of Workshops",
+        "subtitle": "",
+        "start": "2026-08-08",
+        "end": "2026-08-12",
+        "info": true
     }
 }
