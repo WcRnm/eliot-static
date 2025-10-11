@@ -10,6 +10,7 @@ const MAX_FUTURE_YEARS = 2;
 const REFRESH_INTERVAL_SEC = 1 * 24 * 60 * 60;
 
 let g_camps = [];
+let g_now = new Date();
 
 async function fetchCampList(container, filter) {
     const past = filter === 'past';
@@ -36,15 +37,28 @@ async function fetchCampList(container, filter) {
     });
 }
 
-function storeCamp(type, year, md) {
+function storeCamp(type, year, md, mdFile) {
     const html = MD.makeHtml(md);
     const meta = MD.getMetadata();
+
+    // TODO: validate camp metadata
+
+    // fix up the meta data
+    meta.show = meta.show == "false" ? false : true;
+    if (meta.show === false) {
+        return;
+    }
+
+    meta.year = year;
+    meta.mdFile = mdFile;
+    meta.start = new Date(meta.start);
+    meta.end = new Date(meta.end);
+
     try {
         const camp = {
             html,
             meta
         };
-        // TODO: validate camp metadata
         console.log(`store: ${camp.meta.name}`);
 
         if (g_camps[year] === undefined) {
@@ -52,6 +66,7 @@ function storeCamp(type, year, md) {
         }
         g_camps[year][type] = camp;
 
+        addCampToTable(camp.meta, g_now);
     } catch (error) {
         console.error(error);
     }
@@ -59,13 +74,14 @@ function storeCamp(type, year, md) {
 
 async function fetchCamp(type, year) {
     const shortYear = year % 100;
-    const url = `content/camp/${year}/${type}${shortYear}.md`;
+    const mdFile = `${type}${shortYear}`;
+    const url = `content/camp/${year}/${mdFile}.md`;
     let success = false;
     // content/camp/2024/jul24.md
     await fetch(url)
         .then(response => response.text())
         .then(md => {
-            storeCamp(type, year, md);
+            storeCamp(type, year, md, mdFile);
             success = true;
         })
         .catch(error => console.error(error));
@@ -84,6 +100,7 @@ async function fetchCampYear(year) {
 
 async function fetchCamps() {
     g_camps = [];
+    g_now = new Date();
     const baseYear = new Date().getFullYear();
     await fetchCampYear(baseYear);
     let nextYear = await fetchCampYear(baseYear + 1);

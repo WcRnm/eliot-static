@@ -101,8 +101,8 @@ function fixupCampCard(year, camp) {
 
                     e = DOM.elem('h2');
                     e.textContent = campInfo.speaker
-                                        ? `"${campInfo.topic}" with ${campInfo.speaker}`
-                                        : campInfo.topic;
+                                        ? `"${campInfo.title}" with ${campInfo.speaker}`
+                                        : campInfo.title;
                     card.appendChild(e);
 
                     e = DOM.elem('p');
