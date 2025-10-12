@@ -17,9 +17,10 @@ function fixupCampCard(container, year, camp) {
         const info = g_camps[year][camp].meta;
         const card = DOM.article();
 
-        if (info.photo && info.speaker) {
+        if (info.photo) {
             const url = `content/camp/${year}/img/${info.photo}`;
-            const photoImg = DOM.img(url, info.speaker)
+            const altText = info.speaker ? info.speaker : info.title;
+            const photoImg = DOM.img(url, altText)
             DOM.addClass(photoImg, 'float-right-300');
             card.appendChild(photoImg);
         }

@@ -5,6 +5,7 @@ end:    2024-08-14
 show:   true
 
 title:  Your Choice of Workshops
+photo:  cae_550x367.jpg
 
 workshops:
     fiber-arts

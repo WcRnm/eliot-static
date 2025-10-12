@@ -4,6 +4,7 @@ start:  2026-08-08
 end:    2026-08-12
 
 title:  Your Choice of Workshops
+photo:  cae_550x367.jpg
 
 workshops:
 ---

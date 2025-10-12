@@ -29,7 +29,6 @@
     flex-direction: column;
   }
   .col75 {
-    flex: 75%;
     width: auto;
   }
 }
@@ -127,5 +126,6 @@ article.camp {
 
 .float-right-300 {
   float: right;
-  width: 300px;
+  max-width: 300px;
+  max-height: 300px;
 }

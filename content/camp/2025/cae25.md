@@ -5,6 +5,7 @@ end:    2025-08-13
 show:   true
 
 title:  Your Choice of Workshops
+photo:  cae_550x367.jpg
 
 workshops:
     acrylic-painting
