@@ -116,7 +116,6 @@ async function fetchCamps() {
     setTimeout(fetchCamps, (REFRESH_INTERVAL_SEC * 1000));
 }
 
-
 function sortPast(a, b) {
     return b.meta.start - a.meta.start;
 }
@@ -157,3 +156,26 @@ async function showCamps(container, filter) {
     });
 }
 
+async function showBoard(container) {
+    g_board.forEach(group => {
+        const heading = DOM.elem('h2');
+        heading.textContent = group.name;
+        container.appendChild(heading);
+
+        group.members.forEach(member => {
+            const text = member.position
+                            ? `${member.name}, ${member.position}`
+                            : member.name;
+            const figure = DOM.elem('figure');
+            const caption = DOM.elem('figcaption');
+            caption.textContent = text;
+            figure.appendChild(caption);
+
+            const img = DOM.img(member.photo, text);
+            DOM.addClass(img, 'sq200');
+            figure.appendChild(img);
+
+            container.appendChild(figure);
+        });
+    });
+}

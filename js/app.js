@@ -2,6 +2,8 @@ const MD = new showdown.Converter();
 MD.setOption('tables', true);
 MD.setOption('metadata', true);
 
+let g_board = [];
+
 // used by menu.css
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {
@@ -139,9 +141,14 @@ async function fetchContent(link) {
                     }
 
                 } else {
-                    const campDiv = document.getElementById('camp-area');
-                    if (campDiv) {
-                        showCamps(campDiv, meta.filter);
+                    let container = document.getElementById('camp-area');
+                    if (container) {
+                        showCamps(container, meta.filter);
+                    }
+                    container = document.getElementById('board-area');
+                    if (container) {
+                        fetchBoard();
+                        showBoard(container);
                     }
                 }
             })
@@ -157,7 +164,6 @@ function sortNews(a,b) {
 }
 
 async function fetchNewsletters() {
-    console.log("fetch Newsletters");
     try {
         const link = `/content/newsletters.json`;
         fetch(link)
@@ -175,12 +181,28 @@ async function fetchNewsletters() {
     }
 }
 
+async function fetchBoard() {
+    try {
+        const link = `/content/board.json`;
+        fetch(link)
+            .then(response => response.json())
+            .then(board => {
+                g_board = board;
+            })
+            .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
 async function onLoad() {
     const urlParams = new URLSearchParams(window.location.search);
 
-    buildCampTable();
+    buildTables();
     fetchMenu();
     fetchNewsletters();
+    fetchBoard();
     fetchSidebar();
     await fetchCamps();
     fetchContentFromSearchParams(urlParams);
