@@ -4,9 +4,7 @@ subtitle:
 show:       true
 
 presenter:  Karen Stratton
-
-img:
-    stratton_600x731.jpg       "Karen Stratton"
+photo:      stratton_600x731.jpg
 ---
 ### Workshop Description
 

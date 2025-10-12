@@ -1,7 +1,7 @@
 ---
 title:      Poetry as a Spiritual Practice
 presenter:  Lynn Ungar
-img:
+photo:
 ---
 ### Program Description
 

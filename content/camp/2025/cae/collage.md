@@ -4,10 +4,10 @@ subtitle:
 show:       true
 
 presenter:  Glenda Goodrich
+photo:      goodrich_600x450.jpg
 
-img:
-    goodrich_600x450.jpg        "Glenda Goodrich"
-    goodrich-art_600x600.jpg    "Collage samples"
+img0:   goodrich-art_600x600.jpg
+alt0:   Collage samples
 ---
 
 ### Workshop Description

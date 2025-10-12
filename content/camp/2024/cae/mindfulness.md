@@ -1,7 +1,7 @@
 ---
 title:      Bringing Mindfulness to the Creative Process
 presenter:  Margo Benedetto
-img:
+photo:
 ---
 ### Program Description
 

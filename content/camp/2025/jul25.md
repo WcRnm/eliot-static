@@ -7,9 +7,7 @@ show:       true
 title:      Joyful Noise
 subtitle:   Sing Out, Be Free
 speaker:    Lea Morris
-
-img:
-    lea_morris_600x600.jpg   "Lea Morris"
+photo:      lea_morris_600x600.jpg
 ---
 
 ### Program Description

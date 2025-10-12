@@ -7,9 +7,7 @@ show:       true
 title:      Stick Pounding
 subtitle:
 speaker:    Melanie DeMore
-
-img:
-    melanie_demore_600x325.jpg   "Melanie DeMore"
+photo:      melanie_demore_600x325.jpg
 ---
 
 ### Program Description:

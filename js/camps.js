@@ -17,10 +17,11 @@ function fixupCampCard(container, year, camp) {
         const info = g_camps[year][camp].meta;
         const card = DOM.article();
 
-        if (info.img && info.speaker) {
-            const img = DOM.img(`/img/${info.img}`, info.speaker)
-            DOM.addClass(img, 'float-right-300');
-            card.appendChild(img);
+        if (info.photo && info.speaker) {
+            const url = `content/camp/${year}/img/${info.photo}`;
+            const photoImg = DOM.img(url, info.speaker)
+            DOM.addClass(photoImg, 'float-right-300');
+            card.appendChild(photoImg);
         }
 
         let e = DOM.elem('h1');
@@ -29,8 +30,8 @@ function fixupCampCard(container, year, camp) {
 
         e = DOM.elem('h2');
         e.textContent = info.speaker
-                            ? `"${info.title}" with ${info.speaker}`
-                            : info.title;
+            ? `"${info.title}" with ${info.speaker}`
+            : info.title;
         card.appendChild(e);
 
         e = DOM.elem('p');

@@ -7,9 +7,7 @@ show:       true
 title:      The Practice of Evidence-Based Hope
 subtitle:
 speaker:    Elin Kelsey
-
-img:
-    elin_kelsey_600x800     "Elin Kelsey"
+photo:      elin_kelsey_600x800
 ---
 
 ### Program Description:

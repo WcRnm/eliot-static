@@ -4,9 +4,7 @@ subtitle:   Exploring & Expressing Our Heartfelt Beliefs Through Short Essays
 show:       true
 
 presenter:  Amanda Aikman
-
-img:
-    aikman_600x676.jpg       "Amanda Aikman"
+photo:      aikman_600x676.jpg
 ---
 ## Workshop Description
 

@@ -4,9 +4,7 @@ subtitle:
 show:       true
 
 presenter:  Corey Pressman
-
-img:
-    pressman_600x600.jpg       "Corey Pressman"
+photo:      pressman_600x600.jpg
 ---
 ###  Program Description
 

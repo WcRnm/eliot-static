@@ -1,8 +1,7 @@
 ---
 title:      Waxed Powder Painting
 presenter:  Corey Pressman
-img:
-    pressman.jpg    "Corey Pressman"
+photo:      pressman.jpg
 ---
 ###  Program Description
 

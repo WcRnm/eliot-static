@@ -7,7 +7,5 @@ show:       true
 title:      Exploring and Celebrating Sexuality, Gender, and Faith
 subtitle:
 speaker:    Zr. Alex Kapitan
-
-img:
-    alex_kapitan_600x701    "Zr. Alex Kapitan"
+photo:      alex_kapitan_600x701
 ---

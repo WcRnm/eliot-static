@@ -4,9 +4,7 @@ subtitle:
 show:       true
 
 presenter:  Anne Weiss
-
-img:
-    weiss_600x672.jpg       "Anne Weiss"
+photo:      weiss_600x672.jpg
 ---
 ### Workshop Description
 

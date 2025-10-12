@@ -1,8 +1,7 @@
 ---
 title:      Watercolor Nature Journaling
 presenter:  Elizabeth Higgins
-img:
-    higgins.jpg "Elizabeth Higgins"
+photo:      higgins.jpg
 ---
 ### Program Description
 

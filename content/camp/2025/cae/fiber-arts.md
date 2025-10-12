@@ -4,12 +4,16 @@ subtitle:
 show:       true
 
 presenter:  Drew Betz
+photo:      betz_558x640.jpg
 
-img:
-    betz_558x640.jpg        "Drew Betz"
-    betz-art-1_612x640.jpg  "Sample stitchwork"
-    betz-art-2_488x640.jpg  "Sample stitchwork"
-    betz-art-3_566x640.jpg  "Sample stitchwork"
+img0:   betz-art-1_612x640.jpg
+alt0:   Sample stitchwork
+
+img1:   betz-art-2_488x640.jpg
+alt1:   Sample stitchwork
+
+img2:   betz-art-3_566x640.jpg
+alt2:   Sample stitchwork
 ---
 
 ### Workshop Description

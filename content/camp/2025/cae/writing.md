@@ -4,9 +4,7 @@ subtitle:
 show:       true
 
 presenter:  Bryan Willis
-
-img:
-    willis_329x434.jpg       "Bryan Willis"
+photo:      willis_329x434.jpg
 ---
 #### Workshop Description
 

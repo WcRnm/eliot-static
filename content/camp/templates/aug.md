@@ -7,10 +7,7 @@ show:       false
 title:      Camp title, theme, or topic
 subtitle:   Optional subtitle
 speaker:    Speaker's Name
-
-# list of images and alt text
-img:
-    photo.jpg   "Speaker's Name"
+photo:      photo.jpg
 ---
 
 ### Program Description

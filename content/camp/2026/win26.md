@@ -7,9 +7,7 @@ show:       false
 title:      To be announced ...
 subtitle:
 speaker:    To be announced ...
-
-#img:
-#    photo.jpg   "Speaker TBA"
+photo:      #photo.jpg
 ---
 
 ### Program Description:

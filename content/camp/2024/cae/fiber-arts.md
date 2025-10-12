@@ -1,8 +1,7 @@
 ---
 title:      Creative Embroidery with Felted Wool
 presenter:  Drew Betz
-img:
-    betz.jpg    "Drew Betz"
+photo:      betz.jpg
 ---
 
 ### Program Description

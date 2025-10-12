@@ -7,9 +7,7 @@ show:       true
 title:      Creativity Games & Storytelling
 subtitle:
 speaker:    Guy Nelson
-
-img:
-    guy_nelson_600x900   "Guy Nelson"
+photo:      guy_nelson_600x900
 ---
 
 ### Program Description

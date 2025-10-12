@@ -7,10 +7,7 @@ show:       true
 title:      Sheherazade's Caravan
 subtitle:   A Journey of Telling Stories and Changing Lives
 speaker:    Will Hornyak
-
-# list of images and alt text
-img:
-    hornyak_480x616.jpg   "Will Hornyak"
+photo:      hornyak_480x616.jpg
 ---
 
 ### Program Description

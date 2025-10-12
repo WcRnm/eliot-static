@@ -4,10 +4,10 @@ subtitle:
 show:       true
 
 presenter:  Shannon Wells-Moran
+photo:      wells-moran_600x1067.jpg
 
-img:
-    wells-moran_600x1067.jpg    "Shannon Wells-Moran"
-    shannon_miniatures_600x337  "Painted miniature models; Robots, Enchantress, Demon Fighter"
+img0:   shannon_miniatures_600x337
+alt0:   Painted miniature models; Robots, Enchantress, Demon Fighter
 ---
 ### Program Description
 

@@ -4,9 +4,7 @@ subtitle:
 show:       true
 
 presenter:  Elizabeth Higgins
-
-img:
-    higgins_600x637.jpg       "Elizabeth Higgins"
+photo:      higgins_600x637.jpg
 ---
 ### Program Description
 

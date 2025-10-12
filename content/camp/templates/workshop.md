@@ -4,13 +4,17 @@ subtitle:   Optional subtitle
 show:       false
 
 presenter:  Presenter's Name
+photo:      # photo.jpg photo of presenter
 
-# List of images and alt text (in quotes)
-# first image is typically the presenter.
-img:
-    photo.jpg       "Presenter's Name"
-    photo-2.jpg     "alt text"
-    photo-3-jpg     "alt text"
+# Optional List of images and alt text
+img0:   art.jpg
+alt0:   description
+
+img1:   art-2.jpg
+alt1:   alt text
+
+img2:   photo-3-jpg
+alt2:   alt text
 ---
 
 ### Program Description

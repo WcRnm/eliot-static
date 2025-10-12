@@ -2,7 +2,7 @@
 title:      Circle Singing
 subtitle:   Your Voice
 presenter:  Francisco Ruiz
-img:
+photo:
 ---
 ### Program Description:
 

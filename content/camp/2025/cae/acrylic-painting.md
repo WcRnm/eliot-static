@@ -4,9 +4,7 @@ subtitle:
 show:       true
 
 presenter:  Amy Dapice
-
-img:
-    dapice_600x800.jpg  "Amy Dapice"
+photo:      dapice_600x800.jpg
 ---
 ### Workshop Description
 
