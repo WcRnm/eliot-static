@@ -71,8 +71,6 @@ function buildCampTable() {
     // also build the newsletter table
     g_newsTable = DOM.elem('table', 'news-table');
     thead = g_newsTable.createTHead();
-    let headerData = ['Date', 'Newsletter'];
-    thead.appendChild(createNewsRow(headerData));
     g_newsTBody = g_newsTable.createTBody();
     g_newsTable.appendChild(g_newsTBody);
 }
@@ -179,12 +177,21 @@ function createNewsRow(data, isHeader) {
     return row;
 }
 
+function formatNewsletterDate(date) {
+    let options = { month: 'numeric',
+                day: 'numeric',
+                year: '2-digit',
+                timeZone: "UTC" };
+    return date.toLocaleDateString("en-US", options);
+}
+
 function addNewsletterToTable(news) {
     // newsletters are pre-sorted
 
     const url = `/pdf/news/${news.pdf}`;
     const anchor = DOM.anchor(url, news.name);
-    const data = [news.date.toLocaleDateString(), anchor];
+    const dateString = formatNewsletterDate(news.date);
+    const data = [anchor, dateString];
     const row = createNewsRow(data, false);
     g_newsTBody.appendChild(row);
 }
