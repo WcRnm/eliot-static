@@ -7,20 +7,23 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
 # TODO List
 
 - [ ] Add instructions and How-to's for updating the website.
-- [ ] Improve layout - font, background color, etc.
+- [x] Improve layout - font, background color, etc.
 - [ ] Photo gallery
 - [ ] Archive: Past camp: descriptions
-- [ ] fix PDF links
-  - [ ] open in new tab
+- [x] fix PDF links
+  - [x] open in new tab
 - [ ] Contact page - email address and phone number only
 - [ ] Email list for newsletter - TBD
-- [ ] sidebar
-  - [ ] add newsletter link
-  - [ ] Camp info
-- [ ] past camps
+- [x] sidebar
+  - [x] add newsletter link
+  - [x] Camp info
+- [x] past camps
 - [ ] implement history (back button)
 - [ ] Dates - https://github.com/datejs/Datejs
 - [ ] scrap camp descriptions
+- [ ] mark currently running camp with a star or something?
+- [ ] do not refetch the camp html - used the cached version
+
 
 
 # Current Website Notes

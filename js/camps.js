@@ -52,8 +52,6 @@ function storeCamp(type, year, md, mdFile) {
     const html = MD.makeHtml(md);
     const meta = MD.getMetadata();
 
-    // TODO: validate camp metadata
-
     // fix up the meta data
     meta.show = !(meta.show == "false");
     if (meta.show === false) {
@@ -67,7 +65,7 @@ function storeCamp(type, year, md, mdFile) {
 
     try {
         const camp = {
-            html, // TODO: do not refetch the camp html - used the cached version
+            html,
             meta
         };
         if (g_camps[year] === undefined) {
@@ -134,7 +132,6 @@ function getSortedCamps(past) {
     g_camps.forEach(campYear => {
         for (let [_, info] of Object.entries(campYear)) {
             // a currently running camp counts as a future/upcomming camp
-            // TODO: mark currently running camp ?
             if (past) {
                 if (now > info.meta.end) {
                     camps.push(info);
