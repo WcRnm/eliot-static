@@ -119,3 +119,48 @@ async function fetchCamps() {
 
     setTimeout(fetchCamps, (REFRESH_INTERVAL_SEC * 1000));
 }
+
+
+function sortPast(a, b) {
+    return b.meta.start - a.meta.start;
+}
+function sortFuture(a, b) {
+    return a.meta.start - b.meta.start;
+}
+
+function getSortedCamps(past) {
+    const now = new Date();
+    const camps = [];
+
+    // filter out future camps
+    g_camps.forEach(campYear => {
+        for (let [_, info] of Object.entries(campYear)) {
+            // a currently running camp counts as a future/upcomming camp
+            // TODO: mark currently running camp ?
+            if (past) {
+                if (now > info.meta.end) {
+                    camps.push(info);
+                }
+            } else {
+                if (info.meta.end > now) {
+                    camps.push(info);
+                }
+            }
+        }
+    });
+
+    camps.sort(past ? sortPast : sortFuture);
+    return camps;
+}
+
+async function showCamps(container, filter) {
+    const camps = getSortedCamps(filter === 'past');
+
+    console.log('-- past camps ---');
+    camps.forEach(info => {
+        console.log(`  ${info.year} ${info.camp}`);
+        const card = formatCampCard(info.meta);
+        container.appendChild(card);
+    });
+}
+

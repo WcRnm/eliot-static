@@ -143,7 +143,7 @@ async function fetchContent(link) {
                 } else {
                     const campDiv = document.getElementById('camp-area');
                     if (campDiv) {
-                        fetchCampList(campDiv, meta.filter);
+                        showCamps(campDiv, meta.filter);
                     }
                 }
             })
