@@ -129,3 +129,10 @@ article.camp {
   max-width: 300px;
   max-height: 300px;
 }
+@media (max-width: 1080px) {
+  .float-right-300 {
+    float: right;
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
