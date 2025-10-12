@@ -70,8 +70,6 @@ function storeCamp(type, year, md, mdFile) {
             html, // TODO: do not refetch the camp html - used the cached version
             meta
         };
-        console.log(`store: ${camp.meta.name}`);
-
         if (g_camps[year] === undefined) {
             g_camps[year] = [];
         }
@@ -156,9 +154,7 @@ function getSortedCamps(past) {
 async function showCamps(container, filter) {
     const camps = getSortedCamps(filter === 'past');
 
-    console.log('-- past camps ---');
     camps.forEach(info => {
-        console.log(`  ${info.year} ${info.camp}`);
         const card = formatCampCard(info.meta);
         container.appendChild(card);
     });

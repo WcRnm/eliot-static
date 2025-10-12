@@ -2,8 +2,6 @@ const MD = new showdown.Converter();
 MD.setOption('tables', true);
 MD.setOption('metadata', true);
 
-const g_newsletters = [];
-
 // used by menu.css
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {
@@ -154,14 +152,20 @@ async function fetchContent(link) {
     }
 }
 
+function sortNews(a,b) {
+    return (a.date < b.date);
+}
+
 async function fetchNewsletters() {
+    console.log("fetch Newsletters");
     try {
-        const link = `/data/newsletters.json`;
+        const link = `/content/newsletters.json`;
         fetch(link)
             .then(response => response.json())
-            .then(newsData => {
-                newsData.forEach((news) => {
-                    g_newsletters.push(newsData);
+            .then(newsletters => {
+                newsletters.forEach((news) => {
+                    news.date = new Date(news.date);
+                    addNewsletterToTable(news);
                 });
             })
             .catch(error => console.error(error));

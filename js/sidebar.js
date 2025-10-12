@@ -1,5 +1,8 @@
-let g_campTable = null;     // sidebar table
-let g_campTBody = null;     // sidebar table
+let g_campTable = null;
+let g_campTBody = null;
+
+let g_newsTable = null;
+let g_newsTBody = null;
 
 function fetchSidebar() {
     try {
@@ -11,8 +14,11 @@ function fetchSidebar() {
                 const container = document.getElementById('sidebar_container');
                 container.innerHTML = html;
 
-                const tableContainer = document.getElementById('upcomming');
+                let tableContainer = document.getElementById('upcomming');
                 tableContainer.appendChild(g_campTable);
+
+                tableContainer = document.getElementById('newsletters');
+                tableContainer.appendChild(g_newsTable);
 
                 fixupLinks(container, link);
             })
@@ -27,17 +33,17 @@ function createRow(data, isHeader) {
     const row = DOM.elem('tr', 'camp-row');
     let i = 0;
     data.forEach(cellContent => {
-        const th = document.createElement(isHeader ? 'th' : 'td');
+        const cell = document.createElement(isHeader ? 'th' : 'td');
         if (i++ < 2) {
             // hide the first two rows - start and end date, used for sorting
-            th.classList.add('hidden');
+            cell.classList.add('hidden');
         }
         if (typeof cellContent === 'object') {
-            th.appendChild(cellContent);
+            cell.appendChild(cellContent);
         } else {
-            th.innerHTML = cellContent;
+            cell.innerHTML = cellContent;
         }
-        row.appendChild(th);
+        row.appendChild(cell);
     });
     return row;
 }
@@ -55,16 +61,20 @@ function addCampToTable(info, now) {
 }
 
 function buildCampTable() {
-    // first two columns are hidden
-    const headerData = ['0', '0', 'Camps'];
-
     g_campTable = DOM.elem('table', 'camp-table');
-    const thead = g_campTable.createTHead();
-    thead.appendChild(createRow(headerData));
+    let thead = g_campTable.createTHead();
     g_campTable.appendChild(thead);
 
     g_campTBody = g_campTable.createTBody();
     g_campTable.appendChild(g_campTBody);
+
+    // also build the newsletter table
+    g_newsTable = DOM.elem('table', 'news-table');
+    thead = g_newsTable.createTHead();
+    let headerData = ['Date', 'Newsletter'];
+    thead.appendChild(createNewsRow(headerData));
+    g_newsTBody = g_newsTable.createTBody();
+    g_newsTable.appendChild(g_newsTBody);
 }
 
 function sortTable(table, col, reverse) {
@@ -124,7 +134,7 @@ function formatCampCard(info) {
     const card = DOM.article('camp');
 
     const campName = DOM.div('camp-name');
-    const a = DOM.anchor(`?camp=${info.year}/${info.mdFile}`, `${info.name}`);
+    const a = DOM.anchor(`?camp=${info.year}/${info.mdFile}`, info.name);
     campName.appendChild(a);
     card.appendChild(campName);
 
@@ -152,4 +162,29 @@ function formatCampCard(info) {
     fixupLinks(card, `card=${info.year}/${info.camp}`);
 
     return card;
+}
+
+function createNewsRow(data, isHeader) {
+    const row = DOM.elem('tr', 'news-row');
+    let i = 0;
+    data.forEach(cellContent => {
+        const cell = document.createElement(isHeader ? 'th' : 'td');
+        if (typeof cellContent === 'object') {
+            cell.appendChild(cellContent);
+        } else {
+            cell.innerHTML = cellContent;
+        }
+        row.appendChild(cell);
+    });
+    return row;
+}
+
+function addNewsletterToTable(news) {
+    // newsletters are pre-sorted
+
+    const url = `/pdf/news/${news.pdf}`;
+    const anchor = DOM.anchor(url, news.name);
+    const data = [news.date.toLocaleDateString(), anchor];
+    const row = createNewsRow(data, false);
+    g_newsTBody.appendChild(row);
 }
