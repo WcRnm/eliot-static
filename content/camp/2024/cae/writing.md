@@ -1,3 +1,8 @@
+---
+title:      Writing Your Story
+presenter:  Bryan Willis
+photo:      willis.jpg
+---
 ## Bryan Willis • Writing Your Story
 
 Willis photo

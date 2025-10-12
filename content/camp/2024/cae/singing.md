@@ -1,8 +1,9 @@
 ---
-topic: "Circle Singing - Your Voice"
-presenter: "Francisco Ruiz"
+title:      Circle Singing
+subtitle:   Your Voice
+presenter:  Francisco Ruiz
+photo:
 ---
-
 ### Program Description:
 
 Circle singing cultivates the traditional skills important for ensemble singing—intonation, dynamics, blend, and sensitivity, and builds the fundamentals of musicianship, including composition, harmony, counterpoint, intonation, improvisation, and deep, responsive listening. Group singing benefits posture, breathing and muscle tension release - regardless of the skill level of participants. Join us in a safe exploration of our voices as we navigate fundamentals of breath control, listening skills and unveiling the singing potential within each one of us. Francisco Ruiz will facilitate Circle Singing, emphasizing community building and utilizing singing as a spiritual practice.

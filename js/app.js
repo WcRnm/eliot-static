@@ -2,9 +2,7 @@ const MD = new showdown.Converter();
 MD.setOption('tables', true);
 MD.setOption('metadata', true);
 
-const g_camps = [];
 const g_newsletters = [];
-let g_campGeneral = {};     // camp names & years
 
 // used by menu.css
 function updatemenu() {
@@ -79,49 +77,6 @@ function formatDateLong(date) {
     return date.toLocaleString('en-US', options);
 }
 
-function fixupCampCard(year, camp) {
-    try {
-        fetch(`content/camp/${year}/camps.json`)
-            .then(response => response.json())
-            .then(json => {
-                const dateDiv = document.getElementById('camp-card');
-                if (dateDiv) {
-                    const campInfo = json[camp];
-
-                    const card = DOM.article();
-
-                    if (campInfo.img && campInfo.speaker) {
-                        const img = DOM.img(`/img/${campInfo.img}`, campInfo.speaker)
-                        DOM.addClass(img, 'float-right-300');
-                        card.appendChild(img);
-                    }
-
-                    let e = DOM.elem('h1');
-                    e.textContent = `${g_campGeneral.names[camp]} ${year}`;
-                    card.appendChild(e);
-
-                    e = DOM.elem('h2');
-                    e.textContent = campInfo.speaker
-                                        ? `"${campInfo.topic}" with ${campInfo.speaker}`
-                                        : campInfo.topic;
-                    card.appendChild(e);
-
-                    e = DOM.elem('p');
-                    const start = formatDateLong(new Date(campInfo.start));
-                    const end = formatDateLong(new Date(campInfo.end));
-                    e.textContent = `${start} -- ${end}`;
-                    card.appendChild(e);
-
-                    dateDiv.appendChild(card);
-                }
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
 function fetchMenu() {
     try {
         const link = `/content/menu.html`;
@@ -152,31 +107,6 @@ async function fetchContentFromSearchParams(params) {
     await fetchContent(link);
 }
 
-async function fetchCampList(container, filter) {
-    const past = filter === 'past';
-    const now = new Date();
-    const pastCamps = [];
-
-    // sort descending
-    g_camps.sort((a, b) => {
-        return b.start - a.start;
-    });
-
-    // filter out future camps
-    g_camps.forEach(info => {
-        if (info.end < now) {
-            pastCamps.push(info);
-        }
-    });
-
-    console.log('-- past camps ---');
-    pastCamps.forEach(info => {
-        console.log(`  ${info.year} ${info.camp}`);
-        const card = formatCampCard(info);
-        container.appendChild(card);
-    });
-}
-
 async function fetchContent(link) {
     try {
         fetch(`content/${link}.md`)
@@ -190,13 +120,19 @@ async function fetchContent(link) {
 
                 const parts = link.split('/');
                 const year = parts.length > 1 ? parts[1] : null;
-                const camp = parts.length > 2 ? parts[2] : null;
+                let camp = parts.length > 2 ? parts[2] : null;
+                if (camp) {
+                    const firstNumber = camp.match(/[0-9]+/);
+                    camp = camp.substring(0, camp.indexOf(firstNumber)); //
+                }
 
                 if (year && camp) {
                     // is this a camp page?
                     console.log(`link: ${link}`)
                     if (link.startsWith('camp/')) {
-                        fixupCampCard(year, camp);
+                        const campCard = DOM.div('camp-card');
+                        container.prepend(campCard);
+                        fixupCampCard(campCard, year, camp);
                     }
 
                     const workshopDiv = document.getElementById('workshop-area');
@@ -207,60 +143,9 @@ async function fetchContent(link) {
                 } else {
                     const campDiv = document.getElementById('camp-area');
                     if (campDiv) {
-                        fetchCampList(campDiv, meta.filter);
+                        showCamps(campDiv, meta.filter);
                     }
                 }
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
-async function fetchCampYear(year) {
-    const now = new Date();
-    try {
-        const url = `content/camp/${year}/camps.json`;
-        fetch(url)
-            .then(response => response.json())
-            .then(camps => {
-                for (let [camp, info] of Object.entries(camps)) {
-                    info.camp = camp;
-                    info.name = `${g_campGeneral.names[camp]}`;
-                    info.year = year;
-                    info.url = `content/camp/${year}/${camp}.md`;
-                    if (info.md === undefined) {
-                        info.md = false;
-                    }
-                    if (info.hide === undefined) {
-                        info.hide = info.md === undefined;
-                    }
-                    info.start = new Date(info.start);
-                    info.end = new Date(info.end);
-
-                    g_camps.push(info);
-                    addCampToTable(info, now);
-                }
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
-async function fetchCamps() {
-    try {
-        const link = `/content/camp/general.json`;
-        fetch(link)
-            .then(response => response.json())
-            .then(data => {
-                g_campGeneral = data;
-
-                g_campGeneral.years.forEach((year) => {
-                    fetchCampYear(year);
-                });
             })
             .catch(error => console.error(error));
     }
@@ -286,13 +171,17 @@ async function fetchNewsletters() {
     }
 }
 
-window.onload = () => {
+async function onLoad() {
+    const urlParams = new URLSearchParams(window.location.search);
+
     buildCampTable();
     fetchMenu();
-
-    const urlParams = new URLSearchParams(window.location.search);
-    fetchContentFromSearchParams(urlParams);
     fetchNewsletters();
     fetchSidebar();
-    fetchCamps();
+    await fetchCamps();
+    fetchContentFromSearchParams(urlParams);
+}
+
+window.onload = () => {
+    onLoad();
 };

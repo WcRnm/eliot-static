@@ -1,6 +1,7 @@
 ---
-topic: "Creative Embroidery with Felted Wool"
-presenter: "Drew Betz"
+title:      Creative Embroidery with Felted Wool
+presenter:  Drew Betz
+photo:      betz.jpg
 ---
 
 ### Program Description

@@ -43,16 +43,14 @@ function createRow(data, isHeader) {
 }
 
 function addCampToTable(info, now) {
-    if (!info.hide) {
-        if (info.end >= now) {
-            const row = createRow([
-                info.start.getTime(),
-                info.end.getTime(),
-                formatCampCard(info)
-            ]);
-            g_campTBody.appendChild(row);
-            sortCampTable();
-        }
+    if (info.end >= now) {
+        const row = createRow([
+            info.start.getTime(),
+            info.end.getTime(),
+            formatCampCard(info)
+        ]);
+        g_campTBody.appendChild(row);
+        sortCampTable();
     }
 }
 
@@ -78,9 +76,9 @@ function sortTable(table, col, reverse) {
         return reverse // `-1 *` if want opposite order
             * (a.cells[col].textContent.trim()
                 .localeCompare(b.cells[col].textContent.trim())
-               );
+            );
     });
-    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+    for (i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
 }
 
 function sortCampTable() {
@@ -126,7 +124,7 @@ function formatCampCard(info) {
     const card = DOM.article('camp');
 
     const campName = DOM.div('camp-name');
-    const a = DOM.anchor(`?camp=${info.year}/${info.camp}`, `${info.name} ${info.year}`);
+    const a = DOM.anchor(`?camp=${info.year}/${info.mdFile}`, `${info.name}`);
     campName.appendChild(a);
     card.appendChild(campName);
 
@@ -136,10 +134,13 @@ function formatCampCard(info) {
     dateline.innerHTML = `${start.weekday} ${start.month} ${start.day} &mdash; ${end.weekday} ${end.month} ${end.day}`;
     card.appendChild(dateline);
 
-    if (info.topic) {
-        const campTopic = DOM.div('camp-topic');
-        campTopic.textContent = `"${info.topic}"`;
-        card.appendChild(campTopic);
+    if (info.title) {
+        const campTitle = DOM.div('camp-topic');
+        campTitle.textContent = info.title;
+        if (info.subtitle) {
+            campTitle.textContent += `: ${info.subtitle}`;
+        }
+        card.appendChild(campTitle);
     }
 
     if (info.speaker) {

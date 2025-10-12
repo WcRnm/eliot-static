@@ -1,6 +1,7 @@
 ---
-topic: "Painting Miniature Models"
-presenter: "Shannon Wells-Moran"
+title:      Painting Miniature Models
+presenter:  Shannon Wells-Moran
+photo:      wells-moran.jpg
 ---
 
 ### Program Description

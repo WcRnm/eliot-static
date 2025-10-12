@@ -37,7 +37,7 @@ function fetchWorkshop(workshopDiv, baseUrl, workshop) {
                 }
 
                 let e = DOM.elem('h3');
-                e.innerHTML = `${meta.topic}<br>${meta.presenter}`;
+                e.innerHTML = `${meta.title}<br>${meta.presenter}`;
                 workshopDiv.appendChild(e);
 
                 //const card = DOM.article();
