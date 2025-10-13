@@ -194,7 +194,7 @@ function formatNewsletterDate(date) {
 function addNewsletterToTable(news) {
     // newsletters are pre-sorted
 
-    const url = `/pdf/news/${news.pdf}`;
+    const url = `/content/pdf/news/${news.pdf}`;
     const anchor = DOM.anchor(url, news.name);
     const dateString = formatNewsletterDate(news.date);
     const data = [anchor, dateString];

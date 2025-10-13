@@ -4,7 +4,7 @@ This page contains more detail to help you plan for camp: learn about accessibil
 
 ## Accessibility Notes
 
-### Vision 
+### Vision
 
 A paper newsletter is distributed each day, which contains important information about camp. If you would like an electronic version that is compatible with a screen reader, let the newsletter editor know. We have a blind Elioteer who has taught us about the need to introduce ourselves verbally before speaking, and when there is an event that is very dependent on visuals (for example a slide show of photographs), other campers have sat next to them to verbally describe what is shown. If you would benefit from similar support, let the Deans know.
 
@@ -42,13 +42,13 @@ If you have any additional questions about accessibility and accommodations, ple
 
 ## Attending with Children 3 and under
 
-We offer information here that will help you think about your needs, and what you may or may not choose to pack. The first aid team does not stock medicines (like children's Tylenol) or bulb syringes, but they have plenty of bandaids and such. Seabeck does not provide cribs or pack and plays. Many, but not all, bathrooms have stepstools to support hand-washing. There are not changing tables in the bathrooms. Housing facilities have showers, not bathtubs. There are a few high chairs for use in the dining room, on a first come, first served basis. 
+We offer information here that will help you think about your needs, and what you may or may not choose to pack. The first aid team does not stock medicines (like children's Tylenol) or bulb syringes, but they have plenty of bandaids and such. Seabeck does not provide cribs or pack and plays. Many, but not all, bathrooms have stepstools to support hand-washing. There are not changing tables in the bathrooms. Housing facilities have showers, not bathtubs. There are a few high chairs for use in the dining room, on a first come, first served basis.
 
 There is a refrigerator in the dining room (only accessible during meals), one in Colman, one in Pines, and small ones in Spruce and Juniper. These are available for storage of breastmilk, and limited storage of other items. (They are shared by all 250 campers, so please limit your use to the bare essentials, and please clearly label all items.) The small fridge in Juniper is not available if social hour is being held in Juniper. There are microwaves in Spruce, Pines, and Juniper.
 
-For camps where food is served in buffet lines, families with children under 3 should be able to cut into line - ask the accessibility coordinator or deans to share this expectation at orientation and/or in newsletter announcements. 
+For camps where food is served in buffet lines, families with children under 3 should be able to cut into line - ask the accessibility coordinator or deans to share this expectation at orientation and/or in newsletter announcements.
 
-The lagoon area is muddy, and the beach is rocky, so having shoes a child can wear in water is helpful for enjoying wading and swimming. 
+The lagoon area is muddy, and the beach is rocky, so having shoes a child can wear in water is helpful for enjoying wading and swimming.
 
 There are laundry machines in Pines, and in a small laundry building near Huckleberry. No detergent is provided. These are a shared resource and may not be available - you are welcome to create a sign-up sheet and post it there to facilitate planning.
 
@@ -62,10 +62,10 @@ Mail or packages can be sent to the Seabeck office, if essential. Postage may be
 
 ## Emergencies and First Aid
 
-In case of emergency, call 911 and then notify the Seabeck office in person or phone 360-830-5010. 
+In case of emergency, call 911 and then notify the Seabeck office in person or phone 360-830-5010.
 
-First Aid supplies are available in the Inn Lobby, children's program areas, and on the swim dock (during summer). Fellow campers who have volunteered for First Aid assistance will be identified at the all-camp orientation on the first day. During summer swim times, a staff member at the lagoon usually has an air horn and 911 cell phone for emergency use. For additional assistance, ask an Eliot staff member. 
+First Aid supplies are available in the Inn Lobby, children's program areas, and on the swim dock (during summer). Fellow campers who have volunteered for First Aid assistance will be identified at the all-camp orientation on the first day. During summer swim times, a staff member at the lagoon usually has an air horn and 911 cell phone for emergency use. For additional assistance, ask an Eliot staff member.
 
 ### Medical Facilities
 
-For urgent care, follow this link for Seabeck's list of [local medical facilities](https://www.seabeck.org/medical-facilities). To download a PDF of a map to Silverdale's medical clinics, [please click here](pdf/policy/Eliot_Emergencies_2021.pdf).  Please note that the former Harrison Hospital in Silverdale is now called St. Michael Medical Center.
+For urgent care, follow this link for Seabeck's list of [local medical facilities](https://www.seabeck.org/medical-facilities). To download a PDF of a map to Silverdale's medical clinics, [please click here](/content/pdf/policy/Eliot_Emergencies_2021.pdf).  Please note that the former Harrison Hospital in Silverdale is now called St. Michael Medical Center.

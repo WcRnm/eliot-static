@@ -8,7 +8,7 @@ Donations to Eliot may be directed to
 - The **Opportunity Fund** to help to secure Eliot's future financial vitality; or to
 - The **Scholarship Fund** to provide financial assistance to those who otherwise could not attend.
 
-[Click here for our brochure with more information](pdf/form/Eliot.Giving.Opportunity.Brochure.online.pdf).
+[Click here for our brochure with more information](/content/pdf/form/Eliot.Giving.Opportunity.Brochure.online.pdf).
 
 Eliot Institute is a charity under Section 501(c)(3) of the United States Internal Revenue Code.
 
