@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /pdf/
+Disallow: /img/
+Disallow: /*img/
+Disallow: /*templates/
