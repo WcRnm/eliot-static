@@ -2,7 +2,7 @@
 
 ## General Guidelines
 
-<img src="content/img/Lifeguard.jpg"
+<img src="/content/img/Lifeguard.jpg"
     alt="Lifeguard explaining waterfront rules"
     align="right" />
 

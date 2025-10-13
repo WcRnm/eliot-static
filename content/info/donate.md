@@ -78,7 +78,7 @@ Or donate online. (Consider making your PayPal gift a regular, automated monthly
 
 <hr>
 
-# <img src="content/img/CanadaFlag.png"> Canadian Donors
+# <img src="/content/img/CanadaFlag.png"> Canadian Donors
 
 Some gifts made to U.S. charities can be claimed on a Canadian tax return, but the tax benefits are limited. These gifts can only be claimed against US-sourced net income. [Click here for more information](?info=donate_canada).
 

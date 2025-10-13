@@ -17,6 +17,6 @@ For committees or the board, please [fill out this form](https://eliotinstitute.
 Thank you from the Eliot Board. We couldn't do it without you!
 
 <figure>
-    <img src="content/img/board/2025-board.jpg" alt="2025 Board and Staff Members" />
+    <img src="/content/img/board/2025-board.jpg" alt="2025 Board and Staff Members" />
     <figcaption>Eliot Insitute Board and Staff</figcaption>
 </figure>

@@ -1,6 +1,6 @@
 # Eliot Institute Camps
 
-<img src="content/img/Inn_on_a_Winter_Night800px.jpg"
+<img src="/content/img/Inn_on_a_Winter_Night800px.jpg"
      alt="Seabeck Inn on a winter night"
      align="right" />
 
@@ -22,7 +22,7 @@ Or check out this introductory video:
 
 People young and old come to Eliot, from infants to seniors. Here's the breakdown in age from a recent July Eliot as an example:
 
-<img src="content/img/ages.png"
+<img src="/content/img/ages.png"
     alt="Pie chart showing age groups attending Eliot camps" />
 
 Most campers are from Washington, Oregon, and British Columbia. But we have people come from across North America, and beyond. (At any camp, 10 - 20% or more are Canadian.)

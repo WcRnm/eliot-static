@@ -1,6 +1,6 @@
 # Children and Youth
 
-<img src="content/img/MAGS_on_Bouncy_Bridge.jpg"
+<img src="/content/img/MAGS_on_Bouncy_Bridge.jpg"
      alt="MAGs on the bouncy bridge"
      align="right" />
 

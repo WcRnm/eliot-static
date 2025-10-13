@@ -57,6 +57,6 @@ If you are adding a camper to an already submitted registration, please do not u
   </form>
 </article>
 
-<p><img src="content/img/meeting-house.jpg"
+<p><img src="/content/img/meeting-house.jpg"
         alt="The Meeting House, a red building nestled amongst evergreen trees"
         width="596" height="296"></p>

@@ -2,7 +2,7 @@
 
 ## Morning
 
-<img src="content/img/Camp_Staff800px.jpg"
+<img src="/content/img/Camp_Staff800px.jpg"
      alt="Camp staff at the morning program"
      align="right" />
 
