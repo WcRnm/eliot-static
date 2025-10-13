@@ -165,7 +165,7 @@ function sortNews(a,b) {
 
 async function fetchNewsletters() {
     try {
-        const link = `/content/newsletters.json`;
+        const link = `/content/data/newsletters.json`;
         fetch(link)
             .then(response => response.json())
             .then(newsletters => {
@@ -183,7 +183,7 @@ async function fetchNewsletters() {
 
 async function fetchBoard() {
     try {
-        const link = `/content/board.json`;
+        const link = `/content/data/board.json`;
         fetch(link)
             .then(response => response.json())
             .then(board => {
