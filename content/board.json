@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Executive Committee",
+    "members": [
+      {
+        "name": "Jody Feldman",
+        "position": "President",
+        "photo": "/content/img/board/Jody_Feldman_2024_-_250_x_300.jpg"
+      },
+      {
+        "name": "Jean DeVenney",
+        "position": "VP Communications & Marketing",
+        "photo": "/content/img/board/Jean_DeVenney_2024__-_250_x_300.jpg"
+      },
+      {
+        "name": "Xander Simmons",
+        "position": "Treasurer",
+        "photo": "/content/img/board/Xander-Simmons-Eliot-2024-250x300.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Board Members At-Large",
+    "members": [
+      {
+        "name": "Paul David",
+        "photo": "/content/img/board/Paul_David.jpeg"
+      },
+      {
+        "name": "Rick Duncan",
+        "photo": "/content/img/board/Rick-Duncan-Eliot-2024-250x300.jpg"
+      },
+      {
+        "name": "Janelle Durham",
+        "photo": "/content/img/board/Janelle-Durham-Eliot-2024-250x300.jpg"
+      },
+      {
+        "name": "Carla Mandy",
+        "photo": "/content/img/board/Carla-Mandy_-Eliot-2023-250x300.jpg"
+      },
+      {
+        "name": "Rory McLeod",
+        "photo": "/content/img/board/Rory_McLeod_-_250_x_300.jpg"
+      },
+      {
+        "name": "McKenna Niemer",
+        "photo": "/content/img/board/McKenna_2023_-_250_x_300.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Staff",
+    "members": [
+      {
+        "name": "Calyn McLeod",
+        "position": "Registrar",
+        "photo": "/content/img/board/calyn-seabeck-2022-color-RESIZE-UPLOAD.jpg"
+      },
+      {
+        "name": "Drew Betz",
+        "position": "Executive Secretary",
+        "photo": "/content/img/board/Drew.jpeg"
+      }
+    ]
+  }
+]

@@ -22,7 +22,7 @@ The last Spring Eliot was held in 2001.  In 2002, a new summer camp was started 
 
 ## Past Camps
 
-- [Presenters/Speakers](pdf/history/Past_Speakers.pdf)
-- [Deans](pdf/history/Camp_Deans.pdf)
+- [Presenters/Speakers](/content/pdf/history/Past_Speakers.pdf)
+- [Deans](/content/pdf/history/Camp_Deans.pdf)
 
 Contributors to this history were: Maurine Tuttle, Joan Lawson, The Rev. Dr. C. Leon Hopper, The Rev. Dr. Peter S. Raible, and John Lancaster. Refer to Our Stories, a publication of the Pacific Northwest District History Project.

@@ -1,7 +1,7 @@
 # Children and Youth
 
-<img src="img/MAGS_on_Bouncy_Bridge.jpg" 
-     alt="MAGs on the bouncy bridge" 
+<img src="/content/img/MAGS_on_Bouncy_Bridge.jpg"
+     alt="MAGs on the bouncy bridge"
      align="right" />
 
 Eliot Institute is a true multi-generational community, with attendees ranging from birth to 90+ years old. Children may attend with a parent, grandparent or a sponsor. Each camp typically includes some newcomers, and other children who have been attending with their extended families for many years. At July and August, of the 240 campers, 40 – 50 may be kids under 18. At Winter, out of 120 campers, there may be up to 20 kids.
@@ -18,17 +18,17 @@ For children under age 3, we will create a child-friendly space with fun toys an
 
 Note: At Creative Arts Eliot, children age 11+ can join a morning arts workshop with adults. For younger children, a multi-age play-based program may be available, depending on attendance numbers. (Children must be registered at least 6 weeks before camp begins.)
 
-### Afternoon Options 
+### Afternoon Options
 
 There’s lots of activities to choose from, depending on the camp: swimming in the lagoon (when lifeguards are on duty), trying out rowboats and paddle boats, participating in sports, playing board games or foosball, tie-dye or other crafts, hanging out on the playground, playing make believe in the forest, sitting and talking with friends, playing in a rock band, singing in choir, sitting under a tree and reading, and so much more! One thing that children love about Eliot is that they can have a lot of independence in this setting, and tend to spend more time venturing out with friends than hanging out with family.
 
 The Youth also have a dedicated meeting space which is available to them throughout the day.
 
-### Evening All-camp Activities 
+### Evening All-camp Activities
 
 Evenings may include: concert or coffeehouse, a talent show, games like To Tell the Truth or Charades, singalongs, or a dance. People of all ages are encouraged to participate.
 
-## Meals 
+## Meals
 
 All meals are served in the dining hall. Children often eat with their friends, though many families ask their children to eat one meal a day with them, as a chance to re-connect. There are a wide range of food options, and many dietary restrictions can be managed. Parents may also choose to bring some of their own foods to keep in the refrigerator in the dining hall or in their car. (No food in rooms, please! It draws in mice and squirrels.)
 
@@ -36,8 +36,8 @@ All meals are served in the dining hall. Children often eat with their friends, 
 
 Youth and children's curfew is 11 p.m., unless set earlier by parents or program staff. Youth may stay out for youth activities until 1 a.m. provided they are in a designated youth area and have two adults, age 25 or over, present. After curfew, children and youth should be in their sleeping quarters or with a parent or sponsor.
 
-Check out pictures from camp at the bottom of this post! 
-Or, we have a flyer you can share with your kids. 
+Check out pictures from camp at the bottom of this post!
+Or, we have a flyer you can share with your kids.
 
 ## Supervision
 
@@ -63,10 +63,10 @@ Eliot Institute is concerned with your child’s health and safety as well as yo
 
 4. **Wasps and Yellow Jackets** inevitably establish nests in the wooded areas around Seabeck. Parents of children with known reactions to stings from such insects should take precautions.
 
-5. **Waterfront**. To swim, campers under 18 must have a swimming check and wear a swimming bracelet. Campers under 18 wishing to use the boats must be accompanied by an adult (unless they have passed the boating test) and must wear a lifejacket. (Please see [waterfront rules](pdf/policy/Eliot_Waterfront_Rules_(2025).pdf) for more details.)
+5. **Waterfront**. To swim, campers under 18 must have a swimming check and wear a swimming bracelet. Campers under 18 wishing to use the boats must be accompanied by an adult (unless they have passed the boating test) and must wear a lifejacket. (Please see [waterfront rules](/content/pdf/policy/Eliot_Waterfront_Rules_(2025).pdf) for more details.)
 
 You can find additional helpful information on amenities available at camp on our [survival guide](?info=survival_guide) page.
 
 ## Eliot’s Policy for the Safety of Children, Youth, and Vulnerable Adults
 
-- [Vulnerable Camper Protection Policy](pdf/policy/Vulnerable_Camper_Protection_Policy_-_DRAFT5.pdf)
+- [Vulnerable Camper Protection Policy](/content/pdf/policy/Vulnerable_Camper_Protection_Policy_-_DRAFT5.pdf)

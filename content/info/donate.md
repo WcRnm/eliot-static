@@ -1,16 +1,16 @@
-# Donate 
+# Donate
 
 ***Eliot Institute*** welcomes your financial support. Thank you for considering a donation to our organization! (If you would like to contribute your time or talent, please check out our volunteers page.)
 
-Donations to Eliot may be directed to 
+Donations to Eliot may be directed to
 
 - The **Operations Fund** to pay for innovative programs and camps without increasing fees
-- The **Opportunity Fund** to help to secure Eliot's future financial vitality; or to 
+- The **Opportunity Fund** to help to secure Eliot's future financial vitality; or to
 - The **Scholarship Fund** to provide financial assistance to those who otherwise could not attend.
-  
-[Click here for our brochure with more information](pdf/form/Eliot.Giving.Opportunity.Brochure.online.pdf).
 
-Eliot Institute is a charity under Section 501(c)(3) of the United States Internal Revenue Code. 
+[Click here for our brochure with more information](/content/pdf/form/Eliot.Giving.Opportunity.Brochure.online.pdf).
+
+Eliot Institute is a charity under Section 501(c)(3) of the United States Internal Revenue Code.
 
 Mail checks to:
 
@@ -78,7 +78,7 @@ Or donate online. (Consider making your PayPal gift a regular, automated monthly
 
 <hr>
 
-# <img src="img/CanadaFlag.png"> Canadian Donors
+# <img src="/content/img/CanadaFlag.png"> Canadian Donors
 
 Some gifts made to U.S. charities can be claimed on a Canadian tax return, but the tax benefits are limited. These gifts can only be claimed against US-sourced net income. [Click here for more information](?info=donate_canada).
 
@@ -88,8 +88,8 @@ Eliot Institute also welcomes donations of time and skills as part of a camp sta
 
 <hr>
 
-<a href="https://www.paypal.com/webapps/mpp/paypal-popup" 
-    title="How PayPal Works" 
+<a href="https://www.paypal.com/webapps/mpp/paypal-popup"
+    title="How PayPal Works"
     onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;">
     <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
 </a>

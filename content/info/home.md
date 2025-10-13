@@ -1,7 +1,7 @@
 # What is Eliot?
 
 <figure>
-    <img src="img/firelight_slide.jpg" alt="Songs at Firelight" />
+    <img src="/content/img/firelight_slide.jpg" alt="Songs at Firelight" />
     <figcaption>Songs at Firelight</figcaption>
 </figure>
 

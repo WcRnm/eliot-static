@@ -1,8 +1,13 @@
-let g_campTable = null;
-let g_campTBody = null;
-
-let g_newsTable = null;
-let g_newsTBody = null;
+const g_table = {
+    camps: {
+        table: null,
+        body: null,
+    },
+    news: {
+        table: null,
+        body: null,
+    }
+};
 
 function fetchSidebar() {
     try {
@@ -15,10 +20,10 @@ function fetchSidebar() {
                 container.innerHTML = html;
 
                 let tableContainer = document.getElementById('upcomming');
-                tableContainer.appendChild(g_campTable);
+                tableContainer.appendChild(g_table.camps.table);
 
                 tableContainer = document.getElementById('newsletters');
-                tableContainer.appendChild(g_newsTable);
+                tableContainer.appendChild(g_table.news.table);
 
                 fixupLinks(container, link);
             })
@@ -55,29 +60,30 @@ function addCampToTable(info, now) {
             info.end.getTime(),
             formatCampCard(info)
         ]);
-        g_campTBody.appendChild(row);
+        g_table.camps.body.appendChild(row);
         sortCampTable();
     }
 }
 
-function buildCampTable() {
-    g_campTable = DOM.elem('table', 'camp-table');
-    let thead = g_campTable.createTHead();
-    g_campTable.appendChild(thead);
+function buildTables() {
+    let table = g_table.camps;
+    table.table = DOM.elem('table', 'camp-table');
+    let thead = table.table.createTHead();
+    table.table.appendChild(thead);
 
-    g_campTBody = g_campTable.createTBody();
-    g_campTable.appendChild(g_campTBody);
+    table.body = table.table.createTBody();
+    table.table.appendChild(table.body);
 
     // also build the newsletter table
-    g_newsTable = DOM.elem('table', 'news-table');
-    thead = g_newsTable.createTHead();
-    g_newsTBody = g_newsTable.createTBody();
-    g_newsTable.appendChild(g_newsTBody);
+    table = g_table.news;
+    table.table = DOM.elem('table', 'news-table');
+    thead = table.table.createTHead();
+    table.body = table.table.createTBody();
+    table.table.appendChild(table.body);
 }
 
 function sortTable(table, col, reverse) {
-    let tb = table.tBodies[0],
-        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+    let tr = Array.prototype.slice.call(table.body.rows, 0), // put rows into array
         i;
     reverse = -((+reverse) || -1);
     tr = tr.sort(function (a, b) {
@@ -86,11 +92,11 @@ function sortTable(table, col, reverse) {
                 .localeCompare(b.cells[col].textContent.trim())
             );
     });
-    for (i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+    for (i = 0; i < tr.length; ++i) table.body.appendChild(tr[i]); // append each row in order
 }
 
 function sortCampTable() {
-    sortTable(g_campTable, 0, 0);
+    sortTable(g_table.camps, 0, 0);
 }
 
 function dateParts(date) {
@@ -188,10 +194,10 @@ function formatNewsletterDate(date) {
 function addNewsletterToTable(news) {
     // newsletters are pre-sorted
 
-    const url = `/pdf/news/${news.pdf}`;
+    const url = `/content/pdf/news/${news.pdf}`;
     const anchor = DOM.anchor(url, news.name);
     const dateString = formatNewsletterDate(news.date);
     const data = [anchor, dateString];
     const row = createNewsRow(data, false);
-    g_newsTBody.appendChild(row);
+    g_table.news.body.appendChild(row);
 }
