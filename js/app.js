@@ -148,8 +148,11 @@ async function fetchContent(link) {
                     }
                     container = document.getElementById('board-area');
                     if (container) {
-                        fetchBoard();
                         showBoard(container);
+                    }
+                    container = document.getElementById('fee-area');
+                    if (container) {
+                        showFees(container);
                     }
                 }
             })
@@ -204,6 +207,7 @@ async function fetchFees() {
             .then(response => response.text())
             .then(data => {
                 g_fees = jsyaml.load(data, 'utf8');
+                updateFeeTables();
             })
             .catch(error => console.error(error));
     }

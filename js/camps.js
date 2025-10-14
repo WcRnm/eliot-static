@@ -164,8 +164,8 @@ async function showBoard(container) {
 
         group.members.forEach(member => {
             const text = member.position
-                            ? `${member.name}, ${member.position}`
-                            : member.name;
+                ? `${member.name}, ${member.position}`
+                : member.name;
             const figure = DOM.elem('figure');
             const caption = DOM.elem('figcaption');
             caption.textContent = text;
@@ -179,4 +179,23 @@ async function showBoard(container) {
             container.appendChild(figure);
         });
     });
+}
+
+async function showFees(container) {
+    for (const [key, table] of Object.entries(g_table.fees)) {
+        const heading = DOM.elem('h2');
+        heading.textContent = table.name;
+        container.appendChild(heading);
+
+        // list buildings
+        // add table
+        // update range spans
+    }
+
+    const heading = DOM.elem('h2');
+    heading.textContent = 'Surcharges and Disccounts';
+    container.appendChild(heading);
+
+    // add table
+
 }

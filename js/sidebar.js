@@ -6,7 +6,8 @@ const g_table = {
     news: {
         table: null,
         body: null,
-    }
+    },
+    fees: {}
 };
 
 function fetchSidebar() {
@@ -34,7 +35,7 @@ function fetchSidebar() {
     }
 }
 
-function createRow(data, isHeader) {
+function createCampTableRow(data, isHeader) {
     const row = DOM.elem('tr', 'camp-row');
     let i = 0;
     data.forEach(cellContent => {
@@ -55,7 +56,7 @@ function createRow(data, isHeader) {
 
 function addCampToTable(info, now) {
     if (info.end >= now) {
-        const row = createRow([
+        const row = createCampTableRow([
             info.start.getTime(),
             info.end.getTime(),
             formatCampCard(info)
@@ -168,8 +169,8 @@ function formatCampCard(info) {
     return card;
 }
 
-function createNewsRow(data, isHeader) {
-    const row = DOM.elem('tr', 'news-row');
+function createTableRow(data, isHeader, className) {
+    const row = DOM.elem('tr', className);
     let i = 0;
     data.forEach(cellContent => {
         const cell = document.createElement(isHeader ? 'th' : 'td');
@@ -198,6 +199,55 @@ function addNewsletterToTable(news) {
     const anchor = DOM.anchor(url, news.name);
     const dateString = formatNewsletterDate(news.date);
     const data = [anchor, dateString];
-    const row = createNewsRow(data, false);
+    const row = createTableRow(data, false, 'news-row');
     g_table.news.body.appendChild(row);
+}
+
+function buildFeeTable(key, name, buildings) {
+    const table = DOM.elem('table', 'fee-table');
+    const thead = table.createTHead();
+    const tbody = table.createTBody();
+    table.appendChild(tbody);
+
+    g_table.fees[key] = {
+        name: name,
+        buildings: buildings,
+        table: table,
+        head: thead,
+        body: tbody,
+    }
+}
+
+function updateFeeTables() {
+    g_table.fees = {};
+
+    const cols = g_fees.fee_columns;
+
+    for (tier of g_fees.tiers) {
+        console.log(tier.key);
+        buildFeeTable(tier.key, tier.name, tier.buildings);
+        const row = createTableRow(cols, true, 'fee-row');
+        g_table.fees[tier.key].head.appendChild(row);
+
+        const tierData = g_fees.fees[tier.key];
+
+        for (let i=0; i<g_fees.fee_rows.length; ++i) {
+            const rowData = [g_fees.fee_rows[i]].concat(tierData[i]);
+            const row = createTableRow(rowData, true, 'fee-row');
+            g_table.fees[tier.key].body.appendChild(row);
+        }
+    }
+
+    const key = 'surcharges'
+    const surchargeRows = g_fees.surcharges.rows;
+    const surchargeData = g_fees.surcharges.data;
+    console.log(key);
+    buildFeeTable(key);
+    const row = createTableRow(cols, true, 'fee-row');
+    g_table.fees[key].head.appendChild(row);
+    for (let i=0; i<surchargeData.length; ++i) {
+        const rowData = [surchargeRows[i]].concat(surchargeData[i]);
+        const row = createTableRow(rowData, true, 'fee-row');
+        g_table.fees[key].body.appendChild(row);
+    }
 }
