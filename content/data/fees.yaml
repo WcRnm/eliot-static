@@ -42,6 +42,11 @@ fee_rows: [
   "2 and Under"
 ]
 
+fee_minmax:
+  julaug: "$750 &mdash; $1260"
+  cae: "$685 &mdash; 1045"
+  win: "$565 &mdash; 960"
+
 fees:
   shared_bath_economy: [
     [   750,  685,   565 ],  # 17 and up

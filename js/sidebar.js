@@ -204,7 +204,7 @@ function addNewsletterToTable(news) {
     g_table.news.body.appendChild(row);
 }
 
-function buildFeeTable(key, name, buildings) {
+function buildFeeTable(key, name, buildings, minmax) {
     const table = DOM.elem('table', 'fee-table');
     const thead = table.createTHead();
     const tbody = table.createTBody();
