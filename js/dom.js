@@ -35,6 +35,16 @@ class DOM {
         return img;
     }
 
+    static list(ordered, itemArr) {
+        const list = DOM.elem(ordered ? 'ol' : 'ul');
+        itemArr.forEach(function (item) {
+            const li = DOM.elem('li');
+            li.textContent = item;
+            list.appendChild(li);
+        });
+        return list;
+    }
+
     static addClass(elem, cls) {
         elem.classList.add(cls);
     }

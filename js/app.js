@@ -3,6 +3,7 @@ MD.setOption('tables', true);
 MD.setOption('metadata', true);
 
 let g_board = [];
+let g_fees = {};
 
 // used by menu.css
 function updatemenu() {
@@ -147,8 +148,11 @@ async function fetchContent(link) {
                     }
                     container = document.getElementById('board-area');
                     if (container) {
-                        fetchBoard();
                         showBoard(container);
+                    }
+                    container = document.getElementById('fee-area');
+                    if (container) {
+                        showFees(container);
                     }
                 }
             })
@@ -165,7 +169,7 @@ function sortNews(a,b) {
 
 async function fetchNewsletters() {
     try {
-        const link = `/content/newsletters.json`;
+        const link = `/content/data/newsletters.json`;
         fetch(link)
             .then(response => response.json())
             .then(newsletters => {
@@ -183,7 +187,7 @@ async function fetchNewsletters() {
 
 async function fetchBoard() {
     try {
-        const link = `/content/board.json`;
+        const link = `/content/data/board.json`;
         fetch(link)
             .then(response => response.json())
             .then(board => {
@@ -196,6 +200,23 @@ async function fetchBoard() {
     }
 }
 
+async function fetchFees() {
+    try {
+        const link = `/content/data/fees.yaml`;
+        fetch(link)
+            .then(response => response.text())
+            .then(data => {
+                g_fees = jsyaml.load(data, 'utf8');
+                updateFeeTables();
+            })
+            .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
+
 async function onLoad() {
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -203,6 +224,7 @@ async function onLoad() {
     fetchMenu();
     fetchNewsletters();
     fetchBoard();
+    fetchFees();
     fetchSidebar();
     await fetchCamps();
     fetchContentFromSearchParams(urlParams);

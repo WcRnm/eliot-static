@@ -164,18 +164,44 @@ async function showBoard(container) {
 
         group.members.forEach(member => {
             const text = member.position
-                            ? `${member.name}, ${member.position}`
-                            : member.name;
+                ? `${member.name}, ${member.position}`
+                : member.name;
             const figure = DOM.elem('figure');
             const caption = DOM.elem('figcaption');
             caption.textContent = text;
             figure.appendChild(caption);
 
-            const img = DOM.img(member.photo, text);
+            const url = `/content/img/board/${member.photo}`;
+            const img = DOM.img(url, text);
             DOM.addClass(img, 'sq200');
             figure.appendChild(img);
 
             container.appendChild(figure);
         });
     });
+}
+
+async function showFees(container) {
+    for (const [key, table] of Object.entries(g_table.fees)) {
+        if (key == KEY_SURCHARGES) {
+            const heading = DOM.elem('h2');
+            heading.textContent = table.name;
+            container.appendChild(heading);
+
+            const list = DOM.list(false, table.desc);
+            container.appendChild(list);
+            container.appendChild(table.table);
+
+        } else {
+            const heading = DOM.elem('h2');
+            heading.textContent = table.name;
+            container.appendChild(heading);
+
+            const list = DOM.list(false, table.desc);
+            container.appendChild(list);
+            container.appendChild(table.table);
+        }
+
+        // TODO: update range spans
+    }
 }
