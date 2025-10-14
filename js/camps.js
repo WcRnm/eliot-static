@@ -171,7 +171,8 @@ async function showBoard(container) {
             caption.textContent = text;
             figure.appendChild(caption);
 
-            const img = DOM.img(member.photo, text);
+            const url = `/content/img/board/${member.photo}`;
+            const img = DOM.img(url, text);
             DOM.addClass(img, 'sq200');
             figure.appendChild(img);
 
