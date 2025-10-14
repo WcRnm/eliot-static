@@ -1,6 +1,3 @@
-replace_md:
-  fees: fees
-
 tiers:
   shared_bath_economy:
     name: Shared Bath - Economy

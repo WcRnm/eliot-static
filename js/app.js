@@ -3,6 +3,7 @@ MD.setOption('tables', true);
 MD.setOption('metadata', true);
 
 let g_board = [];
+let g_fees = {};
 
 // used by menu.css
 function updatemenu() {
@@ -196,6 +197,22 @@ async function fetchBoard() {
     }
 }
 
+async function fetchFees() {
+    try {
+        const link = `/content/data/fees.yaml`;
+        fetch(link)
+            .then(response => response.text())
+            .then(data => {
+                g_fees = jsyaml.load(data, 'utf8');
+            })
+            .catch(error => console.error(error));
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
+
 async function onLoad() {
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -203,6 +220,7 @@ async function onLoad() {
     fetchMenu();
     fetchNewsletters();
     fetchBoard();
+    fetchFees();
     fetchSidebar();
     await fetchCamps();
     fetchContentFromSearchParams(urlParams);
