@@ -9,6 +9,7 @@ const g_table = {
     },
     fees: {}
 };
+const KEY_SURCHARGES = 'surcharges';
 
 function fetchSidebar() {
     try {
@@ -211,11 +212,26 @@ function buildFeeTable(key, name, buildings) {
 
     g_table.fees[key] = {
         name: name,
-        buildings: buildings,
+        desc: buildings,
         table: table,
         head: thead,
         body: tbody,
     }
+}
+
+function formatFees(fees) {
+    const formatted = [];
+    fees.forEach((fee) => {
+        const negative = fee < 0;
+        if (negative) {
+            // -($100)
+            formatted.push(`-($${Math.abs(fee)})`);
+        } else {
+            // $100
+            formatted.push(`$${fee}`);
+        }
+    })
+    return formatted;
 }
 
 function updateFeeTables() {
@@ -232,21 +248,24 @@ function updateFeeTables() {
         const tierData = g_fees.fees[tier.key];
 
         for (let i=0; i<g_fees.fee_rows.length; ++i) {
-            const rowData = [g_fees.fee_rows[i]].concat(tierData[i]);
+            const data = formatFees(tierData[i]);
+            const rowData = [g_fees.fee_rows[i]].concat(data);
             const row = createTableRow(rowData, true, 'fee-row');
             g_table.fees[tier.key].body.appendChild(row);
         }
     }
 
-    const key = 'surcharges'
+    const key = KEY_SURCHARGES
     const surchargeRows = g_fees.surcharges.rows;
     const surchargeData = g_fees.surcharges.data;
     console.log(key);
-    buildFeeTable(key);
+    buildFeeTable(key, g_fees.surcharges.name, g_fees.surcharges.desc);
     const row = createTableRow(cols, true, 'fee-row');
     g_table.fees[key].head.appendChild(row);
+
     for (let i=0; i<surchargeData.length; ++i) {
-        const rowData = [surchargeRows[i]].concat(surchargeData[i]);
+        const data = formatFees(surchargeData[i]);
+        const rowData = [surchargeRows[i]].concat(data);
         const row = createTableRow(rowData, true, 'fee-row');
         g_table.fees[key].body.appendChild(row);
     }

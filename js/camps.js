@@ -183,19 +183,25 @@ async function showBoard(container) {
 
 async function showFees(container) {
     for (const [key, table] of Object.entries(g_table.fees)) {
-        const heading = DOM.elem('h2');
-        heading.textContent = table.name;
-        container.appendChild(heading);
+        if (key == KEY_SURCHARGES) {
+            const heading = DOM.elem('h2');
+            heading.textContent = table.name;
+            container.appendChild(heading);
 
-        // list buildings
-        // add table
-        // update range spans
+            const list = DOM.list(false, table.desc);
+            container.appendChild(list);
+            container.appendChild(table.table);
+
+        } else {
+            const heading = DOM.elem('h2');
+            heading.textContent = table.name;
+            container.appendChild(heading);
+
+            const list = DOM.list(false, table.desc);
+            container.appendChild(list);
+            container.appendChild(table.table);
+        }
+
+        // TODO: update range spans
     }
-
-    const heading = DOM.elem('h2');
-    heading.textContent = 'Surcharges and Discounts';
-    container.appendChild(heading);
-
-    // add table
-
 }

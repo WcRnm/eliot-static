@@ -56,22 +56,27 @@ fees:
     [    50,   50,    50 ]   # 2 and under
   ]
   private_bath_historic: [
-    [ 1,110,  905,   815 ],  # 17 and up
+    [  1110,  905,   815 ],  # 17 and up
     [   895,  695,   370 ],  # 12-16
     [   680,  560,   290 ],  # 3-11
     [    50,   50,    50 ]   # 2 and under
   ]
   private_bath_new: [
-    [ 1,260, 1,045,  960 ],  # 17 and up
+    [  1260,  1045,  960 ],  # 17 and up
     [   895,   695,  680 ],  # 12-16
     [   680,   560,  545 ],  # 3-11
     [    50,    50,   50 ]   # 2 and under
   ]
 
 surcharges:
+  name: 'Surcharges and Discounts'
+  desc: [
+    "Single Occupancy: Single Occupancy in Multiple Occupancy Rooms",
+    "Shared Room: At July Eliot and August Eliot, if 3 or more adults (age 18+) share a room, there is a per/adult discount. You can tell us your choice of roommates on your registration form, or let us choose for you."
+  ]
   rows: [
-    "Single Occupancy in Multiple Occupancy Room",
-    "Shared Room, 3+ adults"
+    "Single Occupancy",
+    "Shared"
   ]
   data: [
     [ 350, 200, 200 ],
