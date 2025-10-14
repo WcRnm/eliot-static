@@ -82,7 +82,7 @@ In early June of 2024, the Seabeck Conference Center (SCC) was informed by the W
 | 3 – 11      | $735                       | $640                     | $545              |
 | 2 and Under | $50                        | $50                      | $50               |
 
-## Surcharges and Disccounts
+## Surcharges and Discounts
 
 - Single Occupancy in Multiple Occupancy Rooms
 - Shared Room Discount: At July Eliot and August Eliot, if 3 or more adults (age 18+) share a room, there is a per/adult discount. You can tell us your choice of roommates on your registration form, or let us choose for you.

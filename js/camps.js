@@ -193,7 +193,7 @@ async function showFees(container) {
     }
 
     const heading = DOM.elem('h2');
-    heading.textContent = 'Surcharges and Disccounts';
+    heading.textContent = 'Surcharges and Discounts';
     container.appendChild(heading);
 
     // add table
