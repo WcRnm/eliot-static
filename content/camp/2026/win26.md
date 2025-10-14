@@ -1,7 +1,7 @@
 ---
 name:       Winter Eliot 2026
 start:      2026-12-28
-end:        2026-01-01
+end:        2027-01-01
 show:       false
 
 title:      To be announced ...
