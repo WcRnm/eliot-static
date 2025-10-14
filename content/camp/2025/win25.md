@@ -1,7 +1,7 @@
 ---
 name:       Winter Eliot 2025
 start:      2025-12-28
-end:        2026-12-01
+end:        2026-01-01
 show:       true
 
 title:      Stick Pounding
