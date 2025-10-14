@@ -7,7 +7,7 @@ show:       true
 title:      Music Lessons & Rhythm Revelations
 subtitle:
 speaker:    Matthew Meyer
-photo:      content/camp/2022/img/Meyer_photo_480x669.jpg
+photo:      Meyer_480x669.jpg
 ---
 
 ### Program Description

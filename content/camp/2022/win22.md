@@ -8,7 +8,7 @@ title:      Smithing Our Souls
 subtitle:   Dynamic Balance & Harmony In the Midst of Struggle & Transformation
 speaker:    Ruth Shekwaga Kaliat Osunlade Idakula
 speaker2:   Rev. Deanna Marie Vandiver
-photo:      Idakula_and_Vandiver_photo_480x270.jpg
+photo:      Idakula_and_Vandiver_480x270.jpg
 ---
 
 ### Program Description:

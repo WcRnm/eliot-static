@@ -7,7 +7,7 @@ show:       true
 title:      Camp title, theme, or topic
 subtitle:   Shaping Unitarian Universalist into a Multicultural Faith
 speaker:    Aisha Hauser
-photo:      Hauser_picture_480x480.jpg
+photo:      Hauser_480x480.jpg
 ---
 
 ### Program Description
