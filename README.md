@@ -20,7 +20,7 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
 - [x] past camps
 - [x] implement history (back button)
 - [ ] Dates - https://github.com/datejs/Datejs
-- [ ] scrap camp descriptions
+- [ ] scrape camp descriptions from current site
 - [ ] mark currently running camp with a star or something?
 - [ ] do not refetch the camp html - used the cached version
 - [ ] fees = calculate and update min/max ranges
