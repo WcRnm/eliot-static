@@ -1,7 +1,7 @@
 ---
 name:       Winter Eliot 2024
 start:      2024-12-28
-end:        2024-12-01
+end:        2025-01-01
 show:       true
 
 title:      The Practice of Evidence-Based Hope
