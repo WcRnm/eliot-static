@@ -11,7 +11,7 @@ For each camp, the costs vary based on the program, the length of the camp (how 
 **You can find detailed descriptions of each lodging option at [Seabeck Conference Center Housing](https://www.seabeck.org/lodging)**.
 
 Per person cost for one adult, depending on housing, ranges from
-**<span id="fee-range-winter">$565 – 960<span> for Winter Eliot**, from
+**<span id="fee-range-win">$565 – 960<span> for Winter Eliot**, from
 **<span id="fee-range-cae">$685 – 1045</span> for Creative Arts**, and
 **<span id="fee-range-julaug">$750 – 1260</span>** for July and August Eliot.
 Costs for children are lower. See chart below for full details, and review the [Deposit / Cancellation Policy](?info=fee_policy).

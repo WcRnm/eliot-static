@@ -202,6 +202,11 @@ async function showFees(container) {
             container.appendChild(table.table);
         }
 
-        // TODO: update range spans
+        let span = document.getElementById('fee-range-win');
+        span.innerHTML = g_fees.fee_minmax.win;
+        span = document.getElementById('fee-range-cae');
+        span.innerHTML = g_fees.fee_minmax.cae;
+        span = document.getElementById('fee-range-julaug');
+        span.innerHTML = g_fees.fee_minmax.julaug;
     }
 }
