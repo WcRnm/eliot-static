@@ -1,83 +1,85 @@
 # Camp Jobs
 
-Eliot Institute camps relies on volunteers to staff our camps. Many roles include a camp credit which can reduce your cost for attending camp. If you are interested in being considered, please complete our [Application for Camp Staff Jobs](https://eliotinstitute.wufoo.com/forms/p1g1gs6u0y5uwea/).
+Eliot Institute camps relies on volunteers to staff our camps. Many roles include a camp credit which can reduce your cost for attending camp. If you are interested in being considered, please complete our
+
+<span id="link.job.application">Application for Camp Staff Jobs</span>
 
 ## All Staff
 
-All staff are required to sign our [Camp Staff Code of Ethics](/content/pdf/policy/Camp_Staff_Code_of_Ethics__April_2019.pdf) and some staff positions require a background check.
+All staff are required to sign our <span id="doc.policy.code-of-ethics">Camp Staff Code of Ethics</span> and some staff positions require a background check.
 
 ## Job Descriptions
 
-- Board Representive.
-    - Job Description is located on the [Board Manual, Policies, and Procedures](?info=board_resources) page
+- <span id="doc.board.board-rep">Board Representive</span>
 - Audio Visual
-     - [Audio Visual Coordinator](/content/pdf/job/av/AV_Coordinator_(2024).pdf)
-     - [AV How-To Manual](/content/pdf/job/av/AV_Manual_(2024).pdf)
+     - <span id="doc.job.av-coordinator">Audio Visual Coordinator</span>
+     - <span id="doc.job.av-manual">AV How-To Manual</span>
 - Chaplain
-    - [Camp Chaplain](/content/pdf/job/chaplain/Camp_Chaplain.(2017).pdf)
-    - [Youth &amp; Young Adult Chaplain](/content/pdf/job/chaplain/Youth-Young_Adult_Chaplain.(2017).pdf)
+    - <span id="doc.job.chaplain">Camp Chaplain</span>
+    - <span id="doc.job.chaplain-yya">Youth &amp; Young Adult Chaplain</span>
 - Children's/MAGS (Middle School Age Group) and Youth Program
-    - [Children's Program Director & Youth Advisor](/content/pdf/job/youth/Children's_Program_Director_and_Youth_Advisor_(2024).pdf)
-    - [Children's and Youth Program Guidelines](/content/pdf/job/youth/Children's_and_Youth_Program_Guidelines_(2024).pdf)
-    - [Children's, MAGS and Youth Program Staff](/content/pdf/job/youth/Children's_and_Youth_Staff_(2024).pdf)
-    - [Children/Youth & Parent/Sponsor Orientation - First Night](/content/pdf/job/youth/Children_and_Youth_Orientation_Meetings_(2024).pdf)
+    - <span id="doc.job.youth-director">Children's Program Director & Youth Advisor</span>
+    - <span id="doc.job.youth-guidelines">Children's and Youth Program Guidelines</span>
+    - <span id="doc.job.youth-staff">Children's, MAGS and Youth Program Staff</span>
+    - <span id="doc.job.youth-orientation">Children/Youth & Parent/Sponsor Orientation - First Night</span>
 - Creative Arts Eliot Camp
-     - [Presenter & Extravaganza Coordinator](/content/pdf/job/cae/2024_CAE_Presenter_Extravaganza_Coordinator_JD.pdf)
-     - [Workshop Registrar](/content/pdf/job/cae/CAW_coordinator_job_description_(2022).pdf)
+     - <span id="doc.job.cae-extravaganza">Presenter & Extravaganza Coordinator</span>
+     - <span id="doc.job.cae-children">Children's Workshop Presenter &amp; Coordinator</span>
 - Dean
-    - [Dean](/content/pdf/job/dean/Dean_(2024).pdf.pdf)
-    - [Dean Timeline](/content/pdf/job/dean/Dean_-_Timeline_(2024).pdf)
-    - [Dean Staffing Guidelines](/content/pdf/job/dean/Dean_-_Staffing_Guidelines_(2024).pdf)
-    - [Dean - Theme Speaker Guidelines](/content/pdf/job/dean/Dean_-_Theme_Speaker_(2024).pdf)
-    - [Dean - Camp Staffing Lists](/content/pdf/job/dean/Dean_-_Staffing_Guidelines_(2024).pdf)
-- [Early Morning Coffee Host](/content/pdf/job/misc/Early_Morning_Coffee_Host_(2017).pdf)
+    - <span id="doc.job.dean">Dean</span>
+    - <span id="doc.job.dean-timeline">Dean Timeline</span>
+    - <span id="doc.job.dean-staff-guide">Dean Staffing Guidelines</span>
+    - <span id="doc.job.dean-speaker">Dean - Theme Speaker Guidelines</span>
+    - <span id="doc.job.dean-staff-lists">Dean - Camp Staffing Lists</span>
 - First Aid
-    - [First Aid Coordinator](/content/pdf/job/firstaid/First_Aid_Coordinator_(Jul_2017).pdf)
-    - [First Aid Volunteer](/content/pdf/job/firstaid/First_Aid_Volunteer.(Jul_2017).pdf)
-    - [First Aid Information](/content/pdf/job/firstaid/First_Aid_Information_Chart_(Jul_2017).pdf)
-    - [First Aid Supplies List](/content/pdf/job/firstaid/First_Aid_Supllies_(2022).pdf)
-    - [Concussion & Head Injury Information](/content/pdf/job/firstaid/First_Aid_Info_-_Concussions__Head_Injuries__(2016).pdf)
-    - [EpiPen Document](/content/pdf/job/firstaid/EpiPen_Document_January_2019.pdf)
-- [Golf Cart Coordinator](/content/pdf/job/misc/Golf_Cart_Coordinator_Revised_Dec_2023.pdf)
-- [House Leader](/content/pdf/job/misc/House_Leader_(2024).pdf)
+    - <span id="doc.job.aid-coordinator">First Aid Coordinator</span>
+    - <span id="doc.job.aid-volunteer">First Aid Volunteer</span>
+    - <span id="doc.job.aid-info">[First Aid Information</span>
+    - <span id="doc.job.aid-supplies">First Aid Supplies List</span>
+    - <span id="doc.job.aid-concussion">Concussion & Head Injury Information</span>
+    - <span id="doc.job.aid-epipen">EpiPen Document</span>
+- Misc
+    - <span id="doc.job.coffee">Early Morning Coffee Host</span>
+    - <span id="doc.job.golf-cart">Golf Cart Coordinator</span>
+    - <span id="doc.job.house">House Leader</span>
+    - <span id="doc.job.newcomer">Newcomer Host</span>
+    - <span id="doc.job.newsletter">Newsletter Editor</span>
+    - <span id="doc.job.slide-show">Slide Show Creator</span>
+    - <span id="doc.job.social-hour">Social Hour Host</span>
+    - <span id="doc.job.storage">Storage Closet Manager</span>
+    - <span id="doc.job.volunteer">Volunteer Coordinator</span>
+    - <span id="doc.job.ya">Young Adult Coordinator</span>
 - Music
-    - [Music Coordinator](/content/pdf/job/music/Music_Coordinator__(2017).pdf)
-    - [Music Accompanist](/content/pdf/job/music/Music_Accompanist_(2017).pdf)
-    - [Choir Director](/content/pdf/job/music/Choir_Director_(2017).pdf)
-- [Newcomer Host](/content/pdf/job/misc/Newcomer_Host_(2024).pdf)
-- [Newsletter Editor](/content/pdf/job/misc/Newsletter_Editor_(2024).pdf)
-- [Slide Show Creator](/content/pdf/job/misc/Slide_Show_Creator_(2017).pdf)
+    - <span id="doc.job.music-coordinator">Music Coordinator</span>
+    - <span id="doc.job.music-accompanist">Music Accompanist</span>
+    - <span id="doc.job.music-choir">Choir Director</span>
 - Small Groups
-    - [Small Groups Coordinator](/content/pdf/job/smallgrp/Small_Group_Coordinator_(2024).pdf)
-    - [Small Group Facilitator](/content/pdf/job/smallgrp/Small_Group_Facilitators_-_(2024).pdf)
-- [Social Hour Host](/content/pdf/job/misc/Social_Hour_Host_(2024).pdf)
+    - <span id="doc.job.sg-coordinator">Small Groups Coordinator</span>
+    - <span id="doc.job.sg-facilitator">Small Group Facilitator</span>
 - Special Events and Activities
-    - [Afternoon Art](/content/pdf/job/events/Afternoon_Art_Coordinator_(2016).pdf)
-    - [Art Show](/content/pdf/job/events/Art_Show_Coordinator_(2017)_.pdf)
-    - [Concerts](/content/pdf/job/events/Concerts_(2017).pdf)
-    - [Costume Parade](/content/pdf/job/events/Costume_Parade_Coordinator_(2017)_wpd.pdf)
-    - [Dances](/content/pdf/job/events/Dances_(2017).pdf)
-    - [Photo Scavenger Hunt](/content/pdf/job/events/Photo_Scavenger_Hunt__(2017).pdf)
-    - [Talent Show](/content/pdf/job/events/Talent_Show_Coordinator_(2017).pdf)
-    - [Tie Dye](/content/pdf/job/events/Tie-Dye_Coordinator_(2017)_.pdf)
-    - [Trivia Night](/content/pdf/job/events/Trivia_Night__(2017).pdf)
-- [Storage Closet Manager](/content/pdf/job/misc/Storage_Closet_Manager_(2023).pdf)
-- [Volunteer Coordinator](/content/pdf/job/misc/Volunteer_Coordinator_(2024).pdf)
+    - <span id="doc.job.evt-art-afternoon">Afternoon Art</span>
+    - <span id="doc.job.evt-art-show">Art Show</span>
+    - <span id="doc.job.evt-concerts">Concerts</span>
+    - <span id="doc.job.evt-parade">Costume Parade</span>
+    - <span id="doc.job.evt-dances">Dances</span>
+    - <span id="doc.job.evt-scavenger">Photo Scavenger Hunt</span>
+    - <span id="doc.job.evt-talent-show">Talent Show</span>
+    - <span id="doc.job.evt-tie-dye">Tie Dye</span>
+    - <span id="doc.job.evt-trivia">Trivia Night</span>
 - Waterfront - Boating & Swimming
-    - [Waterfront Director](/content/pdf/job/water/Waterfront_Director_(2023)__FINAL.pdf)
-    - [Eliot Waterfront Rules](/content/pdf/policy/Eliot_Waterfront_Rules_(2025).pdf)
-    - [Boat Dock Coordinator](/content/pdf/job/water/Boat_Dock_Coordinator_(2017).pdf)
-    - [Boat Dock Volunteer](/content/pdf/job/water/Boat_Dock_Volunteers__(2017).pdf)
-    - [Boating Tests](/content/pdf/job/water/Boating_Tests__(2017).pdf)
-    - [Lifeguard](/content/pdf/job/water/Lifeguard__(2023)_DRAFT_v4.pdf)
-    - [Waterfront Badge Information](/content/pdf/job/water/Swimming___Boating_Badges_Description_(2018).pdf)
-    - [Badge Chart](/content/pdf/job/water/Swimming___Boating_Badges_Chart_2018_Rev_1.pdf)
+    - <span id="doc.job.water-director">Waterfront Director</span>
+    - <span id="doc.policy.waterfront">Eliot Waterfront Rules</span>
+    - <span id="doc.job.boat-coordinator">Boat Dock Coordinator</span>
+    - <span id="doc.job.boat-volunteer">Boat Dock Volunteer</span>
+    - <span id="doc.job.boat-tests">Boating Tests</span>
+    - <span id="doc.job.water-lifeguard">Lifeguard</span>
+    - <span id="doc.job.water-badge-info">Waterfront Badge Information</span>
+    - <span id="doc.job.water-badge-chart">Badge Chart</span>
 - Winter Eliot
-    - [Feast Master](/content/pdf/job/winter/Feast_Master_-_Winter_Eliot_(2017).pdf)
-    - [Living Room Coordinator](/content/pdf/job/winter/Living_Room_Coordinator_(2017).pdf)
+    - <span id="doc.job.winter-feast">Feast Master</span>
+    - <span id="doc.job.winter-living">Living Room Coordinator</span>
 - Worship
-    - [Morning Ingathering Coordinator](/content/pdf/job/worship/Morning_Ingathering_Coordinator_(2017).pdf)
-    - [Evening Worship Coordinator](/content/pdf/job/worship/Evening_Worship_Coordinator_Job_Description.pdf)
-    - [Worship Manual](/content/pdf/job/worship/Worship_Manual_(2017).pdf)
-    - [Worship Schedule](/content/pdf/job/worship/Worship_Coordinator_Planning_Grids.pdf)
-- [Young Adult Coordinator](/content/pdf/job/misc/Young_Adult_Coordinator_(2016).pdf)
+    - <span id="doc.job.worship-am">Morning Ingathering Coordinator</span>
+    - <span id="doc.job.worship-pm">Evening Worship Coordinator</span>
+    - <span id="doc.job.worship-manual">Worship Manual</span>
+    - <span id="doc.job.worship-schedule">Worship Schedule</span>
