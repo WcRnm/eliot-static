@@ -2,6 +2,7 @@
 name:   Creative Arts Eliot 2026
 start:  2026-08-08
 end:    2026-08-12
+show:   true
 
 title:  Your Choice of Workshops
 photo:  cae_550x367.jpg
@@ -52,7 +53,7 @@ may be able to attend a children's progam in the morning. CAE tends to attract a
 
 ## Calling All Artists!
 
-Are you interested in presenting a workshop at a future Creative Arts Eliot? If so, you can find more information at this link: Workshop Presenter Information. If you're ready to apply, please complete the application found at this link: Workshop Presenter Application
+Are you interested in presenting a workshop at a future Creative Arts Eliot? If so, you can find more information at this link: <span id="doc.cae.presenter-info">Workshop Presenter Information</span>. If you're ready to apply, please complete the application found at this link: <span id="link.cae.presenter-application">Workshop Presenter Application</span>.
 
 ## Additional Activities
 

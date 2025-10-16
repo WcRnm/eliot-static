@@ -2,31 +2,31 @@
 
 ## PART A: Organization
 
-- [Articles of Incorporation](/content/pdf/board/A_Articles_of_Incorporation_-_1999__2_.pdf)
-- [Bylaws](/content/pdf/board/Eliot_Bylaws_2024.pdf)
-- [Mission-Vision Statements](/content/pdf/policy/Strategic_Plan_Narrative_and_Vision_2020_rev_January_2024.pdf)
-- [Covenant of Right Relations](/content/pdf/policy/Eliot_Board_Covenant_of_Right_Relations_(April_2024).pdf)
-- [Corporate Records](/content/pdf/board/A_Corporate_Records.pdf)
+- <span id="doc.board.articles">Articles of Incorporation</span>
+- <span id="doc.board.bylaws">Bylaws</span>
+- <span id="doc.board.mission">Mission-Vision Statements</span>
+- <span id="doc.board.right-relations">Covenant of Right Relations</span>
+- <span id="doc.board.corp-records">Corporate Records</span>
 
 ## PART B: Governance
 
 ### Officers
-- [President](/content/pdf/board/B_President.pdf)
-- [President-Elect](/content/pdf/board/B_President-Elect.pdf)
-- [Vice President - Communications](/content/pdf/board/B_Vice-President_Communications.pdf)
-- [Secretary/Treasurer](/content/pdf/board/B_Secretary-Treasurer_Job_Description.pdf)
+- <span id="doc.board.president">President</span>
+- <span id="doc.board.president-elect">President-Elect</span>
+- <span id="doc.board.vp-comm">Vice President - Communications</span>
+- <span id="doc.board.treasurer">Treasurer</span>
 
 ### Board Member
-- [Job Description](/content/pdf/board/B_Board_Member_(2013).pdf)
-- [Board Member Handbook](/content/pdf/board/Board_Member_Handbook_(2019).pdf)
-- [Board Representative at Camp](/content/pdf/board/Board_Representative_JD_(2025).pdf)
-- [Board Member Duties (chaplain search)](/content/pdf/board/Board_member_duties_for_chaplain_search.pdf)
-- [Meetings](/content/pdf/board/B_Agendas.pdf)
-- [Policy Guidelines](/content/pdf/board/B_Policy_or_not_guidelines.pdf)
+- <span id="doc.board.member">Job Description</span>
+- <span id="doc.board.handbook">Board Member Handbook</span>
+- <span id="doc.board.board-rep">Board Representative at Camp</span>
+- <span id="doc.board.chaplain-search">Board Member Duties (chaplain search)</span>
+- <span id="doc.board.meetings">Meetings</span>
+- <span id="doc.board.policy-guidelines">Policy Guidelines</span>
 
 ### Nominations and Elections
-- Nominations
-- [Voting Procedures](/content/pdf/board/B_Eliot_Voting_Procedures.pdf)
+- <span id="doc.board.nominations">Nominations</span>
+- <span id="doc.board.voting">Voting Procedures</span> (needs revision)
 
 ## PART C: Committees:
 
@@ -34,23 +34,23 @@ See the [Committee Page](?info=committees) for a list of committees, description
 
 ## PART D: Support Staff
 
-- [Registrar](/content/pdf/board/Registrar_and_Bookkeeper_JDs_with_Admin_Task_Chart.pdf)
-- [Bookkeeper](/content/pdf/board/Registrar_and_Bookkeeper_JDs_with_Admin_Task_Chart.pdf)
-- [Executive Secretary](Eliot_Exec_Secretary_Job_Description_(2023).pdf)
+- <span id="doc.board.registrar">Registrar</span>
+- <span id="doc.board.bookkeeper">Bookkeeper</span>
+- <span id="doc.board.secretary">Executive Secretary</span>
 
 ## PART E: Affiliations
 
-- [Unitarian Universalist Association](http://www.uua.org/) (UUA)
-- [Pacific Western Region UUA](https://www.uua.org/pacific-western) (PWR)
-- [Council of Unitarian Universalist Camps and Conferences](http://www.cu2c2.org/) (CU2CU)
-  - [Eliot Membership](/content/pdf/board/E_CU2C2.pdf)
+- <span id="link.affiliation.uua">Unitarian Universalist Association</span>
+- <span id="link.affiliation.uua-pwr">Pacific Western Region UUA</span>
+- <span id="link.affiliation.cu2c2">Council of Unitarian Universalist Camps and Conferences</span>
+  - <span id="doc.board.cu2c2">Eliot Membership</span>
 
 ## PART F:  REGISTRATION
 
-- [Registration Policy](/content/pdf/policy/Registration_Policies_(2019).pd)
+- <span id="doc.board.registration">Registration Policy</span>
 - Financial Assistance Policy (Please see our [Financial Assistance](?info=financial_assistance) page for the current form and policy)
 
 ## PART G: COMMUNICATIONS
 
-- [E-mail guidelines](/content/pdf/board/G_E-mail_guidelines.pdf)
+- <span id="doc.board.email-guide">E-mail guidelines</span>
 - Document Management Policy (in progress)

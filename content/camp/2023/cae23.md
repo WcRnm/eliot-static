@@ -1,22 +1,23 @@
 ---
-name:   Creative Arts Eliot 2025
-start:  2025-08-09
-end:    2025-08-13
+name:   Creative Arts Eliot 2023
+start:  2023-08-12
+end:    2023-08-16
 show:   true
 
 title:  Your Choice of Workshops
-photo:  cae_550x367.jpg
 
+
+# List of workshop files
 workshops:
     acrylic-painting
-    collage
-    essays
+    egg-dying
     fiber-arts
-    minature-painting
+    mosaics
+    movement
     nature-journaling
-    picklball
+    print-making
+    poetry
     singing
-    waxed-powder-painting
     writing
 ---
 
@@ -38,7 +39,7 @@ Children under 11:
 
 ## Calling All Artists!
 
-Are you interested in presenting a workshop at a future Creative Arts Eliot? If so, you can find more information at this link: <span id="doc.cae.presenter-info">Workshop Presenter Information</span>>. If you're ready to apply, please complete the application found at this link: <span id="link.cae.presenter-application">Workshop Presenter Application</span>
+Are you interested in presenting a workshop at a future Creative Arts Eliot? If so, you can find more information at this link: <span id="doc.cae.presenter-info">Workshop Presenter Information</span>. If you're ready to apply, please complete the application found at this link: <span id="link.cae.presenter-application">Workshop Presenter Application</span>
 
 ## Additional Activities
 
