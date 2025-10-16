@@ -7,33 +7,17 @@ Menu Generator: [https://www.cssportal.com/css3-menu-generator/](https://www.css
 # TODO List
 
 - [ ] Add instructions and How-to's for updating the website.
-- [x] Improve layout - font, background color, etc.
 - [ ] Photo gallery
 - [ ] Archive: Past camp: descriptions
-- [x] fix PDF links
-  - [x] open in new tab
 - [ ] Contact page - email address and phone number only
 - [ ] Email list for newsletter - TBD
-- [x] sidebar
-  - [x] add newsletter link
-  - [x] Camp info
-- [x] past camps
-- [x] implement history (back button)
 - [ ] Dates - https://github.com/datejs/Datejs
-- [ ] scrape camp descriptions from current site
+- [ ] past camps
+  - [ ] scrape camp descriptions from current site
 - [ ] mark currently running camp with a star or something?
 - [ ] do not refetch the camp html - used the cached version
 - [ ] fees = calculate and update min/max ranges
 
 
-
-# Current Website Notes
-
-[https://www.eliotinstitute.org/](https://www.eliotinstitute.org/)
-
-- Board Manual is not a menu item or linked from the board page.
-- Board Manual
-  - Items that need attention
-    - Document Management Policy (in progress)
-    - Nominations
-    - CU2CU membership
+# Current Website
+- [https://www.eliotinstitute.org/](https://www.eliotinstitute.org/)

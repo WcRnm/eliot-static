@@ -23,5 +23,5 @@
     THE GOLDEN HAND & HEART RECOGNITION to:
 
 
-[Hand and Heart recipients](/content/pdf/history/HAND_AND_HEART_AWARD.pdf)
+<span id="doc.history.hand-and-heart">Hand and Heart recipients</span>
 Sorted chronologically by year/camp, and by last name

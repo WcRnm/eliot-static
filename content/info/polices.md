@@ -1,17 +1,17 @@
 # Eliot Policies
 
-[Respectful Behavior Expectations](/content/pdf/policy/Respectful_Behavior_Expectations__final3.pdf)
+<span id="doc.policy.respoct">Respectful Behavior Expectations</span>
 
-[Restoring Right Relations Policy (April 2024)](/content/pdf/policy/ELIOT_INSTITUTE_RRR_POLICY_(April_2024).pdf)
+<span id="doc.policy.right-relations">Restoring Right Relations Policy</span>
 
-[Sex and Gender Diversity Policy and Statement (April 2024)](/content/pdf/policy/Eliot_Institute_Sex_and_Gender_Diversity_Policy_and_Statement_(April_2024).pdf)
+<span id="doc.policy.sex-and-gender">Sex and Gender Diversity Policy and Statement</span>
 
-[Copyright Guidelines](/content/pdf/policy/Copyright_Guidelines_(2021).pdf)
+<span id="doc.policy.copyright">Copyright Guidelines</span>
 
-[Photo & Video Sharing (DUWOP - Don't Upload Without Permission)](/content/pdf/policy/DUWOP_policy.pdf)
+<span id="doc.policy.duwop">Photo & Video Sharing (DUWOP - Don't Upload Without Permission)</span>
 
-[Visitor and Attendance Policy](/content/pdf/policy/Attendance_and_Visitor_Policy.pdf)
+<span id="doc.policy.vistors">Visitor and Attendance Policy</span>
 
-[Vulnerable Camper Protection Policy](/content/pdf/policy/Vulnerable_Camper_Protection_Policy_-_DRAFT5.pdf)
+<span id="doc.policy.vulnerable">Vulnerable Camper Protection Policy</span>
 
 [Board Manual](?info=board_resources): includes articles of incorporation, bylaws, governance structure, committees, support staff, registration policies and more
