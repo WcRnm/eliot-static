@@ -8,7 +8,7 @@ First-time campers in 2025 get a $50 per person discount!
 
 This discount applies per person, so, for example, a family of 4 will get $200 off! Newcomers who have already registered for an upcoming camp - don't worry, you'll get the discount too!
 
-If you are adding a camper to an already submitted registration, please do not use this form. Instead, send an email to [registrar@eliotinstitute.org](mailto://registrar@eliotinstitute.org).
+If you are adding a camper to an already submitted registration, please do not use this form. Instead, send an email to the <span id="link.eliot.email">Regstrar</span>.
 
 <article>
   <form

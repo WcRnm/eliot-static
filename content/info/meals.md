@@ -8,7 +8,7 @@ When requested before camp starts, the Seabeck kitchen can provide four alternat
 
 A refrigerator in the dining room area is available for those who bring food for special diets or to accommodate children’s preferences.
 
-More [dining details](https://www.seabeck.org/dining) are available on the Seabeck website.
+More <span id="link.seabeck.dining">dining details</span> are available on the Seabeck website.
 
 <img src="/content/img/seabeck_dining_hall.jpg"
     alt="Seabeck Conference Center dining hall" />

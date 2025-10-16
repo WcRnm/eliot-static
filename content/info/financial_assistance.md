@@ -12,6 +12,6 @@ Applicants are eligible for no more than one grant each year.
 
 If your request for financial assistance is denied, you may appeal by submitting a letter and any supporting material to the registrar for review by the Eliot Board of Directors.
 
-**Please email your <span id="doc.form.assistance">completed application</span> to <a href="mailto://registrar@eliotinstitute.org">registrar@eliotinstitute.org</a>**
+**Please email your <span id="doc.form.assistance">completed application</span> to <span id="link.eliot.email">registrar@eliotinstitute.org</span>**
 
 Another option for reducing the cost of camp is to serve on staff. Many staff positions include a credit toward camp fees. [Learn more](?info=volunteer).

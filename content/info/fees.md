@@ -8,7 +8,7 @@ Registration fees for Eliot are all inclusive, covering: housing, all meals, the
 
 For each camp, the costs vary based on the program, the length of the camp (how many nights) and on which housing you choose. Accommodations range from historic shared-bath economy houses to new, deluxe rooms with private bathrooms.
 
-**You can find detailed descriptions of each lodging option at [Seabeck Conference Center Housing](https://www.seabeck.org/lodging)**.
+**You can find detailed descriptions of each lodging option at <span id="link.seabeck.lodging">Seabeck Conference Center Lodging</span>]**.
 
 Per person cost for one adult, depending on housing, ranges from
 **<span id="fee-range-win">$565 – 960<span> for Winter Eliot**, from

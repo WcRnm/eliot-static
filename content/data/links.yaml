@@ -1,3 +1,9 @@
+eliot:
+  email: mailto://registrar@eliotinstitute.org
+
+board:
+  volunteer: https://eliotinstitute.wufoo.com/forms/p1842lbt1252t9r/
+
 cae:
   presenter-application: https://docs.google.com/forms/d/e/1FAIpQLSf5pBF-bQJAptqBdbHRVAqzImRCFUewTUdavoi32n08mldJvg/viewform?usp=sf_link
 
@@ -7,7 +13,10 @@ affiliation:
   cu2c2: http://www.cu2c2.org/
 
 seabeck:
+  home: http://www.seabeck.org/
   medical-facilities: https://www.seabeck.org/medical-facilities
+  lodging: https://www.seabeck.org/lodging
+  dining: https://www.seabeck.org/dining
 
 job:
   application: https://eliotinstitute.wufoo.com/forms/p1g1gs6u0y5uwea/
