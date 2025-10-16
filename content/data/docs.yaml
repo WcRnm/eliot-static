@@ -20,7 +20,7 @@ board:
   ### Board Member
   member: B_Board_Member_(2013).pdf
   handbook: Board_Member_Handbook_(2019).pdf
-  board-rep: content/pdf/board/Board_Representative_JD_(2025).pdf
+  board-rep: Board_Representative_JD_(2025).pdf
   chaplain-search: Board_member_duties_for_chaplain_search.pdf
   meetings: B_Agendas.pdf
   policy-guidelines: B_Policy_or_not_guidelines.pdf
@@ -52,6 +52,7 @@ form:
   parents:    DRE_Day_In_the_Life_For_Kids_at_Eliot_3.0.pdf
 
 policy:
+  code-of-ethics:   Camp_Staff_Code_of_Ethics__April_2019.pdf
   copyright:        Copyright_Guidelines_(2021).pdf
   duwop:            DUWOP_policy.pdf
   respect:          Respectful_Behavior_Expectations__final3
@@ -74,13 +75,13 @@ job:
   chaplain:       chaplain/Camp_Chaplain.(2017).pdf
   chaplain-yya:   chaplain/Youth-Young_Adult_Chaplain.(2017).pdf
 
-  youth-director:   youth/Children's_Program_Director_and_Youth_Advisor_(2024).pdf
-  youth-staff:      youth/Children's_and_Youth_Staff_(2024).pdf
-  youth-guidelines: youth/Children's_and_Youth_Staff_(2024).pdf
-  youth-orintation: youth/Children_and_Youth_Orientation_Meetings_(2024).pdf
+  youth-director:     youth/Children's_Program_Director_and_Youth_Advisor_(2024).pdf
+  youth-staff:        youth/Children's_and_Youth_Staff_(2024).pdf
+  youth-guidelines:   youth/Children's_and_Youth_Staff_(2024).pdf
+  youth-orientation:  youth/Children_and_Youth_Orientation_Meetings_(2024).pdf
 
   cae-extravaganza: cae/2024_CAE_Presenter_Extravaganza_Coordinator_JD.pdf
-  cae-coordinator:  cae/CAW_coordinator_job_description_(2022).pdf
+  cae-children:     cae/CAW_coordinator_job_description_(2022).pdf
 
   dean:             dean/Dean_(2024).pdf
   dean-timeline:    dean/Dean_-_Timeline_(2024).pd
@@ -89,37 +90,37 @@ job:
   dean-staff-lists: dean/Dean_-_Camp_Staff_Lists_(2024).pdf
 
   # Misc
-  am-coffee:              misc/Early_Morning_Coffee_Host_(2017).pdf
-  golf-cart:              misc/Golf_Cart_Coordinator_Revised_Dec_2023.pdf
-  house-leader:           misc/House_Leader_(2024).pdf
-  newcomer-host:          misc/Newcomer_Host_(2024).pdf
-  newsletter:             misc/Newsletter_Editor_(2024).pdf)
-  slide-show:             misc/Slide_Show_Creator_(2017).pdf
-  social-hour:            misc/Social_Hour_Host_(2024).pdf
-  storage-closet:         misc/Storage_Closet_Manager_(2023).pdf
-  volunteer-coordinator:  misc/Volunteer_Coordinator_(2024).pdf
-  ya-coordinator:         misc/Young_Adult_Coordinator_(2016).pdf
+  coffee:      misc/Early_Morning_Coffee_Host_(2017).pdf
+  golf-cart:   misc/Golf_Cart_Coordinator_Revised_Dec_2023.pdf
+  house:       misc/House_Leader_(2024).pdf
+  newcomer:    misc/Newcomer_Host_(2024).pdf
+  newsletter:  misc/Newsletter_Editor_(2024).pdf)
+  slide-show:  misc/Slide_Show_Creator_(2017).pdf
+  social-hour: misc/Social_Hour_Host_(2024).pdf
+  storage:     misc/Storage_Closet_Manager_(2023).pdf
+  volunteer:   misc/Volunteer_Coordinator_(2024).pdf
+  ya:          misc/Young_Adult_Coordinator_(2016).pdf
 
-  first-aid-coordinator:  firstaid/First_Aid_Coordinator_(Jul_2017).pdf
-  first-aid-volunteer:    firstaid/First_Aid_Volunteer.(Jul_2017).pdf
-  first-aid-info:         firstaid/First_Aid_Information_Chart_(Jul_2017).pdf
-  first-aid-supplies:     firstaid/First_Aid_Supplies_(2022).pdf
-  first-aid-concussion:   firstaid/First_Aid_Info_-_Concussions__Head_Injuries__(2016).pdf
-  first-aid-epipen:       firstaid/EpiPen_Document_January_2019.pdf
+  aid-coordinator:  firstaid/First_Aid_Coordinator_(Jul_2017).pdf
+  aid-volunteer:    firstaid/First_Aid_Volunteer.(Jul_2017).pdf
+  aid-info:         firstaid/First_Aid_Information_Chart_(Jul_2017).pdf
+  aid-supplies:     firstaid/First_Aid_Supplies_(2022).pdf
+  aid-concussion:   firstaid/First_Aid_Info_-_Concussions__Head_Injuries__(2016).pdf
+  aid-epipen:       firstaid/EpiPen_Document_January_2019.pdf
 
   music-coordinator:  music/Music_Coordinator__(2017).pdf
   music-accompanist:  music/Music_Accompanist_(2017).pdf
-  music-chior:        music/Choir_Director_(2017).pdf
+  music-choir:        music/Choir_Director_(2017).pdf
 
-  smallgrp-coordinator: smallgrp/Small_Group_Coordinator_(2024).pdf
-  smallgrp-facilitator: smallgrp/Small_Group_Facilitators_-_(2024).pdf
+  sg-coordinator:     smallgrp/Small_Group_Coordinator_(2024).pdf
+  sg-facilitator:     smallgrp/Small_Group_Facilitators_-_(2024).pdf
 
   evt-art-afternoon:  events/Afternoon_Art_Coordinator_(2016).pdf
   evt-art-show:       events/Art_Show_Coordinator_(2017)_.pdf
   evt-concerts:       events/Concerts_(2017).pdf
-  evt-costume-parade: events/Costume_Parade_Coordinator_(2017)_wpd.pdf
+  evt-parade:         events/Costume_Parade_Coordinator_(2017)_wpd.pdf
   evt-dances:         events/Dances_(2017).pdf
-  evt-scavenger-hunt: events/Photo_Scavenger_Hunt__(2017).pdf
+  evt-scavenger:      events/Photo_Scavenger_Hunt__(2017).pdf
   evt-talent-show:    events/Talent_Show_Coordinator_(2017).pdf
   evt-tie-dye:        events/Tie-Dye_Coordinator_(2017)_.pdf
   evt-trivia:         events/Trivia_Night__(2017).pdf
@@ -135,7 +136,7 @@ job:
   winter-feast:     winter/Feast_Master_-_Winter_Eliot_(2017).pdf
   winter-living:    winter/Living_Room_Coordinator_(2017).pdf
 
-  worship-morning:  worship/Morning_Ingathering_Coordinator_(2017).pdf
-  worship-evening:  worship/Evening_Worship_Coordinator_Job_Description.pdf
+  worship-am:       worship/Morning_Ingathering_Coordinator_(2017).pdf
+  worship-pm:       worship/Evening_Worship_Coordinator_Job_Description.pdf
   worship-manual:   worship/Worship_Manual_(2017).pdf
   worship-schedule: worship/Worship_Coordinator_Planning_Grids.pdf
