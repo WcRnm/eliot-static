@@ -63,10 +63,10 @@ Eliot Institute is concerned with your child’s health and safety as well as yo
 
 4. **Wasps and Yellow Jackets** inevitably establish nests in the wooded areas around Seabeck. Parents of children with known reactions to stings from such insects should take precautions.
 
-5. **Waterfront**. To swim, campers under 18 must have a swimming check and wear a swimming bracelet. Campers under 18 wishing to use the boats must be accompanied by an adult (unless they have passed the boating test) and must wear a lifejacket. (Please see [waterfront rules](/content/pdf/policy/Eliot_Waterfront_Rules_(2025).pdf) for more details.)
+5. **Waterfront**. To swim, campers under 18 must have a swimming check and wear a swimming bracelet. Campers under 18 wishing to use the boats must be accompanied by an adult (unless they have passed the boating test) and must wear a lifejacket. (Please see <span id="doc.policy.waterfront">waterfront rules</span> for more details.)
 
 You can find additional helpful information on amenities available at camp on our [survival guide](?info=survival_guide) page.
 
 ## Eliot’s Policy for the Safety of Children, Youth, and Vulnerable Adults
 
-- [Vulnerable Camper Protection Policy](/content/pdf/policy/Vulnerable_Camper_Protection_Policy_-_DRAFT5.pdf)
+- <span id="doc.policy.vulnerable">Vulnerable Camper Protection Policy<span>
