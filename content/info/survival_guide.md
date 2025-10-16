@@ -68,4 +68,6 @@ First Aid supplies are available in the Inn Lobby, children's program areas, and
 
 ### Medical Facilities
 
-For urgent care, follow this link for Seabeck's list of [local medical facilities](https://www.seabeck.org/medical-facilities). To download a PDF of a map to Silverdale's medical clinics, [please click here](/content/pdf/policy/Eliot_Emergencies_2021.pdf).  Please note that the former Harrison Hospital in Silverdale is now called St. Michael Medical Center.
+For urgent care, follow this link for Seabeck's list of
+<span id="link.seabeck.medical-facilities">local medical facilities</span>. To download a PDF of a map to Silverdale's medical clinics,
+<span id="doc.policy.urgent-care">please click here</span>.  Please note that the former Harrison Hospital in Silverdale is now called St. Michael Medical Center.
