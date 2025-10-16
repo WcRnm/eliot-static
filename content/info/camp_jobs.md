@@ -25,7 +25,7 @@ All staff are required to sign our [Camp Staff Code of Ethics](/content/pdf/poli
      - [Presenter & Extravaganza Coordinator](/content/pdf/job/cae/2024_CAE_Presenter_Extravaganza_Coordinator_JD.pdf)
      - [Workshop Registrar](/content/pdf/job/cae/CAW_coordinator_job_description_(2022).pdf)
 - Dean
-    - [Dean](/content/pdf/job/dean/Dean_(2024).pdf.pdf)
+    - [Dean](/content/pdf/job/dean/Dean_(2024).pdf)
     - [Dean Timeline](/content/pdf/job/dean/Dean_-_Timeline_(2024).pdf)
     - [Dean Staffing Guidelines](/content/pdf/job/dean/Dean_-_Staffing_Guidelines_(2024).pdf)
     - [Dean - Theme Speaker Guidelines](/content/pdf/job/dean/Dean_-_Theme_Speaker_(2024).pdf)
@@ -35,7 +35,7 @@ All staff are required to sign our [Camp Staff Code of Ethics](/content/pdf/poli
     - [First Aid Coordinator](/content/pdf/job/firstaid/First_Aid_Coordinator_(Jul_2017).pdf)
     - [First Aid Volunteer](/content/pdf/job/firstaid/First_Aid_Volunteer.(Jul_2017).pdf)
     - [First Aid Information](/content/pdf/job/firstaid/First_Aid_Information_Chart_(Jul_2017).pdf)
-    - [First Aid Supplies List](/content/pdf/job/firstaid/First_Aid_Supllies_(2022).pdf)
+    - [First Aid Supplies List](/content/pdf/job/firstaid/First_Aid_Supplies_(2022).pdf)
     - [Concussion & Head Injury Information](/content/pdf/job/firstaid/First_Aid_Info_-_Concussions__Head_Injuries__(2016).pdf)
     - [EpiPen Document](/content/pdf/job/firstaid/EpiPen_Document_January_2019.pdf)
 - [Golf Cart Coordinator](/content/pdf/job/misc/Golf_Cart_Coordinator_Revised_Dec_2023.pdf)
