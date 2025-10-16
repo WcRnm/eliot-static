@@ -51,4 +51,7 @@ class DOM {
     static removeClass(elem, cls) {
         elem.classList.removeClass(cls);
     }
+    static hasClass(elem, cls) {
+        return elem.classList.contains(cls);
+    }
 }

@@ -1,0 +1,49 @@
+cae:
+  presenter-info: 2024_CAE_Presenter_Information.pdf
+
+board:
+  # PART A Organization
+  articles: A_Articles_of_Incorporation_-_1999__2_.pdf
+  bylaws: Eliot_Bylaws_2024.pdf
+  mission: Strategic_Plan_Narrative_and_Vision_2020_rev_January_2024.pdf
+  right-relations: Eliot_Board_Covenant_of_Right_Relations_(April_2024).pdf
+  corp-records: A_Corporate_Records.pdf
+
+  ## PART B: Governance
+
+  ### Officers
+  president: B_President.pdf
+  president-elect: B_President-Elect.pdf
+  vp-comm: B_Vice-President_Communications.pdf
+  treasurer: B_Secretary-Treasurer_Job_Description.pdf
+
+  ### Board Member
+  member: B_Board_Member_(2013).pdf
+  handbook: Board_Member_Handbook_(2019).pdf
+  board-rep: content/pdf/board/Board_Representative_JD_(2025).pdf
+  chaplain-search: Board_member_duties_for_chaplain_search.pdf
+  meetings: B_Agendas.pdf
+  policy-guidelines: B_Policy_or_not_guidelines.pdf
+
+  ### Nominations and Elections
+  voting: B_Eliot_Voting_Procedures.pdf
+
+  ## PART C: Committees:
+
+
+  ## PART D: Support Staff
+  registrar: Registrar_and_Bookkeeper_JDs_with_Admin_Task_Chart.pdf
+  bookkeeper: Registrar_and_Bookkeeper_JDs_with_Admin_Task_Chart.pdf
+  secretary: Eliot_Exec_Secretary_Job_Description_(2023).pdf
+
+  ## PART E: Affiliations
+  cu2c2: E_CU2C2.pdf
+
+  ## PART F:  REGISTRATION
+  registration: Registration_Policies_(2019).pdf
+
+  ## PART G: COMMUNICATIONS
+  email-guide: G_E-mail_guidelines.pdf
+
+form:
+  financial_assistance: Eliot_Financial_Assistance_Application_Form_4-24.pdf

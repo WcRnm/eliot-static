@@ -4,6 +4,8 @@ MD.setOption('metadata', true);
 
 let g_board = [];
 let g_fees = {};
+let g_docs = {};
+let g_links = {};
 
 // used by menu.css
 function updatemenu() {
@@ -55,6 +57,57 @@ function fixupLinks(container, page) {
             console.log(`   error; ${anchor.href}`)
             console.error(error);
         }
+    });
+}
+
+// see: data/links.yaml and data/docs.yaml
+function getData(data, key, tag) {
+    if (data.hasOwnProperty(key)) {
+        if(data[key].hasOwnProperty(tag)) {
+            return data[key][tag];
+        }
+    }
+    return '';
+}
+function insertData(container) {
+    const elems = container.querySelectorAll('span');
+    elems.forEach(elem => {
+        const id = elem.id.split('.');
+        console.log(id);
+        if (id.length === 3) {
+            const type = id[0];
+            const key = id[1];
+            const tag = id[2];
+
+            let url;
+            switch(type) {
+                case 'doc':
+                    const doc = getData(g_docs, key, tag);
+                    if (doc) {
+                        url = `/content/pdf/${key}/${doc}`;
+                    }
+                    break;
+                case 'link':
+                    url = getData(g_links, key, tag);
+                    break
+                default:
+                    return;
+            }
+            if (url) {
+                const a = DOM.anchor(url, elem.textContent);
+                elem.replaceChildren(a);
+            }
+        }
+    });
+}
+
+// see: data/docs.yaml
+function insertDocs(container) {
+    const elems = container.querySelectorAll('doc');
+    elems.forEach(elem => {
+        const id = elem.id.split('.');
+        console.log(elem.id);
+        console.log(g_docs);
     });
 }
 
@@ -117,6 +170,7 @@ async function fetchContent(link) {
                 const html = MD.makeHtml(md);
                 const meta = MD.getMetadata();
                 container.innerHTML = html;
+                insertData(container);
                 fixupLinks(container, `${link}.md`);
 
                 const parts = link.split('/');
@@ -200,22 +254,25 @@ async function fetchBoard() {
     }
 }
 
-async function fetchFees() {
-    try {
-        const link = `/content/data/fees.yaml`;
-        fetch(link)
-            .then(response => response.text())
-            .then(data => {
-                g_fees = jsyaml.load(data, 'utf8');
-                updateFeeTables();
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
+async function fetchData(link) {
+    return await fetch(link)
+        .then(response => response.text())
+        .then(data => {
+            return jsyaml.load(data, 'utf8');
+        })
+        .catch(error => {
+            console.error(error);
+            return {};
+        });
 }
 
+async function fetchAllData() {
+    g_fees = await fetchData(`/content/data/fees.yaml`);
+    g_docs = await fetchData(`/content/data/docs.yaml`);
+    g_links = await fetchData(`/content/data/links.yaml`);
+
+    updateFeeTables();
+}
 
 async function onLoad() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -224,8 +281,8 @@ async function onLoad() {
     fetchMenu();
     fetchNewsletters();
     fetchBoard();
-    fetchFees();
     fetchSidebar();
+    await fetchAllData();
     await fetchCamps();
     fetchContentFromSearchParams(urlParams);
 }
