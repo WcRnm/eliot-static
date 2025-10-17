@@ -242,12 +242,18 @@ async function fetchYaml(link) {
 }
 
 async function fetchAllData() {
+    logger.debug('++fetchAllData');
     g_fees = await fetchYaml(`/content/data/fees.yaml`);
-    g_docs = await fetchYaml(`/content/data/docs.yaml`);
+    logger.debug('got fees');
+    docs = await fetchYaml(`/content/data/docs.yaml`);
+    logger.debug('got docs');
     g_links = await fetchYaml(`/content/data/links.yaml`);
+    logger.debug('got links');
     g_board = await fetchYaml('/content/data/board.yaml');
+    logger.debug('got board');
 
     updateFeeTables();
+    logger.debug('--fetchAllData');
 }
 
 async function onLoad() {

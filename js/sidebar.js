@@ -240,7 +240,7 @@ function updateFeeTables() {
     const cols = g_fees.fee_columns;
 
     for (tier of g_fees.tiers) {
-        logger.log(tier.key);
+        logger.info(tier.key);
         buildFeeTable(tier.key, tier.name, tier.buildings);
         const row = createTableRow(cols, true, 'fee-row');
         g_table.fees[tier.key].head.appendChild(row);
@@ -258,7 +258,7 @@ function updateFeeTables() {
     const key = KEY_SURCHARGES
     const surchargeRows = g_fees.surcharges.rows;
     const surchargeData = g_fees.surcharges.data;
-    logger.log(key);
+    logger.info(key);
     buildFeeTable(key, g_fees.surcharges.name, g_fees.surcharges.desc);
     const row = createTableRow(cols, true, 'fee-row');
     g_table.fees[key].head.appendChild(row);
