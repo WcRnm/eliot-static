@@ -7,6 +7,8 @@ let g_fees = {};
 let g_docs = {};
 let g_links = {};
 
+const logger = new Logger();
+
 // used by menu.css
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {
@@ -54,8 +56,8 @@ function fixupLinks(container, page) {
             }
         }
         catch (error) {
-            console.log(`   error; ${anchor.href}`)
-            console.error(error);
+            logger.error(`   error; ${anchor.href}`)
+            logger.error(error);
         }
     });
 }
@@ -73,7 +75,6 @@ function insertData(container) {
     const elems = container.querySelectorAll('span');
     elems.forEach(elem => {
         const id = elem.id.split('.');
-        console.log(id);
         if (id.length === 3) {
             const type = id[0];
             const key = id[1];
@@ -106,14 +107,13 @@ function insertDocs(container) {
     const elems = container.querySelectorAll('doc');
     elems.forEach(elem => {
         const id = elem.id.split('.');
-        console.log(elem.id);
-        console.log(g_docs);
+        logger.debug(elem.id);
     });
 }
 
 // handle the backbutton
 window.addEventListener("popstate", (event) => {
-    console.log(`history state: ${JSON.stringify(event.state)}`);
+    logger.info(`history state: ${JSON.stringify(event.state)}`);
     if (event.state && event.state.url) {
         const url = new URL(event.state.url);
         fetchContentFromSearchParams(url.searchParams);
@@ -141,10 +141,10 @@ function fetchMenu() {
                 container.innerHTML = html;
                 fixupLinks(container, 'menu.html');
             })
-            .catch(error => console.error(error));
+            .catch(error => logger.error(error));
     }
     catch (error) {
-        console.error(error);
+        logger.error(error);
     }
 }
 
@@ -183,7 +183,7 @@ async function fetchContent(link) {
 
                 if (year && camp) {
                     // is this a camp page?
-                    console.log(`link: ${link}`)
+                    logger.info(`link: ${link}`)
                     if (link.startsWith('camp/')) {
                         const campCard = DOM.div('camp-card');
                         container.prepend(campCard);
@@ -210,10 +210,10 @@ async function fetchContent(link) {
                     }
                 }
             })
-            .catch(error => console.error(error));
+            .catch(error => logger.error(error));
     }
     catch (error) {
-        console.error(error);
+        logger.error(error);
     }
 }
 
@@ -232,10 +232,10 @@ async function fetchNewsletters() {
                     addNewsletterToTable(news);
                 });
             })
-            .catch(error => console.error(error));
+            .catch(error => logger.error(error));
     }
     catch (error) {
-        console.error(error);
+        logger.error(error);
     }
 }
 
@@ -246,7 +246,7 @@ async function fetchData(link) {
             return jsyaml.load(data, 'utf8');
         })
         .catch(error => {
-            console.error(error);
+            logger.error(error);
             return {};
         });
 }
