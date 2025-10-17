@@ -38,7 +38,7 @@ All staff are required to sign our <span id="doc.policy.code-of-ethics">Camp Sta
     - <span id="doc.job.aid-supplies">First Aid Supplies List</span>
     - <span id="doc.job.aid-concussion">Concussion & Head Injury Information</span>
     - <span id="doc.job.aid-epipen">EpiPen Document</span>
-- Misc
+- Miscellaneous
     - <span id="doc.job.coffee">Early Morning Coffee Host</span>
     - <span id="doc.job.golf-cart">Golf Cart Coordinator</span>
     - <span id="doc.job.house">House Leader</span>
