@@ -239,21 +239,6 @@ async function fetchNewsletters() {
     }
 }
 
-async function fetchBoard() {
-    try {
-        const link = `/content/data/board.json`;
-        fetch(link)
-            .then(response => response.json())
-            .then(board => {
-                g_board = board;
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
 async function fetchData(link) {
     return await fetch(link)
         .then(response => response.text())
@@ -270,6 +255,7 @@ async function fetchAllData() {
     g_fees = await fetchData(`/content/data/fees.yaml`);
     g_docs = await fetchData(`/content/data/docs.yaml`);
     g_links = await fetchData(`/content/data/links.yaml`);
+    g_board = await fetchData('/content/data/board.yaml');
 
     updateFeeTables();
 }
@@ -280,7 +266,6 @@ async function onLoad() {
     buildTables();
     fetchMenu();
     fetchNewsletters();
-    fetchBoard();
     fetchSidebar();
     await fetchAllData();
     await fetchCamps();
