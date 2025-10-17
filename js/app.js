@@ -222,24 +222,14 @@ function sortNews(a,b) {
 }
 
 async function fetchNewsletters() {
-    try {
-        const link = `/content/data/newsletters.json`;
-        fetch(link)
-            .then(response => response.json())
-            .then(newsletters => {
-                newsletters.forEach((news) => {
-                    news.date = new Date(news.date);
-                    addNewsletterToTable(news);
-                });
-            })
-            .catch(error => logger.error(error));
-    }
-    catch (error) {
-        logger.error(error);
-    }
+    const newsletters = await fetchYaml('/content/data/newsletters.yaml');
+    newsletters.forEach((news) => {
+        news.date = new Date(news.date);
+        addNewsletterToTable(news);
+    });
 }
 
-async function fetchData(link) {
+async function fetchYaml(link) {
     return await fetch(link)
         .then(response => response.text())
         .then(data => {
@@ -252,10 +242,10 @@ async function fetchData(link) {
 }
 
 async function fetchAllData() {
-    g_fees = await fetchData(`/content/data/fees.yaml`);
-    g_docs = await fetchData(`/content/data/docs.yaml`);
-    g_links = await fetchData(`/content/data/links.yaml`);
-    g_board = await fetchData('/content/data/board.yaml');
+    g_fees = await fetchYaml(`/content/data/fees.yaml`);
+    g_docs = await fetchYaml(`/content/data/docs.yaml`);
+    g_links = await fetchYaml(`/content/data/links.yaml`);
+    g_board = await fetchYaml('/content/data/board.yaml');
 
     updateFeeTables();
 }
