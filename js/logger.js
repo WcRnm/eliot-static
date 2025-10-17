@@ -5,7 +5,13 @@ class Logger {
         this.colorWarn = 'Tomato';
         this.colorError = 'Red';
         this.colorSucces = 'Green';
+
+        this.startTime = new Date();
     }
+    elapsedTime() {
+        return new Date() - this.startTime;
+    }
+
     log(msg, color, icon) {
         color = color || "black";
         let bgc = "White";
@@ -29,7 +35,7 @@ class Logger {
             if (icon) {
                 msg = icon + ' ' + msg;
             }
-            console.log("%c" + msg, "color:" + color + "; background-color: " + bgc + ";");
+            console.log("%c[" + this.elapsedTime() + ']' + msg, "color:" + color + "; background-color: " + bgc + ";");
         }
     }
 
