@@ -11,12 +11,15 @@ const g_table = {
 };
 const KEY_SURCHARGES = 'surcharges';
 
-function fetchSidebar() {
+async function fetchSidebar() {
+    logger.debug('++fetchSidebar');
+
     try {
         const link = `/content/sidebar.md`;
-        fetch(link)
+        await fetch(link)
             .then(response => response.text())
             .then(md => {
+                logger.debug('got sidebar');
                 const html = MD.makeHtml(md);
                 const container = document.getElementById('sidebar_container');
                 container.innerHTML = html;
@@ -34,6 +37,7 @@ function fetchSidebar() {
     catch (error) {
         logger.error(error);
     }
+    logger.debug('--fetchSidebar');
 }
 
 function createCampTableRow(data, isHeader) {
@@ -138,6 +142,7 @@ function formatCampDate(date) {
 
 function formatCampCard(info) {
     const card = DOM.article('camp');
+    card.id = info.name;
 
     const campName = DOM.div('camp-name');
     const a = DOM.anchor(`?camp=${info.year}/${info.mdFile}`, info.name);
@@ -165,7 +170,7 @@ function formatCampCard(info) {
         card.appendChild(speaker);
     }
 
-    fixupLinks(card, `card=${info.year}/${info.camp}`);
+    fixupLinks(card);
 
     return card;
 }
