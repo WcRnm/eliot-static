@@ -7,6 +7,9 @@ let g_fees = {};
 let g_docs = {};
 let g_links = {};
 
+const logger = new Logger();
+
+// --------------------------------------------------------------
 // used by menu.css
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {
@@ -20,44 +23,44 @@ function updatemenu() {
 // --------------------------------------------------------------
 // For internal pages, add an onclick handler.
 // For pdfs and external links, open in a separate tab
-function fixupLinks(container, page) {
+function fixupLinks(container) {
+    const tag = 'fixupLinks: <' + container.tagName.toLowerCase() + '>' + container.id;
+    logger.debug('++' + tag);
     const domainName = window.location.hostname;
     const anchors = container.querySelectorAll('a');
     anchors.forEach(anchor => {
-        if (!anchor.href) {
-            return;
-        }
-        try {
-            const url = new URL(anchor.href);
-            if (url.hostname == domainName) {
-                anchor.addEventListener('click', (e) => {
-                    const url = new URL(anchor.href);
-                    let link = null;
-                    for (const [key, value] of url.searchParams) {
-                        link = `${key}/${value}`;
-                        fetchContent(link);
-                        e.preventDefault();
-                        break;
-                    }
+        if (anchor.href) {
+            try {
+                const url = new URL(anchor.href);
+                if (url.hostname == domainName) {
+                    anchor.addEventListener('click', (e) => {
+                        const url = new URL(anchor.href);
+                        let link = null;
+                        for (const [key, value] of url.searchParams) {
+                            link = `${key}/${value}`;
+                            fetchContent(link);
+                            e.preventDefault();
+                            break;
+                        }
 
-                    if (link === null) {
-                        anchor.target = '_other';
-                    } else {
-                        history.pushState({
-                            url: anchor.href
-                        }, "", url);
-                    }
-                })
-                return;
-            } else {
-                anchor.target = '_other';
+                        if (link === null) {
+                            anchor.target = '_other';
+                        } else {
+                            history.pushState({
+                                url: anchor.href
+                            }, "", url);
+                        }
+                    })
+                    return;
+                } else {
+                    anchor.target = '_other';
+                }
+            } catch (error) {
+                logger.error(`   error; ${anchor.href}`)
+                logger.error(error);
             }
-        }
-        catch (error) {
-            console.log(`   error; ${anchor.href}`)
-            console.error(error);
-        }
-    });
+        }});
+    logger.debug('--' + tag);
 }
 
 // see: data/links.yaml and data/docs.yaml
@@ -73,7 +76,6 @@ function insertData(container) {
     const elems = container.querySelectorAll('span');
     elems.forEach(elem => {
         const id = elem.id.split('.');
-        console.log(id);
         if (id.length === 3) {
             const type = id[0];
             const key = id[1];
@@ -106,14 +108,13 @@ function insertDocs(container) {
     const elems = container.querySelectorAll('doc');
     elems.forEach(elem => {
         const id = elem.id.split('.');
-        console.log(elem.id);
-        console.log(g_docs);
+        logger.debug(elem.id);
     });
 }
 
 // handle the backbutton
 window.addEventListener("popstate", (event) => {
-    console.log(`history state: ${JSON.stringify(event.state)}`);
+    logger.info(`history state: ${JSON.stringify(event.state)}`);
     if (event.state && event.state.url) {
         const url = new URL(event.state.url);
         fetchContentFromSearchParams(url.searchParams);
@@ -139,12 +140,12 @@ function fetchMenu() {
             .then(html => {
                 const container = document.getElementById('menu_container');
                 container.innerHTML = html;
-                fixupLinks(container, 'menu.html');
+                fixupLinks(container);
             })
-            .catch(error => console.error(error));
+            .catch(error => logger.error(error));
     }
     catch (error) {
-        console.error(error);
+        logger.error(error);
     }
 }
 
@@ -163,15 +164,17 @@ async function fetchContentFromSearchParams(params) {
 
 async function fetchContent(link) {
     try {
-        fetch(`content/${link}.md`)
+        await fetch(`content/${link}.md`)
             .then(response => response.text())
             .then(md => {
+                logger.debug('got content: ' + link);
                 const container = document.getElementById('content_container');
                 const html = MD.makeHtml(md);
                 const meta = MD.getMetadata();
                 container.innerHTML = html;
+                container.id = link;
                 insertData(container);
-                fixupLinks(container, `${link}.md`);
+                fixupLinks(container);
 
                 const parts = link.split('/');
                 const year = parts.length > 1 ? parts[1] : null;
@@ -183,7 +186,7 @@ async function fetchContent(link) {
 
                 if (year && camp) {
                     // is this a camp page?
-                    console.log(`link: ${link}`)
+                    logger.info(`link: ${link}`)
                     if (link.startsWith('camp/')) {
                         const campCard = DOM.div('camp-card');
                         container.prepend(campCard);
@@ -210,10 +213,10 @@ async function fetchContent(link) {
                     }
                 }
             })
-            .catch(error => console.error(error));
+            .catch(error => logger.error(error));
     }
     catch (error) {
-        console.error(error);
+        logger.error(error);
     }
 }
 
@@ -221,43 +224,50 @@ function sortNews(a,b) {
     return (a.date < b.date);
 }
 
-async function fetchNewsletters() {
-    try {
-        const link = `/content/data/newsletters.json`;
-        fetch(link)
-            .then(response => response.json())
-            .then(newsletters => {
-                newsletters.forEach((news) => {
-                    news.date = new Date(news.date);
-                    addNewsletterToTable(news);
-                });
-            })
-            .catch(error => console.error(error));
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-
-async function fetchData(link) {
+async function fetchYaml(link, defaultVal, cb) {
     return await fetch(link)
         .then(response => response.text())
         .then(data => {
-            return jsyaml.load(data, 'utf8');
+            cb(jsyaml.load(data, 'utf8'));
         })
         .catch(error => {
-            console.error(error);
-            return {};
+            logger.error(error);
+            cb(defaultVal);
         });
 }
 
 async function fetchAllData() {
-    g_fees = await fetchData(`/content/data/fees.yaml`);
-    g_docs = await fetchData(`/content/data/docs.yaml`);
-    g_links = await fetchData(`/content/data/links.yaml`);
-    g_board = await fetchData('/content/data/board.yaml');
+    logger.debug('++fetchAllData');
+    fetchYaml(`/content/data/fees.yaml`, {}, fees => {
+        g_fees = fees;
+        logger.debug('got fees');
+        updateFeeTables();
+    });
 
-    updateFeeTables();
+    fetchYaml(`/content/data/docs.yaml`, {}, docs => {
+        g_docs = docs;
+        logger.debug('got docs');
+    });
+
+    fetchYaml(`/content/data/links.yaml`, {}, links => {
+        g_links = links;
+        logger.debug('got links');
+    });
+
+    fetchYaml('/content/data/board.yaml', [], board => {
+        g_board = board;
+        logger.debug('got board');
+    });
+
+    fetchYaml('/content/data/newsletters.yaml', [], newsletters => {
+        newsletters.forEach((info) => {
+            info.date = new Date(info.date);
+            addNewsletterToTable(info);
+        });
+        logger.debug('got newsletters');
+    });
+
+    logger.debug('--fetchAllData');
 }
 
 async function onLoad() {
@@ -265,10 +275,10 @@ async function onLoad() {
 
     buildTables();
     fetchMenu();
-    fetchNewsletters();
+    fetchAllData();
+    fetchCamps();
+
     fetchSidebar();
-    await fetchAllData();
-    await fetchCamps();
     fetchContentFromSearchParams(urlParams);
 }
 

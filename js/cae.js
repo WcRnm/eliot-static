@@ -8,15 +8,15 @@ function fetchWorkshops(workshopDiv, year, camp) {
                     fetchWorkshop(workshopDiv, baseUrl, workshop);
                 });
             })
-            .catch(error => console.error(error));
+            .catch(error => logger.error(error));
     }
     catch (error) {
-        console.error(error);
+        logger.error(error);
     }
 }
 
 function fetchWorkshop(workshopDiv, baseUrl, workshop) {
-    console.log(`workshop: ${workshop}`)
+    logger.info(`workshop: ${workshop}`)
     try {
         fetch(`${baseUrl}/${workshop}.md`)
             .then(response => response.text())
@@ -24,7 +24,7 @@ function fetchWorkshop(workshopDiv, baseUrl, workshop) {
                 const html = MD.makeHtml(md);
                 const meta = MD.getMetadata();
 
-                console.log(meta.img);
+                logger.debug(meta.img);
 
                 let hr = DOM.elem('hr');
                 workshopDiv.appendChild(hr);
@@ -48,7 +48,7 @@ function fetchWorkshop(workshopDiv, baseUrl, workshop) {
             })
     }
     catch (error) {
-        console.error(error);
+        logger.error(error);
     }
 
 }

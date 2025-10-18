@@ -44,7 +44,7 @@ function fixupCampCard(container, year, camp) {
         container.appendChild(card);
     }
     catch (error) {
-        console.error(error);
+        logger.error(error);
     }
 }
 
@@ -75,7 +75,7 @@ function storeCamp(type, year, md, mdFile) {
 
         addCampToTable(camp.meta, g_now);
     } catch (error) {
-        console.error(error);
+        logger.error(error);
     }
 }
 
@@ -91,7 +91,7 @@ async function fetchCamp(type, year) {
             storeCamp(type, year, md, mdFile);
             success = true;
         })
-        .catch(error => console.error(error));
+        .catch(error => logger.error(error));
     return success;
 }
 
