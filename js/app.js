@@ -9,6 +9,7 @@ let g_links = {};
 
 const logger = new Logger();
 
+// --------------------------------------------------------------
 // used by menu.css
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {

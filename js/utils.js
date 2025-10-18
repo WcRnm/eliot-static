@@ -22,7 +22,7 @@ class Logger {
             case "start":    color = "OliveDrab";  bgc = "PaleGreen";       break;
             case "warning":  color = "Tomato";     bgc = "Black";           break;
             case "end":      color = "Orchid";     bgc = "MediumVioletRed"; break;
-            case 'debug':    color = "DarkGrey";   break
+            case 'debug':    color = "DimGrey";   break
             default: color = color;
         }
 
@@ -54,4 +54,9 @@ class Logger {
     success(msg) {
         this.log(msg, 'success', '✅');
     }
+
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
