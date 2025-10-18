@@ -11,12 +11,15 @@ const g_table = {
 };
 const KEY_SURCHARGES = 'surcharges';
 
-function fetchSidebar() {
+async function fetchSidebar() {
+    logger.debug('++fetchSidebar');
+
     try {
         const link = `/content/sidebar.md`;
-        fetch(link)
+        await fetch(link)
             .then(response => response.text())
             .then(md => {
+                logger.debug('got sidebar');
                 const html = MD.makeHtml(md);
                 const container = document.getElementById('sidebar_container');
                 container.innerHTML = html;
@@ -29,11 +32,12 @@ function fetchSidebar() {
 
                 fixupLinks(container, link);
             })
-            .catch(error => console.error(error));
+            .catch(error => logger.error(error));
     }
     catch (error) {
-        console.error(error);
+        logger.error(error);
     }
+    logger.debug('--fetchSidebar');
 }
 
 function createCampTableRow(data, isHeader) {
@@ -138,6 +142,7 @@ function formatCampDate(date) {
 
 function formatCampCard(info) {
     const card = DOM.article('camp');
+    card.id = info.name;
 
     const campName = DOM.div('camp-name');
     const a = DOM.anchor(`?camp=${info.year}/${info.mdFile}`, info.name);
@@ -165,7 +170,7 @@ function formatCampCard(info) {
         card.appendChild(speaker);
     }
 
-    fixupLinks(card, `card=${info.year}/${info.camp}`);
+    fixupLinks(card);
 
     return card;
 }
@@ -240,7 +245,7 @@ function updateFeeTables() {
     const cols = g_fees.fee_columns;
 
     for (tier of g_fees.tiers) {
-        console.log(tier.key);
+        logger.info(tier.key);
         buildFeeTable(tier.key, tier.name, tier.buildings);
         const row = createTableRow(cols, true, 'fee-row');
         g_table.fees[tier.key].head.appendChild(row);
@@ -258,7 +263,7 @@ function updateFeeTables() {
     const key = KEY_SURCHARGES
     const surchargeRows = g_fees.surcharges.rows;
     const surchargeData = g_fees.surcharges.data;
-    console.log(key);
+    logger.info(key);
     buildFeeTable(key, g_fees.surcharges.name, g_fees.surcharges.desc);
     const row = createTableRow(cols, true, 'fee-row');
     g_table.fees[key].head.appendChild(row);
