@@ -172,7 +172,6 @@ async function fetchContent(link) {
                 const html = MD.makeHtml(md);
                 const meta = MD.getMetadata();
                 container.innerHTML = html;
-                container.id = link;
                 insertData(container);
                 fixupLinks(container);
 
